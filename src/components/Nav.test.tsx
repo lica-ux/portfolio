@@ -1,26 +1,16 @@
-import { render, act } from '@testing-library/react'
-import { MemoryRouter } from 'react-router-dom'
-import { ThemeProvider } from '../context/ThemeContext'
+import { render } from '@testing-library/react'
 import Nav from './Nav'
 
-function Wrapper({ children }: { children: React.ReactNode }) {
-  return <ThemeProvider><MemoryRouter>{children}</MemoryRouter></ThemeProvider>
-}
-
 test('renders nav links', () => {
-  const { getByRole } = render(<Nav />, { wrapper: Wrapper })
-  expect(getByRole('link', { name: 'Home' })).toBeInTheDocument()
-  expect(getByRole('link', { name: 'Components' })).toBeInTheDocument()
+  const { getByRole } = render(<Nav />)
+  expect(getByRole('link', { name: 'Work' })).toBeInTheDocument()
+  expect(getByRole('link', { name: 'About' })).toBeInTheDocument()
+  expect(getByRole('link', { name: 'Contact' })).toBeInTheDocument()
 })
 
-test('renders theme toggle button', () => {
-  const { getByRole } = render(<Nav />, { wrapper: Wrapper })
-  expect(getByRole('button', { name: /toggle theme/i })).toBeInTheDocument()
-})
-
-test('theme toggle button switches label from Light to Dark', () => {
-  const { getByRole } = render(<Nav />, { wrapper: Wrapper })
-  const btn = getByRole('button', { name: /toggle theme/i })
-  act(() => { btn.click() })
-  expect(document.documentElement).toHaveAttribute('data-theme', 'dark')
+test('links point to correct anchors', () => {
+  const { getByRole } = render(<Nav />)
+  expect(getByRole('link', { name: 'Work' })).toHaveAttribute('href', '#work')
+  expect(getByRole('link', { name: 'About' })).toHaveAttribute('href', '#about')
+  expect(getByRole('link', { name: 'Contact' })).toHaveAttribute('href', '#contact')
 })

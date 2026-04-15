@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /Users/lisacaspersson/GitHub/portfolio && git add -A && git diff --staged --quiet || (git commit -m \"chore: auto-save $(date '+%Y-%m-%d %H:%M')\" && git push) 2>/dev/null || true",
+            "statusMessage": "Sparar och pushar till git..."
+          }
+        ]
+      }
+    ]
+  }
+}

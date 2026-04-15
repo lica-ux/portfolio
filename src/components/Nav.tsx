@@ -1,44 +1,30 @@
-import { NavLink } from 'react-router-dom'
-import clsx from 'clsx'
-import { useTheme } from '../context/ThemeContext'
-
 const links = [
-  { to: '/',           label: 'Home' },
-  { to: '/components', label: 'Components' },
-  { to: '/tokens',     label: 'Tokens' },
-  { to: '/about',      label: 'About' },
+  { href: '#work',    label: 'Work' },
+  { href: '#about',   label: 'About' },
+  { href: '#contact', label: 'Contact' },
 ]
 
 export default function Nav() {
-  const { theme, toggleTheme } = useTheme()
-
   return (
-    <nav className="flex items-center justify-between px-6 py-4 border-b border-[var(--color-border)]">
-      <div className="flex gap-6">
-        {links.map(({ to, label }) => (
-          <NavLink
-            key={to}
-            to={to}
-            end={to === '/'}
-            className={({ isActive }) =>
-              clsx('text-sm font-medium rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600',
-                isActive
-                  ? 'text-primary-600'
-                  : 'text-[var(--color-text)] hover:text-primary-600'
-              )
-            }
+    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 md:px-10 py-4">
+      <div
+        className="flex items-center gap-14 px-6 py-5 rounded-full backdrop-blur-[12px]"
+        style={{
+          backgroundColor: 'var(--color-nav-pill-bg)',
+          fontFamily: 'var(--font-display)',
+        }}
+      >
+        {links.map(({ href, label }) => (
+          <a
+            key={href}
+            href={href}
+            className="text-base font-medium whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2"
+            style={{ color: 'var(--color-nav-text)' }}
           >
             {label}
-          </NavLink>
+          </a>
         ))}
       </div>
-      <button
-        onClick={toggleTheme}
-        aria-label="Toggle theme"
-        className="px-3 py-1.5 rounded-md text-sm border border-[var(--color-border)] cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
-      >
-        {theme === 'light' ? 'Dark' : 'Light'}
-      </button>
     </nav>
   )
 }
