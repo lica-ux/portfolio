@@ -30,7 +30,7 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
             return next
           })
         },
-        { threshold: 0.5 }
+        { threshold: 0, rootMargin: '-30% 0px -30% 0px' }
       )
       observer.observe(el)
       return observer
