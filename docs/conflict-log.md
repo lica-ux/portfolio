@@ -17,6 +17,17 @@
 
 ## Resolved
 
+### CONFLICT-001 — 2026-04-16
+**Component:** StatsSection
+**Type:** Color contrast / Dark mode
+
+**Problem:**
+`--color-nav-text` (#491129) has no `[data-theme="dark"]` override. In dark mode, maroon text on `--color-bg` dark (#111827) = 1.17:1 — FAIL for large text (requires 3:1).
+
+**Decision:** Not applicable — the site has no dark mode. Dark mode token exists in the codebase but is not exposed to visitors. Conflict dismissed 2026-04-16.
+
+**Action:** No code change. Note added to wcag-checklist.md.
+
 <!-- Template — copy for each new conflict
 
 ### CONFLICT-[number] — [DATE]
