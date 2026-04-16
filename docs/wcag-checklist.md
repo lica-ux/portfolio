@@ -14,6 +14,7 @@
 | --------- | -------- | ------------- | -------- | ----- | ---- | -------- | -------- | ---- |
 | —         | —        | —             | —        | —     | —    | —        | —        | —    |
 | Button    | ✅       | ✅            | ✅       | ✅      | N/A | ✅       | ✅       | ✅      |
+| StatsSection | ✅    | ✅            | N/A      | N/A     | ✅  | N/A      | —        | ✅      |
 
 ---
 
@@ -40,6 +41,22 @@
 - [x] No Figma source — built without Figma description
 
 Notes: Transition handled via injected `<style>` tag with `@media (prefers-reduced-motion: no-preference)`. axe-core clean 2026-03-31.
+
+### StatsSection — 2026-04-16
+- [x] Contrast ≥ 4.5:1 normal text / 3:1 large text — `--color-nav-text` (#491129) on `--color-bg` (#f8f3ff) = 13.9:1 ✅. Dark mode N/A (no dark mode on site).
+- [x] Correct semantic HTML element used — `<section>` with meaningful image `alt`
+- [x] All interactive states keyboard accessible — N/A (no interactive elements)
+- [x] Visible focus indicator — N/A (no focusable elements)
+- [x] aria-label on icon-only buttons — N/A
+- [x] Form fields have associated `<label>` — N/A
+- [x] Error messages linked via aria-describedby — N/A
+- [x] Loading state uses aria-busy or aria-live — N/A
+- [x] Animations respect prefers-reduced-motion — `.stat-transition` class wrapped in `@media (prefers-reduced-motion: no-preference)` in index.css ✅
+- [x] All interactive elements ≥ 44×44px — N/A
+- [ ] axe-core scan: not yet run
+- [x] No Figma source — built without Figma description
+
+Notes: Purely presentational section. Only animated properties are `opacity` and `transform`. Dark mode conflict flagged and resolved as N/A — site has no dark mode toggle.
 
 <!-- Template — copy for each component
 
