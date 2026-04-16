@@ -87,11 +87,10 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
             >
               <span
                 data-testid="stat-text"
-                className="text-[64px] font-semibold leading-none"
+                className="text-[64px] font-semibold leading-none tracking-[-0.02em]"
                 style={{
                   fontFamily: 'var(--font-display)',
                   color: 'var(--color-nav-text)',
-                  letterSpacing: '-0.02em',
                   opacity: desktopStates[i] === 'visible' ? 1 : 0,
                   transform:
                     desktopStates[i] === 'visible'
@@ -128,11 +127,10 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
             >
               <span
                 data-testid="stat-text"
-                className="text-[40px] font-semibold leading-none"
+                className="text-[40px] font-semibold leading-none tracking-[-0.02em]"
                 style={{
                   fontFamily: 'var(--font-display)',
                   color: 'var(--color-nav-text)',
-                  letterSpacing: '-0.02em',
                   opacity: mobileVisible[i] ? 1 : 0,
                   transform: mobileVisible[i] ? 'translateY(0)' : 'translateY(24px)',
                   transition: 'opacity 0.6s ease, transform 0.6s ease',
