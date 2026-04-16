@@ -40,7 +40,7 @@ export default function Home() {
       {/* About */}
       <section
         id="about"
-        className="relative flex flex-col justify-center gap-6 py-24 md:py-48 px-4 md:px-10"
+        className="relative flex flex-col justify-center gap-6 py-24 md:py-48 px-4 md:px-10 min-h-[75svh]"
         style={{ backgroundColor: 'var(--color-about-bg)' }}
       >
         {/* Background texture */}
