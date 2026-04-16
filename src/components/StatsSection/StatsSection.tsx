@@ -87,7 +87,7 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
             >
               <span
                 data-testid="stat-text"
-                className="text-[64px] font-semibold leading-none tracking-[-0.02em]"
+                className="text-[64px] font-semibold leading-none tracking-[-0.02em] stat-transition"
                 style={{
                   fontFamily: 'var(--font-display)',
                   color: 'var(--color-nav-text)',
@@ -98,7 +98,6 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
                       : desktopStates[i] === 'above'
                       ? 'translateY(-24px)'
                       : 'translateY(24px)',
-                  transition: 'opacity 0.6s ease, transform 0.6s ease',
                 }}
               >
                 {stat}
@@ -127,13 +126,12 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
             >
               <span
                 data-testid="stat-text"
-                className="text-[40px] font-semibold leading-none tracking-[-0.02em]"
+                className="text-[40px] font-semibold leading-none tracking-[-0.02em] stat-transition"
                 style={{
                   fontFamily: 'var(--font-display)',
                   color: 'var(--color-nav-text)',
                   opacity: mobileVisible[i] ? 1 : 0,
                   transform: mobileVisible[i] ? 'translateY(0)' : 'translateY(24px)',
-                  transition: 'opacity 0.6s ease, transform 0.6s ease',
                 }}
               >
                 {stat}
