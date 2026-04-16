@@ -4,11 +4,13 @@
 
 # Claude updates this at the end of every session.
 
-LAST UPDATED: 2026-04-01
+LAST UPDATED: 2026-04-16
 
 ---
 
 ## In progress
+
+NONE
 
 ---
 
@@ -39,6 +41,14 @@ LAST UPDATED: 2026-04-01
 
 - **Test infrastructure** — `bun test` + `@testing-library/react` + `@happy-dom/global-registrator`
   - 41 tests across 6 files, all passing
+
+- **StatsSection** — `src/components/StatsSection/`
+  - Scroll-driven stats section: sticky bild desktop, fade in/out per stat via IntersectionObserver
+  - 4 stats: "6+ years", "30+ products", "2 acquisitions", "2 design awards"
+  - Mobil: bild överst, stats staplade med fade-in
+  - `prefers-reduced-motion` hanterat via `.stat-transition` i `index.css`
+  - Inbyggd i `Home.tsx` efter About-sektionen
+  - 5 tester, WCAG AA godkänt (45 tester totalt)
 
 ---
 
