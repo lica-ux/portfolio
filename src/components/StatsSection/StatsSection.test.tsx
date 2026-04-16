@@ -47,16 +47,16 @@ test('stats are initially hidden (opacity 0)', () => {
   })
 })
 
-test('sets up IntersectionObserver for each phase', () => {
+test('sets up IntersectionObserver for mobile rows', () => {
   render(<StatsSection imageSrc="/hero.webp" imageAlt="Lisa" />)
-  // 4 desktop phases + 4 mobile rows = 8 observer.observe calls
-  expect(mockObserve).toHaveBeenCalledTimes(8)
+  // Desktop uses scroll listener; mobile uses 4 IntersectionObservers
+  expect(mockObserve).toHaveBeenCalledTimes(4)
 })
 
-test('disconnects observers on unmount', () => {
+test('disconnects mobile observers on unmount', () => {
   const { unmount } = render(
     <StatsSection imageSrc="/hero.webp" imageAlt="Lisa" />
   )
   unmount()
-  expect(mockDisconnect).toHaveBeenCalledTimes(8)
+  expect(mockDisconnect).toHaveBeenCalledTimes(4)
 })

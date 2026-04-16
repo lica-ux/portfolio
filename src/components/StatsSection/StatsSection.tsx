@@ -14,27 +14,41 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
   const mobileRefs = useRef<(HTMLDivElement | null)[]>([])
 
   useEffect(() => {
-    const desktopObservers = desktopRefs.current.map((el, i) => {
-      if (!el) return null
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          setDesktopStates(prev => {
-            const next = [...prev]
-            if (entry.isIntersecting) {
-              next[i] = 'visible'
-            } else if (entry.boundingClientRect.top < 0) {
-              next[i] = 'above'
-            } else {
-              next[i] = 'below'
-            }
-            return next
-          })
-        },
-        { threshold: 0, rootMargin: '-30% 0px -30% 0px' }
-      )
-      observer.observe(el)
-      return observer
-    })
+    // Scroll-based detection for desktop: trigger based on text center position.
+    // Text is vertically centered in each 100svh div, so textCenter = rect.top + rect.height/2.
+    // Fade in when textCenter crosses 70%vh (30% from bottom).
+    // Fade out when textCenter crosses 30%vh (30% from top).
+    const checkDesktopPositions = () => {
+      const vh = window.innerHeight
+      desktopRefs.current.forEach((el, i) => {
+        if (!el) return
+        const rect = el.getBoundingClientRect()
+        const textCenter = rect.top + rect.height / 2
+        let next: StatState
+        if (textCenter >= vh * 0.3 && textCenter <= vh * 0.7) {
+          next = 'visible'
+        } else if (textCenter < vh * 0.3) {
+          next = 'above'
+        } else {
+          next = 'below'
+        }
+        setDesktopStates(prev => {
+          if (prev[i] === next) return prev
+          const updated = [...prev]
+          updated[i] = next
+          return updated
+        })
+      })
+    }
+
+    let rafId: number
+    const onScroll = () => {
+      cancelAnimationFrame(rafId)
+      rafId = requestAnimationFrame(checkDesktopPositions)
+    }
+
+    checkDesktopPositions()
+    window.addEventListener('scroll', onScroll, { passive: true })
 
     const mobileObservers = mobileRefs.current.map((el, i) => {
       if (!el) return null
@@ -55,7 +69,8 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
     })
 
     return () => {
-      desktopObservers.forEach(o => o?.disconnect())
+      window.removeEventListener('scroll', onScroll)
+      cancelAnimationFrame(rafId)
       mobileObservers.forEach(o => o?.disconnect())
     }
   }, [])
