@@ -4,13 +4,28 @@
 
 # Claude updates this at the end of every session.
 
-LAST UPDATED: 2026-04-16
+LAST UPDATED: 2026-04-17
 
 ---
 
 ## In progress
 
 NONE
+
+---
+
+## Completed this session (2026-04-17)
+
+- **StatsSection scroll transition fix** — replaced `IntersectionObserver` with scroll event listener + `getBoundingClientRect` for reliable 30%-from-top/bottom fade triggers
+- **Image swap** — `DSC03053-Enhanced-NR (1).webp` added to `src/images/`, used in both hero and StatsSection
+- **About section background** — `gradient.webp` (scaled to 2080×2080) at 30% opacity, `#FFE8DB` base color
+- **StatsSection image padding** — sticky image now has `p-4 md:p-10` + `rounded-[2px]` matching hero section
+
+## Known — not blocking
+
+- `<title>` is still `vite-temp` placeholder — update before public launch
+- Missing `favicon.ico`, `apple-touch-icon.png`, `og-image.png`
+- `hero.png` was removed from `src/images/` (non-compliant PNG)
 
 ---
 
