@@ -49,7 +49,8 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
     }
 
     checkDesktopPositions()
-    window.addEventListener('scroll', onScroll, { passive: true })
+    const scrollEl = rightColRef.current
+    scrollEl?.addEventListener('scroll', onScroll, { passive: true })
 
     const mobileObservers = mobileRefs.current.map((el, i) => {
       if (!el) return null
@@ -70,7 +71,7 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
     })
 
     return () => {
-      window.removeEventListener('scroll', onScroll)
+      scrollEl?.removeEventListener('scroll', onScroll)
       cancelAnimationFrame(rafId)
       mobileObservers.forEach(o => o?.disconnect())
     }
