@@ -12,6 +12,7 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
   )
   const desktopRefs = useRef<(HTMLDivElement | null)[]>([])
   const mobileRefs = useRef<(HTMLDivElement | null)[]>([])
+  const rightColRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     // Scroll-based detection for desktop: trigger based on text center position.
@@ -80,10 +81,10 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
       {/* Desktop layout */}
       <div
         className="hidden md:flex"
-        style={{ minHeight: `${STATS.length * 100}svh` }}
+        style={{ height: '100svh' }}
       >
         {/* Left: sticky image */}
-        <div className="w-1/2 sticky top-0 p-4 md:p-10" style={{ height: '100svh' }}>
+        <div className="w-1/2 p-4 md:p-10" style={{ height: '100svh' }}>
           <div className="relative w-full h-full overflow-hidden rounded-[2px]">
             <img
               src={imageSrc}
@@ -94,13 +95,19 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
         </div>
 
         {/* Right: scroll phases */}
-        <div className="w-1/2 flex flex-col">
+        <div
+          ref={rightColRef}
+          className="w-1/2 flex flex-col overflow-y-scroll snap-y snap-mandatory stats-scroll-container"
+          style={{ height: '100svh' }}
+          data-testid="stats-right-col"
+        >
           {STATS.map((stat, i) => (
             <div
               key={stat}
               ref={el => { desktopRefs.current[i] = el }}
-              className="flex items-center px-[10%]"
+              className="flex items-center px-[10%] snap-start snap-always"
               style={{ height: '100svh' }}
+              data-testid="stat-row-desktop"
             >
               <span
                 data-testid="stat-text"
