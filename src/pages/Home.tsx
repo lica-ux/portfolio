@@ -1,6 +1,7 @@
-// TODO: replace both with local .webp images (max 2080×2080px, max 940kb)
 import StatsSection from '../components/StatsSection/StatsSection'
+import statsImage from '../images/DSC03053-Enhanced-NR (1).webp'
 
+// TODO: replace with local .webp image (max 2080×2080px, max 940kb)
 const heroImage = 'https://www.figma.com/api/mcp/asset/7b5bc51c-a56f-4c04-99d2-b68011959e2f'
 const aboutTexture = 'https://www.figma.com/api/mcp/asset/becf3c32-1203-42b8-8ad0-873d63b0d5a6'
 
@@ -79,7 +80,7 @@ export default function Home() {
 
       {/* Stats */}
       <StatsSection
-        imageSrc={heroImage}
+        imageSrc={statsImage}
         imageAlt="Lisa Caspersson working at her desk"
       />
 
