@@ -61,14 +61,14 @@ test('disconnects mobile observers on unmount', () => {
   expect(mockDisconnect).toHaveBeenCalledTimes(4)
 })
 
-test('desktop right column has scroll-snap classes', () => {
+test('desktop right column does not trap scroll (no overflow-y-scroll)', () => {
   const { getByTestId } = render(
     <StatsSection imageSrc="/hero.webp" imageAlt="Lisa" />
   )
   const rightCol = getByTestId('stats-right-col')
-  expect(rightCol).toHaveClass('snap-y')
-  expect(rightCol).toHaveClass('snap-mandatory')
-  expect(rightCol).toHaveClass('overflow-y-scroll')
+  expect(rightCol).not.toHaveClass('overflow-y-scroll')
+  expect(rightCol).not.toHaveClass('snap-y')
+  expect(rightCol).not.toHaveClass('snap-mandatory')
 })
 
 test('desktop stat rows have snap classes', () => {
