@@ -60,3 +60,25 @@ test('disconnects mobile observers on unmount', () => {
   unmount()
   expect(mockDisconnect).toHaveBeenCalledTimes(4)
 })
+
+test('desktop right column has scroll-snap classes', () => {
+  const { getByTestId } = render(
+    <StatsSection imageSrc="/hero.webp" imageAlt="Lisa" />
+  )
+  const rightCol = getByTestId('stats-right-col')
+  expect(rightCol).toHaveClass('snap-y')
+  expect(rightCol).toHaveClass('snap-mandatory')
+  expect(rightCol).toHaveClass('overflow-y-scroll')
+})
+
+test('desktop stat rows have snap classes', () => {
+  const { getAllByTestId } = render(
+    <StatsSection imageSrc="/hero.webp" imageAlt="Lisa" />
+  )
+  const rows = getAllByTestId('stat-row-desktop')
+  expect(rows).toHaveLength(4)
+  rows.forEach(row => {
+    expect(row).toHaveClass('snap-start')
+    expect(row).toHaveClass('snap-always')
+  })
+})
