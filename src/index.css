@@ -94,7 +94,7 @@
 /* Page-level scroll snap for stats section — desktop only */
 @media (min-width: 768px) {
   html {
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
   }
 }
 
