@@ -33,7 +33,7 @@ export default function Home() {
         </div>
         <div className="shrink-0 h-64 w-full md:flex-1 md:h-auto md:w-auto md:min-w-0 relative rounded-[2px] overflow-hidden">
           <img
-            src={heroImage}
+            src={statsImage}
             alt="Lisa Caspersson working at her desk"
             className="absolute inset-0 w-full h-full object-cover"
           />
