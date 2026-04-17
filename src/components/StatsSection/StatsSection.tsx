@@ -12,7 +12,6 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
   )
   const desktopRefs = useRef<(HTMLDivElement | null)[]>([])
   const mobileRefs = useRef<(HTMLDivElement | null)[]>([])
-  const rightColRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     // Scroll-based detection for desktop: trigger based on text center position.
@@ -49,8 +48,6 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
     }
 
     checkDesktopPositions()
-    const scrollEl = rightColRef.current
-    scrollEl?.addEventListener('scroll', onScroll, { passive: true })
     window.addEventListener('scroll', onScroll, { passive: true })
 
     const mobileObservers = mobileRefs.current.map((el, i) => {
@@ -72,7 +69,6 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
     })
 
     return () => {
-      scrollEl?.removeEventListener('scroll', onScroll)
       window.removeEventListener('scroll', onScroll)
       cancelAnimationFrame(rafId)
       mobileObservers.forEach(o => o?.disconnect())
@@ -84,10 +80,10 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
       {/* Desktop layout */}
       <div
         className="hidden md:flex"
-        style={{ height: '100svh' }}
+        style={{ minHeight: `${STATS.length * 100}svh` }}
       >
         {/* Left: image */}
-        <div className="w-1/2 p-4 md:p-10" style={{ height: '100svh' }}>
+        <div className="w-1/2 sticky top-0 p-4 md:p-10" style={{ height: '100svh' }}>
           <div className="relative w-full h-full overflow-hidden rounded-[2px]">
             <img
               src={imageSrc}
@@ -99,16 +95,14 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
 
         {/* Right: scroll phases */}
         <div
-          ref={rightColRef}
-          className="w-1/2 flex flex-col overflow-y-scroll snap-y snap-mandatory stats-scroll-container"
-          style={{ height: '100svh' }}
+          className="w-1/2 flex flex-col"
           data-testid="stats-right-col"
         >
           {STATS.map((stat, i) => (
             <div
               key={stat}
               ref={el => { desktopRefs.current[i] = el }}
-              className="flex items-center px-[10%] snap-start snap-always shrink-0"
+              className="flex items-center px-[10%] snap-start snap-always"
               style={{ height: '100svh' }}
               data-testid="stat-row-desktop"
             >
