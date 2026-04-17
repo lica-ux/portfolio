@@ -83,6 +83,14 @@
   }
 }
 
+/* Hide scrollbar for stats section scroll container */
+.stats-scroll-container {
+  scrollbar-width: none;
+}
+.stats-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
 /* Base */
 body {
   margin: 0;
