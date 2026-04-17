@@ -83,7 +83,7 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
         className="hidden md:flex"
         style={{ height: '100svh' }}
       >
-        {/* Left: sticky image */}
+        {/* Left: image */}
         <div className="w-1/2 p-4 md:p-10" style={{ height: '100svh' }}>
           <div className="relative w-full h-full overflow-hidden rounded-[2px]">
             <img
