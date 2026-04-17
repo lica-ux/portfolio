@@ -51,6 +51,7 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
     checkDesktopPositions()
     const scrollEl = rightColRef.current
     scrollEl?.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('scroll', onScroll, { passive: true })
 
     const mobileObservers = mobileRefs.current.map((el, i) => {
       if (!el) return null
@@ -72,6 +73,7 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
 
     return () => {
       scrollEl?.removeEventListener('scroll', onScroll)
+      window.removeEventListener('scroll', onScroll)
       cancelAnimationFrame(rafId)
       mobileObservers.forEach(o => o?.disconnect())
     }
@@ -106,7 +108,7 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
             <div
               key={stat}
               ref={el => { desktopRefs.current[i] = el }}
-              className="flex items-center px-[10%] snap-start snap-always"
+              className="flex items-center px-[10%] snap-start snap-always shrink-0"
               style={{ height: '100svh' }}
               data-testid="stat-row-desktop"
             >
