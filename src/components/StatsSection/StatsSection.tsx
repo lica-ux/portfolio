@@ -83,12 +83,14 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
         style={{ minHeight: `${STATS.length * 100}svh` }}
       >
         {/* Left: sticky image */}
-        <div className="w-1/2 sticky top-0 overflow-hidden" style={{ height: '100svh' }}>
-          <img
-            src={imageSrc}
-            alt={imageAlt}
-            className="w-full h-full object-cover"
-          />
+        <div className="w-1/2 sticky top-0 p-4 md:p-10" style={{ height: '100svh' }}>
+          <div className="relative w-full h-full overflow-hidden rounded-[2px]">
+            <img
+              src={imageSrc}
+              alt={imageAlt}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
         </div>
 
         {/* Right: scroll phases */}
