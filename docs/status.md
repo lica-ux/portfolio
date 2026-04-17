@@ -12,6 +12,10 @@ LAST UPDATED: 2026-04-17
 
 NONE
 
+## Completed this session (2026-04-17, continued)
+
+- **StatsSection scroll-snap** — right column converted to self-contained `overflow-y-scroll snap-y snap-mandatory` container (desktop only); each stat snaps to viewport center via `snap-start snap-always`; window scroll listener restored alongside right-col listener for section-entry detection; `shrink-0` added to stat rows to prevent flex from collapsing them; scrollbar hidden via `.stats-scroll-container` CSS class
+
 ---
 
 ## Completed this session (2026-04-17)
