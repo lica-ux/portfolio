@@ -80,7 +80,7 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
       {/* Desktop layout */}
       <div
         className="hidden md:flex"
-        style={{ minHeight: `${STATS.length * 100}svh` }}
+        style={{ minHeight: `${STATS.length * 70}svh` }}
       >
         {/* Left: sticky image */}
         <div className="w-1/2 sticky top-0 overflow-hidden" style={{ height: '100svh' }}>
@@ -98,7 +98,7 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
               key={stat}
               ref={el => { desktopRefs.current[i] = el }}
               className="flex items-center px-[10%]"
-              style={{ height: '100svh' }}
+              style={{ height: '70svh' }}
             >
               <span
                 data-testid="stat-text"
