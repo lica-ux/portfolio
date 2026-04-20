@@ -27,7 +27,7 @@ NONE
 
 ## Known — not blocking
 
-- `<title>` is still `vite-temp` placeholder — update before public launch
+- `<title>` updated to "Lisa Caspersson — Product Designer and Product Lead" ✅
 - Missing `favicon.ico`, `apple-touch-icon.png`, `og-image.png`
 - `hero.png` was removed from `src/images/` (non-compliant PNG)
 
