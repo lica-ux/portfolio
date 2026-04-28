@@ -132,7 +132,7 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
                 </span>
                 <span
                   className="font-medium tracking-[-0.01em] mt-2"
-                  style={{ fontFamily: 'var(--font-display)', color: 'var(--color-text)', fontSize: '28px' }}
+                  style={{ fontFamily: 'var(--font-display)', color: 'var(--color-hero-subtitle)', fontSize: '28px' }}
                 >
                   {stat.label}
                 </span>
@@ -175,7 +175,7 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
                 </span>
                 <span
                   className="font-medium tracking-[-0.01em] mt-1"
-                  style={{ fontFamily: 'var(--font-display)', color: 'var(--color-text)', fontSize: '16px' }}
+                  style={{ fontFamily: 'var(--font-display)', color: 'var(--color-hero-subtitle)', fontSize: '16px' }}
                 >
                   {stat.label}
                 </span>
