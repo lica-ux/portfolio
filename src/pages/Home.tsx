@@ -1,5 +1,6 @@
 import StatsSection from '../components/StatsSection/StatsSection'
 import SelectedWork from '../components/SelectedWork'
+import MoreWork from '../components/MoreWork'
 import statsImage from '../images/DSC03053-Enhanced-NR (1).webp'
 import gradientImage from '../images/gradient.webp'
 
@@ -88,6 +89,9 @@ export default function Home() {
 
       {/* Selected work */}
       <SelectedWork />
+
+      {/* More work */}
+      <MoreWork />
 
     </main>
   )
