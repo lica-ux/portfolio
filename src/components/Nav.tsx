@@ -8,7 +8,7 @@ export default function Nav() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 md:px-10 py-4">
       <div
-        className="flex items-center gap-14 px-6 py-4 rounded-full backdrop-blur-[12px]"
+        className="flex items-center gap-10 px-6 py-4 rounded-full backdrop-blur-[12px]"
         style={{
           backgroundColor: 'var(--color-nav-pill-bg)',
           fontFamily: 'var(--font-display)',
