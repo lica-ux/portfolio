@@ -79,7 +79,7 @@ export default function MoreWork() {
         />
       </div>
 
-      <div className="relative flex flex-col gap-12">
+      <div className="relative flex flex-col gap-20">
         {/* Heading */}
         <div className="px-4 md:px-10">
           <h2
