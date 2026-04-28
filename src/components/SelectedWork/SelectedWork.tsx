@@ -47,7 +47,7 @@ export default function SelectedWork({ projects = defaultProjects }: SelectedWor
             key={project.title}
             className="flex flex-col gap-6 items-start flex-1 min-w-[240px]"
           >
-            <div className="overflow-hidden relative w-full rounded-[2px] flex-1 min-h-[300px]">
+            <div className="overflow-hidden relative w-full rounded-[2px] h-[400px]">
               <img
                 src={project.imageSrc}
                 alt={project.imageAlt}
