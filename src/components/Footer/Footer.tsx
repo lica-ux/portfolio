@@ -64,11 +64,13 @@ export default function Footer() {
 
       {/* Footer bar */}
       <div className="relative">
-        <div
-          className="w-full h-px"
-          style={{ backgroundColor: 'rgba(73,17,41,0.2)' }}
-          aria-hidden="true"
-        />
+        <div className="px-4 md:px-10">
+          <div
+            className="w-full h-px"
+            style={{ backgroundColor: 'rgba(73,17,41,0.2)' }}
+            aria-hidden="true"
+          />
+        </div>
         <div className="flex flex-wrap gap-8 px-4 md:px-10 pt-10 pb-20 md:pb-[88px]">
           <div className="flex-1 min-w-[280px]">
             <p
