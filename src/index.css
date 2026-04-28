@@ -101,6 +101,7 @@
 /* Base */
 html {
   scroll-snap-type: y mandatory;
+  scroll-padding-top: 72px;
 }
 
 body {
