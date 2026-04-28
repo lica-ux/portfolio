@@ -45,7 +45,7 @@ export default function SelectedWork({ projects = defaultProjects }: SelectedWor
         {projects.map((project) => (
           <article
             key={project.title}
-            className="flex flex-col gap-6 items-start flex-1 min-w-[280px] md:min-w-[416px]"
+            className="flex flex-col gap-6 items-start flex-1 min-w-[240px]"
           >
             <div className="aspect-[384/536] overflow-hidden relative shrink-0 w-full rounded-[2px]">
               <img
