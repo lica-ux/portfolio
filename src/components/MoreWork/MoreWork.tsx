@@ -84,9 +84,9 @@ export default function MoreWork() {
         <div className="px-4 md:px-10">
           <h2
             className="text-[40px] font-medium leading-[1.1]"
-            style={{ fontFamily: 'var(--font-display)', color: '#7d2e44' }}
+            style={{ fontFamily: 'var(--font-display)', color: 'var(--color-nav-text)' }}
           >
-            More work, <span style={{ color: 'rgba(125,46,68,0.7)' }}>briefly.</span>
+            More work, <span style={{ color: 'var(--color-hero-subtitle)' }}>briefly.</span>
           </h2>
         </div>
 
@@ -99,7 +99,7 @@ export default function MoreWork() {
             >
               <h3
                 className="text-[32px] font-medium leading-[1.1]"
-                style={{ fontFamily: 'var(--font-display)', color: '#7d2e44' }}
+                style={{ fontFamily: 'var(--font-display)', color: 'var(--color-nav-text)' }}
               >
                 {project.title}
               </h3>
@@ -109,8 +109,8 @@ export default function MoreWork() {
                     key={tag}
                     className="inline-flex items-center px-2 py-1 rounded-full border text-[14px] font-medium leading-none lowercase tracking-[-0.02em] whitespace-nowrap"
                     style={{
-                      borderColor: 'rgba(125,46,68,0.3)',
-                      color: '#7d2e44',
+                      borderColor: 'rgba(73,17,41,0.3)',
+                      color: 'var(--color-nav-text)',
                     }}
                   >
                     {tag}
@@ -119,7 +119,7 @@ export default function MoreWork() {
               </div>
               <p
                 className="text-[18px] font-normal leading-[1.48]"
-                style={{ color: 'rgba(125,46,68,0.7)' }}
+                style={{ color: 'var(--color-hero-subtitle)' }}
               >
                 {project.description}
               </p>
