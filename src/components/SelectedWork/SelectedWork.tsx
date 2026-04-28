@@ -30,7 +30,7 @@ export default function SelectedWork({ projects = defaultProjects }: SelectedWor
   return (
     <section
       id="work"
-      className="snap-start flex flex-col gap-10 items-start py-16 md:py-24 px-4 md:px-10 w-full"
+      className="snap-start flex flex-col gap-10 items-start py-16 md:py-24 px-4 md:px-10 w-full min-h-[100svh]"
     >
       <div className="flex items-center justify-center w-full">
         <h2
@@ -41,13 +41,13 @@ export default function SelectedWork({ projects = defaultProjects }: SelectedWor
         </h2>
       </div>
 
-      <div className="flex flex-wrap gap-8 items-start w-full">
+      <div className="flex flex-wrap gap-8 items-stretch w-full flex-1">
         {projects.map((project) => (
           <article
             key={project.title}
             className="flex flex-col gap-6 items-start flex-1 min-w-[240px]"
           >
-            <div className="aspect-[384/536] overflow-hidden relative shrink-0 w-full rounded-[2px]">
+            <div className="overflow-hidden relative w-full rounded-[2px] flex-1 min-h-[300px]">
               <img
                 src={project.imageSrc}
                 alt={project.imageAlt}
