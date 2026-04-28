@@ -4,6 +4,6 @@ import svgr from 'vite-plugin-svgr'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/portfolio/',
+  base: '/',
   plugins: [react(), svgr(), tailwindcss()],
 })
