@@ -1,6 +1,7 @@
 import StatsSection from '../components/StatsSection/StatsSection'
 import SelectedWork from '../components/SelectedWork'
 import MoreWork from '../components/MoreWork'
+import Footer from '../components/Footer'
 import statsImage from '../images/DSC03053-Enhanced-NR (1).webp'
 import gradientImage from '../images/gradient.webp'
 
@@ -92,6 +93,9 @@ export default function Home() {
 
       {/* More work */}
       <MoreWork />
+
+      {/* Footer */}
+      <Footer />
 
     </main>
   )
