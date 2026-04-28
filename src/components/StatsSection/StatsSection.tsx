@@ -1,7 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import type { StatsSectionProps, StatState } from './StatsSection.types'
 
-const STATS = ['6+ years', '30+ products', '2 acquisitions', '2 design awards']
+const STATS = [
+  { value: '6+', label: 'years' },
+  { value: '30+', label: 'products' },
+  { value: '2', label: 'acquisitions' },
+  { value: '2', label: 'design awards' },
+]
 
 export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) {
   const [desktopStates, setDesktopStates] = useState<StatState[]>(
@@ -100,18 +105,16 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
         >
           {STATS.map((stat, i) => (
             <div
-              key={stat}
+              key={stat.label}
               ref={el => { desktopRefs.current[i] = el }}
               className="flex items-center px-[10%] snap-start snap-always"
               style={{ height: '100svh' }}
               data-testid="stat-row-desktop"
             >
-              <span
+              <div
                 data-testid="stat-text"
-                className="text-[64px] font-semibold leading-none tracking-[-0.02em] stat-transition"
+                className="flex flex-col stat-transition"
                 style={{
-                  fontFamily: 'var(--font-display)',
-                  color: 'var(--color-nav-text)',
                   opacity: desktopStates[i] === 'visible' ? 1 : 0,
                   transform:
                     desktopStates[i] === 'visible'
@@ -121,8 +124,19 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
                       : 'translateY(24px)',
                 }}
               >
-                {stat}
-              </span>
+                <span
+                  className="font-semibold leading-none tracking-[-0.03em]"
+                  style={{ fontFamily: 'var(--font-display)', color: 'var(--color-nav-text)', fontSize: '120px' }}
+                >
+                  {stat.value}
+                </span>
+                <span
+                  className="font-medium tracking-[-0.01em] mt-2"
+                  style={{ fontFamily: 'var(--font-display)', color: 'var(--color-text-muted)', fontSize: '20px' }}
+                >
+                  {stat.label}
+                </span>
+              </div>
             </div>
           ))}
         </div>
@@ -140,23 +154,32 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
         <div className="flex flex-col">
           {STATS.map((stat, i) => (
             <div
-              key={stat}
+              key={stat.label}
               ref={el => { mobileRefs.current[i] = el }}
               className="px-6 py-12 border-b last:border-b-0"
               style={{ borderColor: 'var(--color-border)' }}
             >
-              <span
+              <div
                 data-testid="stat-text"
-                className="text-[40px] font-semibold leading-none tracking-[-0.02em] stat-transition"
+                className="flex flex-col stat-transition"
                 style={{
-                  fontFamily: 'var(--font-display)',
-                  color: 'var(--color-nav-text)',
                   opacity: mobileVisible[i] ? 1 : 0,
                   transform: mobileVisible[i] ? 'translateY(0)' : 'translateY(24px)',
                 }}
               >
-                {stat}
-              </span>
+                <span
+                  className="font-semibold leading-none tracking-[-0.03em]"
+                  style={{ fontFamily: 'var(--font-display)', color: 'var(--color-nav-text)', fontSize: '80px' }}
+                >
+                  {stat.value}
+                </span>
+                <span
+                  className="font-medium tracking-[-0.01em] mt-1"
+                  style={{ fontFamily: 'var(--font-display)', color: 'var(--color-text-muted)', fontSize: '16px' }}
+                >
+                  {stat.label}
+                </span>
+              </div>
             </div>
           ))}
         </div>
