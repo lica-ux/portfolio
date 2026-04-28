@@ -47,7 +47,7 @@ export default function Home() {
       {/* About */}
       <section
         id="about"
-        className="snap-start relative flex flex-col justify-center gap-6 py-24 md:py-48 px-4 md:px-10 min-h-[75svh]"
+        className="snap-start relative flex flex-col justify-center gap-6 py-24 md:py-48 px-4 md:px-10 min-h-[100svh]"
         style={{ backgroundColor: '#FFE8DB' }}
       >
         {/* Background gradient */}
