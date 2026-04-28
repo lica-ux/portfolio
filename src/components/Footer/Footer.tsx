@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="snap-start relative w-full"
+      className="snap-start snap-always relative w-full"
       style={{ backgroundColor: 'var(--color-about-bg)' }}
     >
       {/* Background gradient */}

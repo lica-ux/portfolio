@@ -76,7 +76,7 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
   }, [])
 
   return (
-    <section id="stats" className="snap-start bg-[var(--color-bg)]">
+    <section id="stats" className="snap-start snap-always bg-[var(--color-bg)]">
       {/* Desktop layout */}
       <div
         className="hidden md:flex"

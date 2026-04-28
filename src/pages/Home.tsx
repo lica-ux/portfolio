@@ -16,7 +16,7 @@ export default function Home() {
       {/* Hero */}
       <section
         id="hero"
-        className="snap-start flex flex-col md:flex-row gap-8 pt-[104px] pb-[104px] px-4 md:px-10 min-h-[calc(100svh+64px)]"
+        className="snap-start snap-always flex flex-col md:flex-row gap-8 pt-[104px] pb-[104px] px-4 md:px-10 min-h-[calc(100svh+64px)]"
       >
         <div className="flex flex-col justify-end gap-2 flex-1 min-w-0 pb-6">
           <p
@@ -47,7 +47,7 @@ export default function Home() {
       {/* About */}
       <section
         id="about"
-        className="snap-start relative flex flex-col justify-center gap-6 py-24 md:py-48 px-4 md:px-10 min-h-[100svh]"
+        className="snap-start snap-always relative flex flex-col justify-center gap-6 py-24 md:py-48 px-4 md:px-10 min-h-[100svh]"
         style={{ backgroundColor: '#FFE8DB' }}
       >
         {/* Background gradient */}
