@@ -99,6 +99,10 @@
 }
 
 /* Base */
+html {
+  scroll-snap-type: y proximity;
+}
+
 body {
   margin: 0;
   background-color: var(--color-bg);
