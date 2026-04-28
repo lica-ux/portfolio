@@ -16,11 +16,26 @@ NONE
 
 - **SelectedWork section** — `src/components/SelectedWork/` (Figma node 5885-4596)
   - "Selected work" heading + 3 project cards (Baribuddy, Booky, Sejfa) with portrait images
-  - Wrapping flex grid, `min-w-[416px]` per card, responsive `min-w-[280px]` mobile
+  - Full viewport height (`min-h-[100svh]`), images stretch to fill via `flex-1` (no fixed aspect ratio)
+  - `min-w-[240px]` cards, `snap-start` added to fix scroll-snap past StatsSection
   - Images using temporary Figma CDN URLs — must be replaced with local `.webp` files before production
   - Added as `id="work"` section at bottom of `Home.tsx` (after StatsSection)
   - WCAG AA: all contrasts pass, semantic HTML, no interactive elements
   - figma-map.md + wcag-checklist.md updated
+
+- **MoreWork section** — `src/components/MoreWork/` (Figma node 5885-4603)
+  - "More work, briefly." heading + 9 project cards with tag pills and descriptions
+  - CSS grid: 1 col mobile → 2 col tablet → 3 col desktop max
+  - Peach background (`--color-about-bg`) + gradient overlay, uses `--color-nav-text` + `--color-hero-subtitle`
+  - WCAG: muted text uses `--color-hero-subtitle` (5.5:1) instead of Figma's rgba(125,46,68,0.7) (3.78:1 fail)
+
+- **Footer** — `src/components/Footer/` (Figma node 5885-4663)
+  - Contact section: "Contact" heading, subtitle, Email + Linkedin pill buttons
+  - Footer bar: divider with `px-4 md:px-10`, "Lisa Caspersson" name, Let's talk + Navigation link columns
+  - Peach background + gradient, all existing tokens, `snap-start`
+  - WCAG AA: all interactive elements keyboard accessible, focus-visible rings, semantic `<nav>` + `<ul>`
+
+- **About section** — full viewport height (`min-h-[100svh]`)
 
 ## Completed this session (2026-04-17, continued)
 
