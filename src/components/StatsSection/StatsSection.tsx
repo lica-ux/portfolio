@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from 'react'
 import type { StatsSectionProps, StatState } from './StatsSection.types'
 
 const STATS = [
-  { value: '6+', label: 'years' },
-  { value: '30+', label: 'products' },
-  { value: '2', label: 'acquisitions' },
+  { value: '6+', label: 'years in product design' },
+  { value: '25+', label: 'products shipped' },
+  { value: '2', label: 'led to acquisitions' },
   { value: '2', label: 'design awards' },
 ]
 
