@@ -4,13 +4,23 @@
 
 # Claude updates this at the end of every session.
 
-LAST UPDATED: 2026-04-17
+LAST UPDATED: 2026-04-28
 
 ---
 
 ## In progress
 
 NONE
+
+## Completed this session (2026-04-28)
+
+- **SelectedWork section** — `src/components/SelectedWork/` (Figma node 5885-4596)
+  - "Selected work" heading + 3 project cards (Baribuddy, Booky, Sejfa) with portrait images
+  - Wrapping flex grid, `min-w-[416px]` per card, responsive `min-w-[280px]` mobile
+  - Images using temporary Figma CDN URLs — must be replaced with local `.webp` files before production
+  - Added as `id="work"` section at bottom of `Home.tsx` (after StatsSection)
+  - WCAG AA: all contrasts pass, semantic HTML, no interactive elements
+  - figma-map.md + wcag-checklist.md updated
 
 ## Completed this session (2026-04-17, continued)
 
