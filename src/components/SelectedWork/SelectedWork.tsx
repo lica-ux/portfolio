@@ -30,7 +30,7 @@ export default function SelectedWork({ projects = defaultProjects }: SelectedWor
   return (
     <section
       id="work"
-      className="flex flex-col gap-10 items-start py-16 md:py-24 px-4 md:px-10 w-full"
+      className="snap-start flex flex-col gap-10 items-start py-16 md:py-24 px-4 md:px-10 w-full"
     >
       <div className="flex items-center justify-center w-full">
         <h2
