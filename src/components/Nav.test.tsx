@@ -17,8 +17,6 @@ test('links point to correct anchors', () => {
 
 test('nav is positioned at bottom on mobile and top on desktop', () => {
   const { container } = render(<Nav />)
-  const nav = container.querySelector('nav')
-  expect(nav?.className).toContain('bottom-4')
-  expect(nav?.className).toContain('md:top-4')
-  expect(nav?.className).toContain('md:bottom-auto')
+  const classes = container.querySelector('nav')?.className.split(/\s+/) ?? []
+  expect(classes).toEqual(expect.arrayContaining(['bottom-4', 'md:top-4', 'md:bottom-auto']))
 })
