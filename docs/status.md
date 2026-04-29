@@ -14,6 +14,11 @@ NONE
 
 ## Completed this session (2026-04-29)
 
+- **CaseIntro component** — `src/components/CaseIntro/` (Figma node 5887-4833)
+  - Props: title, tags (pills), headline, metaLines
+  - Responsive typography: title 48px→104px, headline 22px→34px, meta 16px→24px
+  - WCAG AA: nav-text + hero-subtitle on bg — pass
+
 - **Mobile bottom nav** — `src/components/Nav.tsx`
   - Nav pill moves to `bottom-4` on mobile, stays at `md:top-4` on desktop
   - Single className change, no extra components
