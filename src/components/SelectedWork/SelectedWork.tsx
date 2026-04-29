@@ -47,11 +47,11 @@ export default function SelectedWork({ projects = defaultProjects }: SelectedWor
             key={project.title}
             className="flex flex-col gap-6 items-start flex-1 min-w-[240px]"
           >
-            <div className="overflow-hidden relative w-full rounded-[2px] h-[400px]">
+            <div className="overflow-hidden w-full rounded-[2px]">
               <img
                 src={project.imageSrc}
                 alt={project.imageAlt}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="w-full h-auto object-cover"
               />
             </div>
             <div className="flex flex-col gap-1.5 items-start px-1 w-full">
