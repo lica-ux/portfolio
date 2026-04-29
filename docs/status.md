@@ -14,6 +14,13 @@ NONE
 
 ## Completed this session (2026-04-29)
 
+- **Mobile bottom nav** — `src/components/Nav.tsx`
+  - Nav pill moves to `bottom-4` on mobile, stays at `md:top-4` on desktop
+  - Single className change, no extra components
+  - 3 Nav tests passing
+
+
+
 - **Case page template** — `src/pages/CasePage.tsx`
   - Empty subpage template for Selected Work cases
   - Routes: `/work/baribuddy`, `/work/booky`, `/work/sejfa` registered in `App.tsx`
