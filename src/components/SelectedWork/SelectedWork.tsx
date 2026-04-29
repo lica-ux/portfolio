@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import type { SelectedWorkProps, Project } from './SelectedWork.types'
 
 // TODO: replace with local .webp images (max 2080×2080px, max 940kb)
@@ -11,18 +12,21 @@ const defaultProjects: Project[] = [
     description: 'Scalin from 200 to 50 000 active users, and an acquisition.',
     imageSrc: imgBaribuddy,
     imageAlt: 'Baribuddy app screenshot',
+    slug: 'baribuddy',
   },
   {
     title: 'Booky',
     description: 'More than a redesign. We solved the wrong problem. - A problem redefinition',
     imageSrc: imgBooky,
     imageAlt: 'Booky app screenshot',
+    slug: 'booky',
   },
   {
     title: 'Sejfa',
     description: 'Making insurance relevant to a generation that ignores it.',
     imageSrc: imgSejfa,
     imageAlt: 'Sejfa app screenshot',
+    slug: 'sejfa',
   },
 ]
 
@@ -43,9 +47,10 @@ export default function SelectedWork({ projects = defaultProjects }: SelectedWor
 
       <div className="flex flex-wrap gap-8 items-stretch w-full flex-1">
         {projects.map((project) => (
-          <article
+          <Link
             key={project.title}
-            className="flex flex-col gap-6 items-start flex-1 min-w-[240px]"
+            to={`/work/${project.slug}`}
+            className="flex flex-col gap-6 items-start flex-1 min-w-[240px] no-underline"
           >
             <div className="overflow-hidden relative w-full rounded-[2px] flex-1">
               <img
@@ -68,7 +73,7 @@ export default function SelectedWork({ projects = defaultProjects }: SelectedWor
                 {project.description}
               </p>
             </div>
-          </article>
+          </Link>
         ))}
       </div>
     </section>

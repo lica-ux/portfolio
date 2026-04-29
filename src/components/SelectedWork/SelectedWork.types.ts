@@ -3,6 +3,7 @@ export interface Project {
   description: string
   imageSrc: string
   imageAlt: string
+  slug: string
 }
 
 export interface SelectedWorkProps {
