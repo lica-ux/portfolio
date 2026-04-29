@@ -10,7 +10,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
       <Link
         to="/"
         className="inline-flex items-center gap-2 text-base font-medium font-display focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-nav-text)]"
-        style={{ color: 'var(--color-text-muted)' }}
+        style={{ color: 'var(--color-hero-subtitle)' }}
       >
         ← Selected work
       </Link>
