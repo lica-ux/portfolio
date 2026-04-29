@@ -17,6 +17,7 @@
 | Input      | —       | src/components/Input/ | 2026-03-31 | No Figma source — built 2026-03-31 |
 | ComponentShowcase | — | src/components/ComponentShowcase/ | 2026-03-31 | Docs utility — no Figma source |
 | Section 4 / SelectedWork | 5885-4596 | src/components/SelectedWork/ | 2026-04-28 | "Selected work" portfolio section with 3 project cards |
+| Hero / CaseHero | 5886-4798 | src/components/CaseHero/ | 2026-04-29 | Full-width hero image for case study pages. Image placeholder — replace with local .webp |
 
 ---
 
