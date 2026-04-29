@@ -15,10 +15,10 @@ function renderCasePage() {
 
 test('renders back link', () => {
   const { getByRole } = renderCasePage()
-  expect(getByRole('link', { name: /selected work/i })).toBeInTheDocument()
+  expect(getByRole('link', { name: /home/i })).toBeInTheDocument()
 })
 
 test('back link points to homepage', () => {
   const { getByRole } = renderCasePage()
-  expect(getByRole('link', { name: /selected work/i })).toHaveAttribute('href', '/')
+  expect(getByRole('link', { name: /home/i })).toHaveAttribute('href', '/')
 })
