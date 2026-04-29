@@ -4,13 +4,25 @@
 
 # Claude updates this at the end of every session.
 
-LAST UPDATED: 2026-04-28
+LAST UPDATED: 2026-04-29
 
 ---
 
 ## In progress
 
 NONE
+
+## Completed this session (2026-04-29)
+
+- **Case page template** — `src/pages/CasePage.tsx`
+  - Empty subpage template for Selected Work cases
+  - Routes: `/work/baribuddy`, `/work/booky`, `/work/sejfa` registered in `App.tsx`
+  - Back link "← Selected work" → `/` using `--color-hero-subtitle` + `font-display`
+  - WCAG AA: `focus-visible:outline-[var(--color-nav-text)]` on back link
+  - SelectedWork cards now wrapped in `<Link>` with matching focus ring
+  - `Project` type extended with `slug: string`
+  - 3 new tests, all passing (49/50 total — StatsSection pre-existing failure unrelated)
+  - Content sections to be added from Figma in next session
 
 ## Completed this session (2026-04-28)
 
