@@ -12,6 +12,20 @@ LAST UPDATED: 2026-05-01
 
 NONE
 
+## Completed this session (2026-05-01, session 2)
+
+- **RevealImage rewrite** — ersatt CSS animation + dynamiska klasser med React state + CSS `transition`; mer tillförlitligt i produktionsbyggen; `delay` prop använder nu `transition-delay`; tester uppdaterade (8 st, alla gröna); `img-reveal`/`img-revealed` CSS-klasser borttagna från `index.css`
+
+- **SelectedWork layout** — bytt från `flex-wrap` till `flex-col md:flex-row` (eliminerar fult 2+1-läge på mellanbrea skärmar)
+
+- **CaseHero bildformat** — `aspect-[4/3]` på mobil (liggande), `md:h-[640px]` på desktop
+
+- **CasePage content-bilder** — `aspect-[4/3]` på mobil (var tidigare `h-[56vw]`), konsekvent med CaseHero
+
+- **CasePage showcase-sektion** — ny sektion i botten med app-screenshots (Figma node 5888-4855); full-bredd med `px-4 md:px-10` padding, `min-h-[100svh]`, `rounded-[2px]`, fade-in via RevealImage; TODO: ersätt Figma CDN-bild med lokal .webp
+
+- **CasePage avslutningstext** — ny sista sektion (vanlig bakgrund, ingen gradient) med acquisitions-text om FitForMe/Baricol
+
 ## Completed this session (2026-05-01)
 
 - **Image reveal animation** — `RevealImage` komponent i `src/components/RevealImage/`; scroll-triggrad blur+fade (0.8s) via IntersectionObserver (threshold 15%); stagger på SelectedWork (0/150/300ms); `prefers-reduced-motion` hanterat i både CSS och JS; applicerat på: hero, StatsSection (desktop+mobil), CaseHero, SelectedWork, CasePage (3 content-sektioner); dekorativa bakgrunder (`gradient.webp`) lämnade orörda; 8 tester, alla gröna
