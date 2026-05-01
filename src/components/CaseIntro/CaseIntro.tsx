@@ -16,7 +16,7 @@ export default function CaseIntro({ title, tags, headline, metaLines }: CaseIntr
               key={tag}
               className="inline-flex items-center justify-center px-2 py-[6px] rounded-full border text-[14px] font-medium lowercase tracking-[-0.02em]"
               style={{
-                borderColor: 'var(--color-hero-subtitle)',
+                borderColor: 'rgba(73, 17, 41, 0.3)',
                 color: 'var(--color-nav-text)',
               }}
             >
