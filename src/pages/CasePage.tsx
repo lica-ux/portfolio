@@ -136,7 +136,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
         </div>
       </section>
       {/* TODO: replace with local .webp (max 2080×2080px, max 940kb) */}
-      <section className="-mx-4 md:-mx-10 overflow-hidden">
+      <section className="overflow-hidden">
         <div className="relative w-full h-[320px] md:h-[640px]">
           <RevealImage
             src="https://www.figma.com/api/mcp/asset/081ecd84-3266-43d7-b99d-bab6632b8f20"
