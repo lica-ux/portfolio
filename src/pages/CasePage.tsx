@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import ChevronLeft from '../icons/chevron_left.svg?react'
 import CaseHero from '../components/CaseHero'
@@ -16,14 +15,9 @@ interface CasePageProps {
 }
 
 export default function CasePage({ slug }: CasePageProps) {
-  useEffect(() => {
-    document.documentElement.classList.add('no-snap')
-    return () => document.documentElement.classList.remove('no-snap')
-  }, [])
-
   return (
     <>
-    <main className="min-h-[100svh] px-4 md:px-10 pt-6 flex flex-col">
+    <main className="snap-start snap-always min-h-[100svh] px-4 md:px-10 pt-6 flex flex-col">
       <Link
         to="/"
         className="inline-flex items-center gap-1 text-base font-medium font-display focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-nav-text)] pb-6"
@@ -44,128 +38,90 @@ export default function CasePage({ slug }: CasePageProps) {
           'Result: 50 000 active users & acquisition',
         ]}
       />
-
-      <section
-        className="relative flex flex-col justify-center gap-6 py-24 md:py-48 -mx-4 md:-mx-10 px-4 md:px-10 min-h-[100svh]"
-        style={{ backgroundColor: '#FFE8DB' }}
-      >
-        <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
-          <img
-            alt=""
-            src={gradientImage}
-            className="absolute inset-0 w-full h-full object-cover opacity-30"
-          />
-        </div>
-        <p
-          className="relative text-[20px] md:text-[32px] font-normal leading-[1.1] w-3/4 max-w-[1080px] whitespace-pre-line"
-          style={{ color: 'var(--color-hero-subtitle)' }}
-        >
-          Baricol makes supplements for people who've had gastric bypass surgery. After the procedure, the body absorbs certain vitamins and minerals significantly worse, meaning patients need to supplement every day for the rest of their lives.{'\n\n'}They had an app, but it had started life as a general journal with no daily behaviour to anchor it. Users downloaded it, came back a few times, and disappeared. They came to us to understand why.
-        </p>
-      </section>
-
-      <section className="flex flex-col md:flex-row -mx-4 md:-mx-10 p-4 md:p-10 pb-12 md:min-h-[100svh] gap-6 md:gap-10">
-        {/* Image */}
-        <div className="relative w-full aspect-[4/3] md:aspect-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
-          <RevealImage
-            src={placeholderImage}
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Text */}
-        <div className="md:flex-1 flex flex-col gap-4 md:justify-center">
-          <h2
-            className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]"
-            style={{ color: 'var(--color-nav-text)' }}
-          >
-            Starting with the people who left
-          </h2>
-          <p
-            className="text-base md:text-[20px] leading-[1.4] whitespace-pre-line"
-            style={{ color: 'var(--color-hero-subtitle)' }}
-          >
-            The most useful conversations were with users who had already stopped. What came back wasn't a list of missing features. It was a motivation problem. There was no compelling reason to open the app tomorrow if you'd already opened it today.{'\n\n'}The real design challenge wasn't functionality. It was making a daily health behaviour feel worth maintaining.
-          </p>
-        </div>
-      </section>
-
-      <section className="flex flex-col md:flex-row-reverse -mx-4 md:-mx-10 p-4 md:p-10 pb-12 md:min-h-[100svh] gap-6 md:gap-10">
-        {/* Image */}
-        <div className="relative w-full aspect-[4/3] md:aspect-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
-          <RevealImage
-            src={placeholderImage}
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Text */}
-        <div className="md:flex-1 flex flex-col gap-4 md:justify-center">
-          <h2
-            className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]"
-            style={{ color: 'var(--color-nav-text)' }}
-          >
-            Designing for the actual user, not the clinical default
-          </h2>
-          <p
-            className="text-base md:text-[20px] leading-[1.4] whitespace-pre-line"
-            style={{ color: 'var(--color-hero-subtitle)' }}
-          >
-            The core audience was women over 40 recovering from a major medical procedure. The obvious direction would have been clean and clinical. I went the other way — warm, inviting, and built for someone who deserved an experience that felt genuinely on their side. User feedback confirmed it landed.
-          </p>
-        </div>
-      </section>
-
-      <section className="flex flex-col md:flex-row -mx-4 md:-mx-10 p-4 md:p-10 pb-12 md:min-h-[100svh] gap-6 md:gap-10">
-        {/* Image */}
-        <div className="relative w-full aspect-[4/3] md:aspect-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
-          <RevealImage
-            src={placeholderImage}
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Text */}
-        <div className="md:flex-1 flex flex-col gap-4 md:justify-center">
-          <h2
-            className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]"
-            style={{ color: 'var(--color-nav-text)' }}
-          >
-            Building the habit loop
-          </h2>
-          <p
-            className="text-base md:text-[20px] leading-[1.4] whitespace-pre-line"
-            style={{ color: 'var(--color-hero-subtitle)' }}
-          >
-            I designed the product around one non-negotiable behaviour: logging supplements daily. Completing that action unlocks relevant content. Missing it triggers a gentle end-of-day reminder.{'\n\n'}On top of that I added weight tracking, a post-op food journey with doctor-approved recipes, and social challenges tied to goals users already had from their doctors. The challenges addressed something users told us directly: they wanted to feel less alone in this.
-          </p>
-        </div>
-      </section>
-      {/* TODO: replace with local .webp (max 2080×2080px, max 940kb) */}
-      <section className="py-4 md:py-10 flex flex-col min-h-[100svh]">
-        <div className="relative w-full flex-1 rounded-[2px] overflow-hidden">
-          <RevealImage
-            src="https://www.figma.com/api/mcp/asset/081ecd84-3266-43d7-b99d-bab6632b8f20"
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
-      </section>
-
-      <section className="flex flex-col justify-center gap-6 py-24 md:py-48 min-h-[100svh]">
-        <p
-          className="text-[20px] md:text-[32px] font-normal leading-[1.1] w-3/4 max-w-[1080px] whitespace-pre-line"
-          style={{ color: 'var(--color-hero-subtitle)' }}
-        >
-          FitForMe, a Dutch supplements company, acquired Baricol to enter the Nordic market. Rather than growing organically, they bought a company that had built a loyal user base through its app. Baribuddy was cited as a central reason the acquisition made strategic sense.{'\n\n'}The app had grown from roughly 200 to 50 000 active users. I continued as sole designer post-acquisition, brought in for improvements as the product matured.
-        </p>
-      </section>
-
-      <OtherProjects currentSlug={slug} />
     </main>
+
+    <section
+      className="snap-start snap-always relative flex flex-col justify-center gap-6 py-24 md:py-48 px-4 md:px-10 min-h-[100svh]"
+      style={{ backgroundColor: '#FFE8DB' }}
+    >
+      <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
+        <img
+          alt=""
+          src={gradientImage}
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+        />
+      </div>
+      <p
+        className="relative text-[20px] md:text-[32px] font-normal leading-[1.1] w-3/4 max-w-[1080px] whitespace-pre-line"
+        style={{ color: 'var(--color-hero-subtitle)' }}
+      >
+        Baricol makes supplements for people who've had gastric bypass surgery. After the procedure, the body absorbs certain vitamins and minerals significantly worse, meaning patients need to supplement every day for the rest of their lives.{'\n\n'}They had an app, but it had started life as a general journal with no daily behaviour to anchor it. Users downloaded it, came back a few times, and disappeared. They came to us to understand why.
+      </p>
+    </section>
+
+    <section className="snap-start snap-always flex flex-col md:flex-row p-4 md:p-10 pb-12 md:min-h-[100svh] gap-6 md:gap-10">
+      <div className="relative w-full aspect-[4/3] md:aspect-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
+        <RevealImage src={placeholderImage} alt="" className="absolute inset-0 w-full h-full object-cover" />
+      </div>
+      <div className="md:flex-1 flex flex-col gap-4 md:justify-center">
+        <h2 className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]" style={{ color: 'var(--color-nav-text)' }}>
+          Starting with the people who left
+        </h2>
+        <p className="text-base md:text-[20px] leading-[1.4] whitespace-pre-line" style={{ color: 'var(--color-hero-subtitle)' }}>
+          The most useful conversations were with users who had already stopped. What came back wasn't a list of missing features. It was a motivation problem. There was no compelling reason to open the app tomorrow if you'd already opened it today.{'\n\n'}The real design challenge wasn't functionality. It was making a daily health behaviour feel worth maintaining.
+        </p>
+      </div>
+    </section>
+
+    <section className="snap-start snap-always flex flex-col md:flex-row-reverse px-4 md:px-10 p-4 md:p-10 pb-12 md:min-h-[100svh] gap-6 md:gap-10">
+      <div className="relative w-full aspect-[4/3] md:aspect-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
+        <RevealImage src={placeholderImage} alt="" className="absolute inset-0 w-full h-full object-cover" />
+      </div>
+      <div className="md:flex-1 flex flex-col gap-4 md:justify-center">
+        <h2 className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]" style={{ color: 'var(--color-nav-text)' }}>
+          Designing for the actual user, not the clinical default
+        </h2>
+        <p className="text-base md:text-[20px] leading-[1.4] whitespace-pre-line" style={{ color: 'var(--color-hero-subtitle)' }}>
+          The core audience was women over 40 recovering from a major medical procedure. The obvious direction would have been clean and clinical. I went the other way — warm, inviting, and built for someone who deserved an experience that felt genuinely on their side. User feedback confirmed it landed.
+        </p>
+      </div>
+    </section>
+
+    <section className="snap-start snap-always flex flex-col md:flex-row p-4 md:p-10 pb-12 md:min-h-[100svh] gap-6 md:gap-10">
+      <div className="relative w-full aspect-[4/3] md:aspect-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
+        <RevealImage src={placeholderImage} alt="" className="absolute inset-0 w-full h-full object-cover" />
+      </div>
+      <div className="md:flex-1 flex flex-col gap-4 md:justify-center">
+        <h2 className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]" style={{ color: 'var(--color-nav-text)' }}>
+          Building the habit loop
+        </h2>
+        <p className="text-base md:text-[20px] leading-[1.4] whitespace-pre-line" style={{ color: 'var(--color-hero-subtitle)' }}>
+          I designed the product around one non-negotiable behaviour: logging supplements daily. Completing that action unlocks relevant content. Missing it triggers a gentle end-of-day reminder.{'\n\n'}On top of that I added weight tracking, a post-op food journey with doctor-approved recipes, and social challenges tied to goals users already had from their doctors. The challenges addressed something users told us directly: they wanted to feel less alone in this.
+        </p>
+      </div>
+    </section>
+
+    {/* TODO: replace with local .webp (max 2080×2080px, max 940kb) */}
+    <section className="snap-start snap-always py-4 md:py-10 px-4 md:px-10 flex flex-col min-h-[100svh]">
+      <div className="relative w-full flex-1 rounded-[2px] overflow-hidden">
+        <RevealImage
+          src="https://www.figma.com/api/mcp/asset/081ecd84-3266-43d7-b99d-bab6632b8f20"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </div>
+    </section>
+
+    <section className="snap-start snap-always flex flex-col justify-center gap-6 py-24 md:py-48 px-4 md:px-10 min-h-[100svh]">
+      <p
+        className="text-[20px] md:text-[32px] font-normal leading-[1.1] w-3/4 max-w-[1080px] whitespace-pre-line"
+        style={{ color: 'var(--color-hero-subtitle)' }}
+      >
+        FitForMe, a Dutch supplements company, acquired Baricol to enter the Nordic market. Rather than growing organically, they bought a company that had built a loyal user base through its app. Baribuddy was cited as a central reason the acquisition made strategic sense.{'\n\n'}The app had grown from roughly 200 to 50 000 active users. I continued as sole designer post-acquisition, brought in for improvements as the product matured.
+      </p>
+    </section>
+
+    <OtherProjects currentSlug={slug} />
     <Footer />
     </>
   )
