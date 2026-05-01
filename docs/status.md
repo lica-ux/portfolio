@@ -12,6 +12,13 @@ LAST UPDATED: 2026-05-01
 
 NONE
 
+## Completed this session (2026-05-01, session 4)
+
+- **Footer: Projects column** — ny nav-kolumn med Baribuddy, Booky, Sejfa och "More work" (→ `/#more-work`); alla tre kolumner lika breda via `min-w-0`; "Lisa Caspersson" max 40% bred
+- **Footer: Navigation** — lade till "Home" (→ `/`) överst i listan
+- **Footer: hover-animation** — `underline decoration-transparent hover:decoration-current transition-colors duration-200` på alla footer-länkrader; `motion-reduce:transition-none` inkluderat
+- **CasePage: Footer** — `<Footer />` tillagd i botten av CasePage (utanför `<main>`, wrapper-fragment)
+
 ## Completed this session (2026-05-01, session 3)
 
 - **OtherProjects section** — `src/components/OtherProjects/` (Figma node 5890-4903)

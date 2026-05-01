@@ -96,7 +96,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="mailto:lisa@caspersson.biz"
-                      className="inline-block px-1 py-2 text-[16px] font-normal leading-[1.4] focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap hover:underline"
+                      className="inline-block px-1 py-2 text-[16px] font-normal leading-[1.4] focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap underline decoration-transparent hover:decoration-current transition-colors duration-200 motion-reduce:transition-none"
                       style={{ color: 'var(--color-nav-text)' }}
                     >
                       lisa@caspersson.biz
@@ -107,7 +107,7 @@ export default function Footer() {
                       href="https://www.linkedin.com/in/lisa-caspersson-01231787/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block px-1 py-2 text-[16px] font-normal leading-[1.4] focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap hover:underline"
+                      className="inline-block px-1 py-2 text-[16px] font-normal leading-[1.4] focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap underline decoration-transparent hover:decoration-current transition-colors duration-200 motion-reduce:transition-none"
                       style={{ color: 'var(--color-nav-text)' }}
                     >
                       Linkedin
@@ -135,7 +135,7 @@ export default function Footer() {
                     <li key={label}>
                       <Link
                         to={to}
-                        className="inline-block px-1 py-2 text-[16px] font-normal leading-[1.4] focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap no-underline hover:underline"
+                        className="inline-block px-1 py-2 text-[16px] font-normal leading-[1.4] focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap underline decoration-transparent hover:decoration-current transition-colors duration-200 motion-reduce:transition-none"
                         style={{ color: 'var(--color-nav-text)' }}
                       >
                         {label}
@@ -145,7 +145,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="/#more-work"
-                      className="inline-block px-1 py-2 text-[16px] font-normal leading-[1.4] focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap hover:underline"
+                      className="inline-block px-1 py-2 text-[16px] font-normal leading-[1.4] focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap underline decoration-transparent hover:decoration-current transition-colors duration-200 motion-reduce:transition-none"
                       style={{ color: 'var(--color-nav-text)' }}
                     >
                       More work
@@ -174,7 +174,7 @@ export default function Footer() {
                     <li key={label}>
                       <a
                         href={href}
-                        className="inline-block px-1 py-2 text-[16px] font-normal leading-[1.4] focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap hover:underline"
+                        className="inline-block px-1 py-2 text-[16px] font-normal leading-[1.4] focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap underline decoration-transparent hover:decoration-current transition-colors duration-200 motion-reduce:transition-none"
                         style={{ color: 'var(--color-nav-text)' }}
                       >
                         {label}
