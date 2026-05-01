@@ -26,15 +26,15 @@ export default function CaseIntro({ title, tags, headline, metaLines }: CaseIntr
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-8 pb-20 md:pb-52">
+      <div className="flex flex-col md:flex-row gap-8 pb-20 md:pb-52">
         <p
-          className="flex-1 font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em] min-w-0 md:min-w-[280px] max-w-[640px]"
+          className="md:flex-1 font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em] md:max-w-[640px]"
           style={{ color: 'var(--color-nav-text)' }}
         >
           {headline}
         </p>
         <div
-          className="flex-1 text-base md:text-[24px] leading-[1.24] md:flex-none md:w-[640px]"
+          className="text-base md:text-[24px] leading-[1.24] shrink-0 md:w-[640px]"
           style={{ color: 'var(--color-hero-subtitle)' }}
         >
           {metaLines.map((line, i) => (
