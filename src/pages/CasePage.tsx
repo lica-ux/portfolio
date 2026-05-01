@@ -136,8 +136,8 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
         </div>
       </section>
       {/* TODO: replace with local .webp (max 2080×2080px, max 940kb) */}
-      <section className="py-4 md:py-10">
-        <div className="relative w-full h-[320px] md:h-[640px] rounded-[2px] overflow-hidden">
+      <section className="py-4 md:py-10 flex flex-col min-h-[100svh]">
+        <div className="relative w-full flex-1 rounded-[2px] overflow-hidden">
           <RevealImage
             src="https://www.figma.com/api/mcp/asset/081ecd84-3266-43d7-b99d-bab6632b8f20"
             alt=""
