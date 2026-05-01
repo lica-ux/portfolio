@@ -37,7 +37,7 @@ export default function OtherProjects({ currentSlug }: OtherProjectsProps) {
   return (
     <section
       aria-label="Other projects"
-      className="flex flex-col md:flex-row gap-8 -mx-4 md:-mx-10 px-4 md:px-10 pt-8 pb-[104px]"
+      className="flex flex-col md:flex-row md:items-stretch gap-8 -mx-4 md:-mx-10 px-4 md:px-10 pt-8 pb-[104px] md:min-h-[100svh]"
     >
       <h2
         className="flex-1 basis-0 min-w-[200px] text-[40px] lg:text-[72px] font-medium leading-[1.04]"
@@ -50,9 +50,9 @@ export default function OtherProjects({ currentSlug }: OtherProjectsProps) {
         <Link
           key={project.slug}
           to={`/work/${project.slug}`}
-          className="flex flex-col gap-6 flex-1 basis-0 min-w-[200px] no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-nav-text)] motion-reduce:transition-none"
+          className="flex flex-col gap-6 flex-1 basis-0 min-w-[200px] md:min-h-0 no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-nav-text)] motion-reduce:transition-none"
         >
-          <div className="overflow-hidden relative w-full aspect-[3/4] rounded-[2px]">
+          <div className="overflow-hidden relative w-full rounded-[2px] aspect-[3/4] md:aspect-auto md:flex-1">
             <RevealImage
               src={project.imageSrc}
               alt={project.imageAlt}
