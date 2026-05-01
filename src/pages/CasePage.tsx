@@ -65,7 +65,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
         </div>
 
         {/* Text */}
-        <div className="mt-6 md:mt-0 md:flex-1 flex flex-col gap-4 md:pt-0 md:justify-center">
+        <div className="md:flex-1 flex flex-col gap-4 md:justify-center">
           <h2
             className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]"
             style={{ color: 'var(--color-nav-text)' }}
@@ -92,7 +92,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
         </div>
 
         {/* Text */}
-        <div className="mt-6 md:mt-0 md:flex-1 flex flex-col gap-4 md:pt-0 md:justify-center">
+        <div className="md:flex-1 flex flex-col gap-4 md:justify-center">
           <h2
             className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]"
             style={{ color: 'var(--color-nav-text)' }}
@@ -119,7 +119,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
         </div>
 
         {/* Text */}
-        <div className="mt-6 md:mt-0 md:flex-1 flex flex-col gap-4 md:pt-0 md:justify-center">
+        <div className="md:flex-1 flex flex-col gap-4 md:justify-center">
           <h2
             className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]"
             style={{ color: 'var(--color-nav-text)' }}
