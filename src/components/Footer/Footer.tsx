@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import gradientImage from '../../images/gradient.webp'
 
 export default function Footer() {
@@ -110,6 +111,44 @@ export default function Footer() {
                       style={{ color: 'var(--color-nav-text)' }}
                     >
                       Linkedin
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            {/* Projects */}
+            <div className="flex flex-col gap-2 flex-1">
+              <p
+                className="px-1 text-[16px] font-medium leading-[0.94] tracking-[-0.02em]"
+                style={{ color: 'var(--color-hero-subtitle)', fontFamily: 'var(--font-display)' }}
+              >
+                Projects
+              </p>
+              <nav aria-label="Projects">
+                <ul className="flex flex-col">
+                  {[
+                    { label: 'Baribuddy', to: '/work/baribuddy' },
+                    { label: 'Booky', to: '/work/booky' },
+                    { label: 'Sejfa', to: '/work/sejfa' },
+                  ].map(({ label, to }) => (
+                    <li key={label}>
+                      <Link
+                        to={to}
+                        className="inline-block px-1 py-2 text-[16px] font-normal leading-[1.4] focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap no-underline"
+                        style={{ color: 'var(--color-nav-text)' }}
+                      >
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
+                  <li>
+                    <a
+                      href="/#more-work"
+                      className="inline-block px-1 py-2 text-[16px] font-normal leading-[1.4] focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap"
+                      style={{ color: 'var(--color-nav-text)' }}
+                    >
+                      More work
                     </a>
                   </li>
                 </ul>
