@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import type { StatsSectionProps, StatState } from './StatsSection.types'
+import RevealImage from '../RevealImage'
 
 const STATS = [
   { value: '6+', label: 'years in product design' },
@@ -90,7 +91,7 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
         {/* Left: image */}
         <div className="w-1/2 sticky top-0 p-4 md:p-10" style={{ height: '100svh' }}>
           <div className="relative w-full h-full overflow-hidden rounded-[2px]">
-            <img
+            <RevealImage
               src={imageSrc}
               alt={imageAlt}
               className="absolute inset-0 w-full h-full object-cover"
@@ -145,7 +146,7 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
       {/* Mobile layout */}
       <div className="md:hidden">
         <div className="w-full aspect-[4/3] overflow-hidden">
-          <img
+          <RevealImage
             src={imageSrc}
             alt={imageAlt}
             className="w-full h-full object-cover"
