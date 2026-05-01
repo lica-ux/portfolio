@@ -84,7 +84,7 @@ export default function Footer() {
 
           <div className="flex flex-1 gap-8 min-w-[280px]">
             {/* Let's talk */}
-            <div className="flex flex-col gap-2 flex-1">
+            <div className="flex flex-col gap-2 flex-1 min-w-0">
               <p
                 className="px-1 text-[16px] font-medium leading-[0.94] tracking-[-0.02em]"
                 style={{ color: 'var(--color-hero-subtitle)', fontFamily: 'var(--font-display)' }}
@@ -118,7 +118,7 @@ export default function Footer() {
             </div>
 
             {/* Projects */}
-            <div className="flex flex-col gap-2 flex-1">
+            <div className="flex flex-col gap-2 flex-1 min-w-0">
               <p
                 className="px-1 text-[16px] font-medium leading-[0.94] tracking-[-0.02em]"
                 style={{ color: 'var(--color-hero-subtitle)', fontFamily: 'var(--font-display)' }}
@@ -156,7 +156,7 @@ export default function Footer() {
             </div>
 
             {/* Navigation */}
-            <div className="flex flex-col gap-2 flex-1">
+            <div className="flex flex-col gap-2 flex-1 min-w-0">
               <p
                 className="px-1 text-[16px] font-medium leading-[0.94] tracking-[-0.02em]"
                 style={{ color: 'var(--color-hero-subtitle)', fontFamily: 'var(--font-display)' }}
