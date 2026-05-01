@@ -82,3 +82,18 @@ test('forwards className to img element', () => {
   )
   expect(getByRole('img')).toHaveClass('w-full')
 })
+
+test('adds img-revealed immediately when prefers-reduced-motion is active', () => {
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: (query: string) => ({
+      matches: query === '(prefers-reduced-motion: reduce)',
+      media: query,
+      addEventListener: () => {},
+      removeEventListener: () => {},
+    }),
+  })
+  const { getByRole } = render(<RevealImage src="/test.webp" alt="Test image" />)
+  expect(getByRole('img')).toHaveClass('img-revealed')
+  expect(observeMock).not.toHaveBeenCalled()
+})
