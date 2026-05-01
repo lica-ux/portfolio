@@ -29,7 +29,6 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
         headline={"Turning around a declining health app.\nFrom 200 to 50 000 users and a company acquisition"}
         metaLines={[
           'Client: Baricol / FitForMe',
-          'Role: Sole designer - UX & UI',
           'Year: 2021 - 2024',
           'Result: 50 000 active users & acquisition',
         ]}
