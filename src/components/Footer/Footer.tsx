@@ -165,14 +165,19 @@ export default function Footer() {
               </p>
               <nav aria-label="Footer navigation">
                 <ul className="flex flex-col">
-                  {['Work', 'About', 'Contact'].map((item) => (
-                    <li key={item}>
+                  {[
+                    { label: 'Home', href: '/' },
+                    { label: 'Work', href: '#work' },
+                    { label: 'About', href: '#about' },
+                    { label: 'Contact', href: '#contact' },
+                  ].map(({ label, href }) => (
+                    <li key={label}>
                       <a
-                        href={`#${item.toLowerCase()}`}
+                        href={href}
                         className="inline-block px-1 py-2 text-[16px] font-normal leading-[1.4] focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap"
                         style={{ color: 'var(--color-nav-text)' }}
                       >
-                        {item}
+                        {label}
                       </a>
                     </li>
                   ))}
