@@ -39,27 +39,30 @@ test('renders an img with correct src and alt', () => {
   expect(img).toHaveAttribute('alt', 'Test image')
 })
 
-test('has img-reveal class before intersection', () => {
+test('image is initially hidden', () => {
   const { getByRole } = render(
     <RevealImage src="/test.webp" alt="Test image" />
   )
-  expect(getByRole('img')).toHaveClass('img-reveal')
+  const img = getByRole('img') as HTMLImageElement
+  expect(img.style.opacity).toBe('0')
 })
 
-test('adds img-revealed class after intersection', () => {
+test('image becomes visible after intersection', () => {
   const { getByRole } = render(
     <RevealImage src="/test.webp" alt="Test image" />
   )
   triggerIntersection(true)
-  expect(getByRole('img')).toHaveClass('img-revealed')
+  const img = getByRole('img') as HTMLImageElement
+  expect(img.style.opacity).toBe('1')
 })
 
-test('does not add img-revealed when isIntersecting is false', () => {
+test('does not reveal when isIntersecting is false', () => {
   const { getByRole } = render(
     <RevealImage src="/test.webp" alt="Test image" />
   )
   triggerIntersection(false)
-  expect(getByRole('img')).not.toHaveClass('img-revealed')
+  const img = getByRole('img') as HTMLImageElement
+  expect(img.style.opacity).toBe('0')
 })
 
 test('disconnects observer after intersection', () => {
@@ -68,12 +71,12 @@ test('disconnects observer after intersection', () => {
   expect(disconnectMock).toHaveBeenCalled()
 })
 
-test('applies animationDelay from delay prop', () => {
+test('applies transition delay from delay prop', () => {
   const { getByRole } = render(
     <RevealImage src="/test.webp" alt="Test image" delay={150} />
   )
   const img = getByRole('img') as HTMLImageElement
-  expect(img.style.animationDelay).toBe('150ms')
+  expect(img.style.transition).toContain('150ms')
 })
 
 test('forwards className to img element', () => {
@@ -83,7 +86,7 @@ test('forwards className to img element', () => {
   expect(getByRole('img')).toHaveClass('w-full')
 })
 
-test('adds img-revealed immediately when prefers-reduced-motion is active', () => {
+test('reveals immediately when prefers-reduced-motion is active', () => {
   Object.defineProperty(window, 'matchMedia', {
     writable: true,
     value: (query: string) => ({
@@ -94,6 +97,7 @@ test('adds img-revealed immediately when prefers-reduced-motion is active', () =
     }),
   })
   const { getByRole } = render(<RevealImage src="/test.webp" alt="Test image" />)
-  expect(getByRole('img')).toHaveClass('img-revealed')
+  const img = getByRole('img') as HTMLImageElement
+  expect(img.style.opacity).toBe('1')
   expect(observeMock).not.toHaveBeenCalled()
 })

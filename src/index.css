@@ -83,27 +83,6 @@
   }
 }
 
-@keyframes revealImage {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-.img-reveal {
-  opacity: 0;
-}
-
-.img-revealed {
-  animation: revealImage 0.8s ease forwards;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .img-reveal {
-    opacity: 1;
-  }
-  .img-revealed {
-    animation: none;
-  }
-}
 
 /* Hide scrollbar for stats section scroll container */
 .stats-scroll-container {

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface RevealImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   delay?: number
@@ -6,22 +6,25 @@ interface RevealImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 
 export default function RevealImage({ delay = 0, className = '', style, ...props }: RevealImageProps) {
   const imgRef = useRef<HTMLImageElement>(null)
+  const [visible, setVisible] = useState(false)
+  const [noMotion, setNoMotion] = useState(false)
 
   useEffect(() => {
-    const el = imgRef.current
-    if (!el) return
-
     const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false
     if (reducedMotion) {
-      el.classList.add('img-revealed')
+      setNoMotion(true)
+      setVisible(true)
       return
     }
+
+    const el = imgRef.current
+    if (!el) return
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('img-revealed')))
+            setVisible(true)
             observer.disconnect()
           }
         })
@@ -36,8 +39,12 @@ export default function RevealImage({ delay = 0, className = '', style, ...props
   return (
     <img
       ref={imgRef}
-      className={`img-reveal ${className}`}
-      style={{ animationDelay: `${delay}ms`, ...style }}
+      className={className}
+      style={{
+        opacity: visible ? 1 : 0,
+        transition: noMotion ? 'none' : `opacity 0.8s ease ${delay}ms`,
+        ...style,
+      }}
       {...props}
     />
   )
