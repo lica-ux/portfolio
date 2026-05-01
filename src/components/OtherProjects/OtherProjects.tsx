@@ -37,7 +37,7 @@ export default function OtherProjects({ currentSlug }: OtherProjectsProps) {
   return (
     <section
       aria-label="Other projects"
-      className="flex flex-col md:flex-row md:items-stretch gap-8 -mx-4 md:-mx-10 px-4 md:px-10 pt-8 pb-[104px] md:min-h-[100svh]"
+      className="flex flex-col md:flex-row md:items-stretch gap-8 -mx-4 md:-mx-10 px-4 md:px-10 pt-10 pb-[104px] md:min-h-[100svh]"
     >
       <h2
         className="flex-1 basis-0 min-w-[200px] text-[40px] lg:text-[72px] font-medium leading-[1.04]"
