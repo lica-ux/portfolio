@@ -146,19 +146,9 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
         </div>
       </section>
 
-      <section
-        className="relative flex flex-col justify-center gap-6 py-24 md:py-48 -mx-4 md:-mx-10 px-4 md:px-10 min-h-[100svh]"
-        style={{ backgroundColor: '#FFE8DB' }}
-      >
-        <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
-          <img
-            alt=""
-            src={gradientImage}
-            className="absolute inset-0 w-full h-full object-cover opacity-30"
-          />
-        </div>
+      <section className="flex flex-col justify-center gap-6 py-24 md:py-48 min-h-[100svh]">
         <p
-          className="relative text-[20px] md:text-[32px] font-normal leading-[1.1] w-3/4 max-w-[1080px] whitespace-pre-line"
+          className="text-[20px] md:text-[32px] font-normal leading-[1.1] w-3/4 max-w-[1080px] whitespace-pre-line"
           style={{ color: 'var(--color-hero-subtitle)' }}
         >
           FitForMe, a Dutch supplements company, acquired Baricol to enter the Nordic market. Rather than growing organically, they bought a company that had built a loyal user base through its app. Baribuddy was cited as a central reason the acquisition made strategic sense.{'\n\n'}The app had grown from roughly 200 to 50 000 active users. I continued as sole designer post-acquisition, brought in for improvements as the product matured.
