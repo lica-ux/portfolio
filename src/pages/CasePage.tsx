@@ -47,10 +47,10 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
           />
         </div>
         <p
-          className="relative text-[20px] md:text-[32px] font-normal leading-[1.1] w-3/4 max-w-[1080px]"
+          className="relative text-[20px] md:text-[32px] font-normal leading-[1.1] w-3/4 max-w-[1080px] whitespace-pre-line"
           style={{ color: 'var(--color-hero-subtitle)' }}
         >
-          Baricol makes supplements for people who've had gastric surgery — a group with very specific, ongoing health needs. They already had an app called Baribuddy, but it wasn't working. Users downloaded it, opened it a few times, and disappeared. Baricol knew something was wrong. They didn't know what.
+          Baricol makes supplements for people who've had gastric bypass surgery. After the procedure, the body absorbs certain vitamins and minerals significantly worse, meaning patients need to supplement every day for the rest of their lives.{'\n'}They had an app, but it had started life as a general journal with no daily behaviour to anchor it. Users downloaded it, came back a few times, and disappeared. They came to us to understand why.
         </p>
       </section>
     </main>
