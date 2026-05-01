@@ -25,7 +25,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
       <CaseHero imageSrc={placeholderImage} imageAlt="" />
       <CaseIntro
         title="Baribuddy"
-        tags={['UX', 'UI']}
+        tags={['Health', 'Behaviour design']}
         headline={"Turning around a declining health app.\nFrom 200 to 50 000 users and a company acquisition"}
         metaLines={[
           'Client: Baricol / FitForMe',
