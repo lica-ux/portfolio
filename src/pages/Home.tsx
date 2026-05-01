@@ -39,7 +39,7 @@ export default function Home() {
           <img
             src={statsImage}
             alt="Lisa Caspersson working at her desk"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-[center_20%]"
           />
         </div>
       </section>
