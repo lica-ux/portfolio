@@ -97,6 +97,9 @@
   html {
     scroll-snap-type: y mandatory;
   }
+  html.no-snap {
+    scroll-snap-type: none;
+  }
 }
 
 /* Base */

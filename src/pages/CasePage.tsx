@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import ChevronLeft from '../icons/chevron_left.svg?react'
 import CaseHero from '../components/CaseHero'
@@ -15,6 +16,11 @@ interface CasePageProps {
 }
 
 export default function CasePage({ slug }: CasePageProps) {
+  useEffect(() => {
+    document.documentElement.classList.add('no-snap')
+    return () => document.documentElement.classList.remove('no-snap')
+  }, [])
+
   return (
     <>
     <main className="min-h-[100svh] px-4 md:px-10 pt-6 flex flex-col">
