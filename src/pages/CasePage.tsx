@@ -36,7 +36,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
       />
 
       <section
-        className="relative flex flex-col justify-center gap-6 py-24 md:py-48 -mx-4 md:-mx-10 px-4 md:px-10"
+        className="relative flex flex-col justify-center gap-6 py-24 md:py-48 -mx-4 md:-mx-10 px-4 md:px-10 min-h-[100svh]"
         style={{ backgroundColor: '#FFE8DB' }}
       >
         <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
