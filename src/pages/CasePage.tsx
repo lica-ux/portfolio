@@ -97,13 +97,13 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
             className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]"
             style={{ color: 'var(--color-nav-text)' }}
           >
-            Starting with the people who left
+            Designing for the actual user, not the clinical default
           </h2>
           <p
             className="text-base md:text-[20px] leading-[1.4] whitespace-pre-line"
             style={{ color: 'var(--color-hero-subtitle)' }}
           >
-            The most useful conversations were with users who had already stopped. What came back wasn't a list of missing features. It was a motivation problem. There was no compelling reason to open the app tomorrow if you'd already opened it today.{'\n\n'}The real design challenge wasn't functionality. It was making a daily health behaviour feel worth maintaining.
+            The core audience was women over 40 recovering from a major medical procedure. The obvious direction would have been clean and clinical. I went the other way — warm, inviting, and built for someone who deserved an experience that felt genuinely on their side. User feedback confirmed it landed.
           </p>
         </div>
       </section>
@@ -124,13 +124,13 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
             className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]"
             style={{ color: 'var(--color-nav-text)' }}
           >
-            Starting with the people who left
+            Building the habit loop
           </h2>
           <p
             className="text-base md:text-[20px] leading-[1.4] whitespace-pre-line"
             style={{ color: 'var(--color-hero-subtitle)' }}
           >
-            The most useful conversations were with users who had already stopped. What came back wasn't a list of missing features. It was a motivation problem. There was no compelling reason to open the app tomorrow if you'd already opened it today.{'\n\n'}The real design challenge wasn't functionality. It was making a daily health behaviour feel worth maintaining.
+            I designed the product around one non-negotiable behaviour: logging supplements daily. Completing that action unlocks relevant content. Missing it triggers a gentle end-of-day reminder.{'\n\n'}On top of that I added weight tracking, a post-op food journey with doctor-approved recipes, and social challenges tied to goals users already had from their doctors. The challenges addressed something users told us directly: they wanted to feel less alone in this.
           </p>
         </div>
       </section>
