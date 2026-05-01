@@ -54,7 +54,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
         </p>
       </section>
 
-      <section className="flex flex-col md:flex-row -mx-4 md:-mx-10 p-4 md:p-10 pb-8 md:min-h-[100svh] gap-6 md:gap-10">
+      <section className="flex flex-col md:flex-row -mx-4 md:-mx-10 p-4 md:p-10 pb-12 md:min-h-[100svh] gap-6 md:gap-10">
         {/* Image */}
         <div className="relative w-full h-[56vw] md:h-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
           <img
@@ -65,7 +65,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
         </div>
 
         {/* Text */}
-        <div className="mt-8 md:mt-0 md:flex-1 flex flex-col gap-4 md:pt-0 md:justify-center">
+        <div className="mt-6 md:mt-0 md:flex-1 flex flex-col gap-4 md:pt-0 md:justify-center">
           <h2
             className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]"
             style={{ color: 'var(--color-nav-text)' }}
@@ -81,7 +81,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row-reverse -mx-4 md:-mx-10 p-4 md:p-10 pb-8 md:min-h-[100svh] gap-6 md:gap-10">
+      <section className="flex flex-col md:flex-row-reverse -mx-4 md:-mx-10 p-4 md:p-10 pb-12 md:min-h-[100svh] gap-6 md:gap-10">
         {/* Image */}
         <div className="relative w-full h-[56vw] md:h-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
           <img
@@ -92,7 +92,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
         </div>
 
         {/* Text */}
-        <div className="mt-8 md:mt-0 md:flex-1 flex flex-col gap-4 md:pt-0 md:justify-center">
+        <div className="mt-6 md:mt-0 md:flex-1 flex flex-col gap-4 md:pt-0 md:justify-center">
           <h2
             className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]"
             style={{ color: 'var(--color-nav-text)' }}
@@ -108,7 +108,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row -mx-4 md:-mx-10 p-4 md:p-10 pb-8 md:min-h-[100svh] gap-6 md:gap-10">
+      <section className="flex flex-col md:flex-row -mx-4 md:-mx-10 p-4 md:p-10 pb-12 md:min-h-[100svh] gap-6 md:gap-10">
         {/* Image */}
         <div className="relative w-full h-[56vw] md:h-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
           <img
@@ -119,7 +119,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
         </div>
 
         {/* Text */}
-        <div className="mt-8 md:mt-0 md:flex-1 flex flex-col gap-4 md:pt-0 md:justify-center">
+        <div className="mt-6 md:mt-0 md:flex-1 flex flex-col gap-4 md:pt-0 md:justify-center">
           <h2
             className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]"
             style={{ color: 'var(--color-nav-text)' }}
