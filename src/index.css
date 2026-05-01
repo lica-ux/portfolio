@@ -84,8 +84,8 @@
 }
 
 @keyframes revealImage {
-  from { opacity: 0; filter: blur(12px); }
-  to   { opacity: 1; filter: blur(0px); }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 .img-reveal {
