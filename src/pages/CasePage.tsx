@@ -4,6 +4,7 @@ import CaseHero from '../components/CaseHero'
 import CaseIntro from '../components/CaseIntro'
 import RevealImage from '../components/RevealImage'
 import OtherProjects from '../components/OtherProjects'
+import Footer from '../components/Footer'
 import gradientImage from '../images/gradient.webp'
 
 // TODO: replace with local .webp images per case
@@ -15,6 +16,7 @@ interface CasePageProps {
 
 export default function CasePage({ slug }: CasePageProps) {
   return (
+    <>
     <main className="min-h-[100svh] px-4 md:px-10 pt-6 flex flex-col">
       <Link
         to="/"
@@ -158,5 +160,7 @@ export default function CasePage({ slug }: CasePageProps) {
 
       <OtherProjects currentSlug={slug} />
     </main>
+    <Footer />
+    </>
   )
 }
