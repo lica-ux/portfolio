@@ -156,7 +156,7 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
             <div
               key={stat.label}
               ref={el => { mobileRefs.current[i] = el }}
-              className="px-6 py-12 border-b last:border-b-0"
+              className="px-6 border-b last:border-b-0 flex items-center min-h-[60vh]"
               style={{ borderColor: 'var(--color-border)' }}
             >
               <div
