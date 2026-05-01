@@ -45,7 +45,7 @@ export default function SelectedWork({ projects = defaultProjects }: SelectedWor
         </h2>
       </div>
 
-      <div className="flex flex-wrap gap-12 md:gap-8 items-stretch w-full flex-1">
+      <div className="flex flex-wrap gap-14 md:gap-8 items-stretch w-full flex-1">
         {projects.map((project) => (
           <Link
             key={project.title}
