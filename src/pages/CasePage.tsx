@@ -54,7 +54,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
         </p>
       </section>
 
-      <section className="flex flex-col md:flex-row -mx-4 md:-mx-10 p-4 md:p-10 gap-6 md:gap-10 min-h-[100svh]">
+      <section className="flex flex-col md:flex-row -mx-4 md:-mx-10 p-4 md:p-10 pb-8 md:min-h-[100svh] gap-6 md:gap-10">
         {/* Image */}
         <div className="relative w-full h-[56vw] md:h-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
           <img
@@ -81,7 +81,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row-reverse -mx-4 md:-mx-10 p-4 md:p-10 gap-6 md:gap-10 min-h-[100svh]">
+      <section className="flex flex-col md:flex-row-reverse -mx-4 md:-mx-10 p-4 md:p-10 pb-8 md:min-h-[100svh] gap-6 md:gap-10">
         {/* Image */}
         <div className="relative w-full h-[56vw] md:h-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
           <img
@@ -108,7 +108,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row -mx-4 md:-mx-10 p-4 md:p-10 gap-6 md:gap-10 min-h-[100svh]">
+      <section className="flex flex-col md:flex-row -mx-4 md:-mx-10 p-4 md:p-10 pb-8 md:min-h-[100svh] gap-6 md:gap-10">
         {/* Image */}
         <div className="relative w-full h-[56vw] md:h-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
           <img
