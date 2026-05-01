@@ -14,9 +14,9 @@ export default function CaseIntro({ title, tags, headline, metaLines }: CaseIntr
           {tags.map((tag) => (
             <span
               key={tag}
-              className="inline-flex items-center justify-center px-2 py-2 rounded-full border text-[14px] font-medium lowercase tracking-[-0.02em]"
+              className="inline-flex items-center justify-center px-2 py-[6px] rounded-full border text-[14px] font-medium lowercase tracking-[-0.02em]"
               style={{
-                borderColor: 'var(--color-nav-text)',
+                borderColor: 'var(--color-hero-subtitle)',
                 color: 'var(--color-nav-text)',
               }}
             >
