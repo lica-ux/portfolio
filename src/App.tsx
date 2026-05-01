@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import Nav from './components/Nav'
 import Home from './pages/Home'
 import Components from './pages/Components'
@@ -8,6 +9,7 @@ import CasePage from './pages/CasePage'
 
 function Layout() {
   const { pathname } = useLocation()
+  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
   const hideNav = pathname.startsWith('/work/')
   return (
     <>
