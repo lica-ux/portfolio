@@ -46,12 +46,12 @@ export default function SelectedWork({ projects = defaultProjects }: SelectedWor
         </h2>
       </div>
 
-      <div className="flex flex-wrap gap-14 md:gap-8 items-stretch w-full flex-1">
+      <div className="flex flex-col gap-14 md:flex-row md:gap-8 items-stretch w-full flex-1">
         {projects.map((project, index) => (
           <Link
             key={project.title}
             to={`/work/${project.slug}`}
-            className="flex flex-col gap-6 items-start flex-1 min-w-[240px] no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-nav-text)]"
+            className="flex flex-col gap-6 items-start w-full md:flex-1 no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-nav-text)]"
           >
             <div className="overflow-hidden relative w-full rounded-[2px] aspect-[3/4] md:aspect-auto md:flex-1">
               <RevealImage
