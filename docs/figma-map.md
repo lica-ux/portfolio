@@ -19,6 +19,7 @@
 | Section 4 / SelectedWork | 5885-4596 | src/components/SelectedWork/ | 2026-04-28 | "Selected work" portfolio section with 3 project cards |
 | Hero / CaseHero | 5886-4798 | src/components/CaseHero/ | 2026-04-29 | Full-width hero image for case study pages. Image placeholder — replace with local .webp |
 | Intro / CaseIntro | 5887-4833 | src/components/CaseIntro/ | 2026-04-29 | Case study intro: title, tags, headline, meta lines |
+| OtherProjects | 5890-4903 | src/components/OtherProjects/ | 2026-05-01 | Bottom-of-case section showing the other 2 major projects |
 
 ---
 

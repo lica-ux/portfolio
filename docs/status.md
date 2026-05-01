@@ -12,6 +12,16 @@ LAST UPDATED: 2026-05-01
 
 NONE
 
+## Completed this session (2026-05-01, session 3)
+
+- **OtherProjects section** — `src/components/OtherProjects/` (Figma node 5890-4903)
+  - New bottom-of-case section showing the other 2 major projects (Baribuddy / Booky / Sejfa)
+  - Dynamic filtering: excludes the current slug, always shows the other 2
+  - Layout: heading left + 2 cards right (flex-wrap) — cards use same portrait+title+description style as SelectedWork
+  - Added to `CasePage.tsx` as last section; `slug` prop was previously unused (`_slug`) — now wired through
+  - Images: reusing same Figma CDN URLs as SelectedWork (TODO: replace with local .webp)
+  - WCAG: semantic `<section aria-label>`, keyboard-accessible links, focus-visible rings
+
 ## Completed this session (2026-05-01, session 2)
 
 - **RevealImage rewrite** — ersatt CSS animation + dynamiska klasser med React state + CSS `transition`; mer tillförlitligt i produktionsbyggen; `delay` prop använder nu `transition-delay`; tester uppdaterade (8 st, alla gröna); `img-reveal`/`img-revealed` CSS-klasser borttagna från `index.css`

@@ -3,6 +3,7 @@ import ChevronLeft from '../icons/chevron_left.svg?react'
 import CaseHero from '../components/CaseHero'
 import CaseIntro from '../components/CaseIntro'
 import RevealImage from '../components/RevealImage'
+import OtherProjects from '../components/OtherProjects'
 import gradientImage from '../images/gradient.webp'
 
 // TODO: replace with local .webp images per case
@@ -12,7 +13,7 @@ interface CasePageProps {
   slug: string
 }
 
-export default function CasePage({ slug: _slug }: CasePageProps) {
+export default function CasePage({ slug }: CasePageProps) {
   return (
     <main className="min-h-[100svh] px-4 md:px-10 pt-6 flex flex-col">
       <Link
@@ -154,6 +155,8 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
           FitForMe, a Dutch supplements company, acquired Baricol to enter the Nordic market. Rather than growing organically, they bought a company that had built a loyal user base through its app. Baribuddy was cited as a central reason the acquisition made strategic sense.{'\n\n'}The app had grown from roughly 200 to 50 000 active users. I continued as sole designer post-acquisition, brought in for improvements as the product matured.
         </p>
       </section>
+
+      <OtherProjects currentSlug={slug} />
     </main>
   )
 }
