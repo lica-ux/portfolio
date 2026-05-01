@@ -35,7 +35,7 @@ export default function Home() {
             I turn complex problems into real products.
           </h1>
         </div>
-        <div className="shrink-0 h-[70vw] w-full md:flex-1 md:h-auto md:w-auto md:min-w-0 relative rounded-[2px] overflow-hidden">
+        <div className="flex-1 w-full md:flex-1 md:h-auto md:w-auto md:min-w-0 relative rounded-[2px] overflow-hidden">
           <img
             src={statsImage}
             alt="Lisa Caspersson working at her desk"
