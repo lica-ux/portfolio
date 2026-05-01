@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Nav from './components/Nav'
 import Home from './pages/Home'
 import Components from './pages/Components'
@@ -6,10 +6,12 @@ import Tokens from './pages/Tokens'
 import About from './pages/About'
 import CasePage from './pages/CasePage'
 
-function App() {
+function Layout() {
+  const { pathname } = useLocation()
+  const hideNav = pathname.startsWith('/work/')
   return (
-    <BrowserRouter>
-      <Nav />
+    <>
+      {!hideNav && <Nav />}
       <Routes>
         <Route path="/"                  element={<Home />} />
         <Route path="/components"        element={<Components />} />
@@ -19,6 +21,14 @@ function App() {
         <Route path="/work/booky"        element={<CasePage slug="booky" />} />
         <Route path="/work/sejfa"        element={<CasePage slug="sejfa" />} />
       </Routes>
+    </>
+  )
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Layout />
     </BrowserRouter>
   )
 }
