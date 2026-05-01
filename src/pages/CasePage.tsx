@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import ChevronLeft from '../icons/chevron_left.svg?react'
 import CaseHero from '../components/CaseHero'
 import CaseIntro from '../components/CaseIntro'
+import RevealImage from '../components/RevealImage'
 import gradientImage from '../images/gradient.webp'
 
 // TODO: replace with local .webp images per case
@@ -57,7 +58,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
       <section className="flex flex-col md:flex-row -mx-4 md:-mx-10 p-4 md:p-10 pb-12 md:min-h-[100svh] gap-6 md:gap-10">
         {/* Image */}
         <div className="relative w-full h-[56vw] md:h-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
-          <img
+          <RevealImage
             src={placeholderImage}
             alt=""
             className="absolute inset-0 w-full h-full object-cover"
@@ -84,7 +85,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
       <section className="flex flex-col md:flex-row-reverse -mx-4 md:-mx-10 p-4 md:p-10 pb-12 md:min-h-[100svh] gap-6 md:gap-10">
         {/* Image */}
         <div className="relative w-full h-[56vw] md:h-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
-          <img
+          <RevealImage
             src={placeholderImage}
             alt=""
             className="absolute inset-0 w-full h-full object-cover"
@@ -111,7 +112,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
       <section className="flex flex-col md:flex-row -mx-4 md:-mx-10 p-4 md:p-10 pb-12 md:min-h-[100svh] gap-6 md:gap-10">
         {/* Image */}
         <div className="relative w-full h-[56vw] md:h-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
-          <img
+          <RevealImage
             src={placeholderImage}
             alt=""
             className="absolute inset-0 w-full h-full object-cover"
