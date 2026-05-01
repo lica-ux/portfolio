@@ -161,7 +161,7 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
           className="relative text-[20px] md:text-[32px] font-normal leading-[1.1] w-3/4 max-w-[1080px] whitespace-pre-line"
           style={{ color: 'var(--color-hero-subtitle)' }}
         >
-          Baricol makes supplements for people who've had gastric bypass surgery. After the procedure, the body absorbs certain vitamins and minerals significantly worse, meaning patients need to supplement every day for the rest of their lives.{'\n\n'}They had an app, but it had started life as a general journal with no daily behaviour to anchor it. Users downloaded it, came back a few times, and disappeared. They came to us to understand why.
+          FitForMe, a Dutch supplements company, acquired Baricol to enter the Nordic market. Rather than growing organically, they bought a company that had built a loyal user base through its app. Baribuddy was cited as a central reason the acquisition made strategic sense.{'\n\n'}The app had grown from roughly 200 to 50 000 active users. I continued as sole designer post-acquisition, brought in for improvements as the product matured.
         </p>
       </section>
     </main>
