@@ -53,6 +53,33 @@ export default function CasePage({ slug: _slug }: CasePageProps) {
           Baricol makes supplements for people who've had gastric bypass surgery. After the procedure, the body absorbs certain vitamins and minerals significantly worse, meaning patients need to supplement every day for the rest of their lives.{'\n'}They had an app, but it had started life as a general journal with no daily behaviour to anchor it. Users downloaded it, came back a few times, and disappeared. They came to us to understand why.
         </p>
       </section>
+
+      <section className="flex flex-col md:flex-row -mx-4 md:-mx-10 p-4 md:p-10 gap-6 md:gap-10">
+        {/* Image */}
+        <div className="relative w-full h-[56vw] md:h-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
+          <img
+            src={placeholderImage}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Text */}
+        <div className="-mt-12 md:mt-0 md:flex-1 flex flex-col gap-4 pt-4 md:pt-0">
+          <h2
+            className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]"
+            style={{ color: 'var(--color-nav-text)' }}
+          >
+            Starting with the people who left
+          </h2>
+          <p
+            className="text-base md:text-[20px] leading-[1.4] whitespace-pre-line"
+            style={{ color: 'var(--color-hero-subtitle)' }}
+          >
+            The most useful conversations were with users who had already stopped. What came back wasn't a list of missing features. It was a motivation problem. There was no compelling reason to open the app tomorrow if you'd already opened it today.{'\n\n'}The real design challenge wasn't functionality. It was making a daily health behaviour feel worth maintaining.
+          </p>
+        </div>
+      </section>
     </main>
   )
 }
