@@ -18,7 +18,7 @@ export default function Home() {
         id="hero"
         className="md:snap-start md:snap-always flex flex-col md:flex-row gap-6 md:gap-8 pt-10 md:pt-[104px] pb-32 md:pb-[104px] px-4 md:px-10 min-h-[100svh] md:min-h-[calc(100svh+64px)]"
       >
-        <div className="flex flex-col gap-2 md:flex-1 min-w-0 pb-6 md:justify-end">
+        <div className="flex flex-col gap-2 md:flex-1 min-w-0 md:pb-6 md:justify-end">
           <p
             className="text-[18px] md:text-[40px] leading-[1.1] font-normal"
             style={{ color: 'var(--color-hero-subtitle)' }}
