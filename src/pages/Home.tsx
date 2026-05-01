@@ -16,9 +16,9 @@ export default function Home() {
       {/* Hero */}
       <section
         id="hero"
-        className="snap-start snap-always flex flex-col md:flex-row gap-8 pt-[104px] pb-[104px] px-4 md:px-10 min-h-[calc(100svh+64px)]"
+        className="snap-start snap-always flex flex-col md:flex-row gap-8 pt-10 md:pt-[104px] pb-32 md:pb-[104px] px-4 md:px-10 md:min-h-[calc(100svh+64px)]"
       >
-        <div className="flex flex-col justify-end gap-2 flex-1 min-w-0 pb-6">
+        <div className="flex flex-col gap-2 md:flex-1 min-w-0 pb-6 md:justify-end">
           <p
             className="text-[18px] md:text-[40px] leading-[1.1] font-normal"
             style={{ color: 'var(--color-hero-subtitle)' }}
@@ -35,7 +35,7 @@ export default function Home() {
             I turn complex problems into real products.
           </h1>
         </div>
-        <div className="shrink-0 h-64 w-full md:flex-1 md:h-auto md:w-auto md:min-w-0 relative rounded-[2px] overflow-hidden">
+        <div className="shrink-0 h-[70vw] w-full md:flex-1 md:h-auto md:w-auto md:min-w-0 relative rounded-[2px] overflow-hidden">
           <img
             src={statsImage}
             alt="Lisa Caspersson working at her desk"
