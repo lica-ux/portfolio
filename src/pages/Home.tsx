@@ -2,6 +2,7 @@ import StatsSection from '../components/StatsSection/StatsSection'
 import SelectedWork from '../components/SelectedWork'
 import MoreWork from '../components/MoreWork'
 import Footer from '../components/Footer'
+import RevealImage from '../components/RevealImage'
 import statsImage from '../images/DSC03053-Enhanced-NR (1).webp'
 import gradientImage from '../images/gradient.webp'
 
@@ -36,7 +37,7 @@ export default function Home() {
           </h1>
         </div>
         <div className="flex-1 w-full md:flex-1 md:h-auto md:w-auto md:min-w-0 relative rounded-[2px] overflow-hidden">
-          <img
+          <RevealImage
             src={statsImage}
             alt="Lisa Caspersson working at her desk"
             className="absolute inset-0 w-full h-full object-cover object-[center_20%]"
