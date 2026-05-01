@@ -12,6 +12,12 @@ LAST UPDATED: 2026-05-01
 
 NONE
 
+## Completed this session (2026-05-01, session 5)
+
+- **CasePage: full snap-scroll implementation** — alla sektioner i CasePage har nu `snap-start snap-always`; sektionerna bröts ut ur `<main>` till fragment-siblings så att varje `<section>` är en top-level snap-target; `<main>` innehåller nu bara back-link + CaseHero + CaseIntro
+- **OtherProjects: snap + padding-fix** — `snap-start snap-always` lagt till; negativa marginaler borttagna (sektionen är nu utanför `<main>:s` padding); egna `px-4 md:px-10` padding tillagda
+- **Verifierat i browser** — OtherProjects visar Booky + Sejfa med bilder; Footer nåbar; snap fungerar igenom hela sidan utan trapping
+
 ## Completed this session (2026-05-01, session 4)
 
 - **Footer: Projects column** — ny nav-kolumn med Baribuddy, Booky, Sejfa och "More work" (→ `/#more-work`); alla tre kolumner lika breda via `min-w-0`; "Lisa Caspersson" max 40% bred
