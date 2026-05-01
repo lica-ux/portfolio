@@ -28,7 +28,7 @@ export default function CaseIntro({ title, tags, headline, metaLines }: CaseIntr
 
       <div className="flex flex-col md:flex-row gap-8 pb-20 md:pb-52">
         <p
-          className="md:flex-1 font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em] md:max-w-[640px]"
+          className="md:flex-1 font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em] md:max-w-[640px] whitespace-pre-line"
           style={{ color: 'var(--color-nav-text)' }}
         >
           {headline}
