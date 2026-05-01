@@ -21,7 +21,7 @@ export default function RevealImage({ delay = 0, className = '', style, ...props
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            el.classList.add('img-revealed')
+            requestAnimationFrame(() => el.classList.add('img-revealed'))
             observer.disconnect()
           }
         })
