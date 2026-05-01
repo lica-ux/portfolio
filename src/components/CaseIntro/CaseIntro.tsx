@@ -34,7 +34,7 @@ export default function CaseIntro({ title, tags, headline, metaLines }: CaseIntr
           {headline}
         </p>
         <div
-          className="text-base md:text-[24px] leading-[1.24] md:flex-1"
+          className="flex flex-col gap-1 text-base md:text-[24px] leading-[1.24] md:flex-1"
           style={{ color: 'var(--color-hero-subtitle)' }}
         >
           {metaLines.map((line, i) => (
