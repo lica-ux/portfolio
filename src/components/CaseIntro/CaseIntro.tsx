@@ -3,14 +3,14 @@ import type { CaseIntroProps } from './CaseIntro.types'
 export default function CaseIntro({ title, tags, headline, metaLines }: CaseIntroProps) {
   return (
     <div className="flex flex-col w-full">
-      <div className="flex items-start justify-between gap-4 py-10 md:py-14">
+      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-4 py-10 md:py-14">
         <p
           className="font-display font-normal leading-[0.94] text-[48px] md:text-[104px]"
           style={{ color: 'var(--color-nav-text)' }}
         >
           {title}
         </p>
-        <div className="flex gap-1 items-start pt-2 shrink-0">
+        <div className="flex gap-1 items-start md:pt-2 shrink-0">
           {tags.map((tag) => (
             <span
               key={tag}
