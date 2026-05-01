@@ -98,17 +98,6 @@
   }
 }
 
-/* Hero height — uses JS-set --vh for Safari compatibility */
-#hero {
-  min-height: calc(var(--vh, 1vh) * 100);
-}
-
-@media (min-width: 768px) {
-  #hero {
-    min-height: calc(100svh + 64px);
-  }
-}
-
 /* Base */
 
 body {
