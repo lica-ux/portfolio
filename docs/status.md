@@ -14,6 +14,8 @@ NONE
 
 ## Completed this session (2026-05-01)
 
+- **Image reveal animation** — `RevealImage` komponent i `src/components/RevealImage/`; scroll-triggrad blur+fade (0.8s) via IntersectionObserver (threshold 15%); stagger på SelectedWork (0/150/300ms); `prefers-reduced-motion` hanterat i både CSS och JS; applicerat på: hero, StatsSection (desktop+mobil), CaseHero, SelectedWork, CasePage (3 content-sektioner); dekorativa bakgrunder (`gradient.webp`) lämnade orörda; 8 tester, alla gröna
+
 - **Nav dold på case-sidor** — `src/App.tsx` använder `useLocation` + `Layout`-komponent; nav visas ej när path börjar med `/work/`
 - **CaseIntro layout** — headline + meta sida vid sida på md+, staplade på mobil (`flex-col md:flex-row`); pillrar uppdaterade (py-[6px], border rgba(73,17,41,0.3))
 - **Baribuddy-innehåll** — headline, tags (Health / Behaviour design), metaLines och peach-sektion uppdaterade med faktiskt innehåll
