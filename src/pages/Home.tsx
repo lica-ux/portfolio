@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import StatsSection from '../components/StatsSection/StatsSection'
 import SelectedWork from '../components/SelectedWork'
 import MoreWork from '../components/MoreWork'
@@ -10,13 +11,22 @@ const heroImage = 'https://www.figma.com/api/mcp/asset/7b5bc51c-a56f-4c04-99d2-b
 const aboutTexture = 'https://www.figma.com/api/mcp/asset/becf3c32-1203-42b8-8ad0-873d63b0d5a6'
 
 export default function Home() {
+  useEffect(() => {
+    const setVh = () => {
+      document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`)
+    }
+    setVh()
+    window.addEventListener('resize', setVh)
+    return () => window.removeEventListener('resize', setVh)
+  }, [])
+
   return (
     <main>
 
       {/* Hero */}
       <section
         id="hero"
-        className="md:snap-start md:snap-always flex flex-col md:flex-row gap-6 md:gap-8 pt-16 md:pt-[104px] pb-32 md:pb-[104px] px-4 md:px-10 min-h-[100dvh] md:min-h-[calc(100svh+64px)]"
+        className="md:snap-start md:snap-always flex flex-col md:flex-row gap-6 md:gap-8 pt-16 md:pt-[104px] pb-32 md:pb-[104px] px-4 md:px-10"
       >
         <div className="flex flex-col gap-2 md:flex-1 min-w-0 md:pb-6 md:justify-end">
           <p
