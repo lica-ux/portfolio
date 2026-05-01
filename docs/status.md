@@ -4,13 +4,20 @@
 
 # Claude updates this at the end of every session.
 
-LAST UPDATED: 2026-04-29
+LAST UPDATED: 2026-05-01
 
 ---
 
 ## In progress
 
 NONE
+
+## Completed this session (2026-05-01)
+
+- **Nav dold på case-sidor** — `src/App.tsx` använder `useLocation` + `Layout`-komponent; nav visas ej när path börjar med `/work/`
+- **CaseIntro layout** — headline + meta sida vid sida på md+, staplade på mobil (`flex-col md:flex-row`); pillrar uppdaterade (py-[6px], border rgba(73,17,41,0.3))
+- **Baribuddy-innehåll** — headline, tags (Health / Behaviour design), metaLines och peach-sektion uppdaterade med faktiskt innehåll
+- **Tre content-sektioner på CasePage** — bild+text-layout (`flex-row` / `flex-row-reverse`) med `min-h-[100svh]`, 40px/16px padding; titlar: "Starting with the people who left", "Designing for the actual user, not the clinical default", "Building the habit loop"
 
 ## Completed this session (2026-04-29)
 
