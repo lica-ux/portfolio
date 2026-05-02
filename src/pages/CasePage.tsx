@@ -6,9 +6,14 @@ import RevealImage from '../components/RevealImage'
 import OtherProjects from '../components/OtherProjects'
 import Footer from '../components/Footer'
 import gradientImage from '../images/gradient.webp'
+import sejfaMock2 from '../images/Sejfa_mock2.webp'
 
 // TODO: replace with local .webp images per case
 const placeholderImage = 'https://www.figma.com/api/mcp/asset/71cd43ec-3dfb-420e-90fd-11aedaa8f51c'
+
+const heroImages: Record<string, string> = {
+  sejfa: sejfaMock2,
+}
 
 interface CasePageProps {
   slug: string
@@ -26,7 +31,7 @@ export default function CasePage({ slug }: CasePageProps) {
         <ChevronLeft width={20} height={20} className="[&_path]:fill-[currentColor]" aria-hidden="true" />
         Home
       </Link>
-      <CaseHero imageSrc={placeholderImage} imageAlt="" />
+      <CaseHero imageSrc={heroImages[slug] ?? placeholderImage} imageAlt="" />
       <CaseIntro
         title="Baribuddy"
         tags={['Health', 'Behaviour design']}
