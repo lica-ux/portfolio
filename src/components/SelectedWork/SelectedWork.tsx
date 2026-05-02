@@ -18,7 +18,7 @@ const defaultProjects: Project[] = [
   },
   {
     title: 'Booky',
-    description: 'More than a redesign. We solved the wrong problem. - A problem redefinition',
+    description: 'Not a redesign, but a problem redefinition',
     imageSrc: imgBooky,
     imageAlt: 'Booky app screenshot',
     slug: 'booky',
