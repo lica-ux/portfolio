@@ -52,15 +52,18 @@ export default function SelectedWork({ projects = defaultProjects }: SelectedWor
           <Link
             key={project.title}
             to={`/work/${project.slug}`}
-            className="flex flex-col gap-6 items-start w-full md:flex-1 no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-nav-text)]"
+            className="group flex flex-col gap-6 items-start w-full md:flex-1 no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-nav-text)]"
           >
             <div className="overflow-hidden relative w-full rounded-[2px] aspect-[3/4] md:aspect-auto md:flex-1">
-              <RevealImage
-                src={project.imageSrc}
-                alt={project.imageAlt}
-                className="absolute inset-0 w-full h-full object-cover"
-                delay={index * 150}
-              />
+              <div className="absolute inset-0 transition-transform duration-300 ease-out group-hover:scale-105">
+                <RevealImage
+                  src={project.imageSrc}
+                  alt={project.imageAlt}
+                  className="w-full h-full object-cover"
+                  delay={index * 150}
+                />
+              </div>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out bg-[rgba(73,17,41,0.24)]" />
             </div>
             <div className="flex flex-col gap-1.5 items-start px-1 w-full">
               <p
