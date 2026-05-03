@@ -5,4 +5,5 @@ export interface StatsSectionProps {
   imageSrc: string
   imageAlt: string
   id?: string
+  variant?: 'image' | 'number'
 }

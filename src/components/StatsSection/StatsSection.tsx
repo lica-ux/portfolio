@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { StatsSectionProps, StatState } from './StatsSection.types'
 import RevealImage from '../RevealImage'
 
@@ -9,7 +9,7 @@ const STATS = [
   { value: '2', label: 'design awards' },
 ]
 
-export default function StatsSection({ imageSrc, imageAlt, id = 'stats' }: StatsSectionProps) {
+export default function StatsSection({ imageSrc, imageAlt, id = 'stats', variant = 'image' }: StatsSectionProps) {
   const [desktopStates, setDesktopStates] = useState<StatState[]>(
     STATS.map(() => 'below')
   )
@@ -19,11 +19,18 @@ export default function StatsSection({ imageSrc, imageAlt, id = 'stats' }: Stats
   const desktopRefs = useRef<(HTMLDivElement | null)[]>([])
   const mobileRefs = useRef<(HTMLDivElement | null)[]>([])
 
+  // Which stat to display on the left in number variant
+  const displayIndex = useMemo(() => {
+    const visibleIdx = desktopStates.findIndex(s => s === 'visible')
+    if (visibleIdx >= 0) return visibleIdx
+    // Fall back to the last stat scrolled past
+    for (let i = desktopStates.length - 1; i >= 0; i--) {
+      if (desktopStates[i] === 'above') return i
+    }
+    return 0
+  }, [desktopStates])
+
   useEffect(() => {
-    // Scroll-based detection for desktop: trigger based on text center position.
-    // Text is vertically centered in each 100svh div, so textCenter = rect.top + rect.height/2.
-    // Fade in when textCenter crosses 70%vh (30% from bottom).
-    // Fade out when textCenter crosses 30%vh (30% from top).
     const checkDesktopPositions = () => {
       const vh = window.innerHeight
       desktopRefs.current.forEach((el, i) => {
@@ -88,15 +95,35 @@ export default function StatsSection({ imageSrc, imageAlt, id = 'stats' }: Stats
         className="hidden md:flex"
         style={{ minHeight: `${STATS.length * 100}svh` }}
       >
-        {/* Left: image */}
+        {/* Left: sticky image or number */}
         <div className="w-1/2 sticky top-0 p-4 md:p-10" style={{ height: '100svh' }}>
-          <div className="relative w-full h-full overflow-hidden rounded-[2px]">
-            <RevealImage
-              src={imageSrc}
-              alt={imageAlt}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </div>
+          {variant === 'image' ? (
+            <div className="relative w-full h-full overflow-hidden rounded-[2px]">
+              <RevealImage
+                src={imageSrc}
+                alt={imageAlt}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+          ) : (
+            <div className="relative w-full h-full flex items-center justify-end">
+              {STATS.map((stat, i) => (
+                <span
+                  key={stat.label}
+                  className="absolute font-semibold leading-none tracking-[-0.03em]"
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    color: 'var(--color-nav-text)',
+                    fontSize: '20vw',
+                    opacity: displayIndex === i ? 1 : 0,
+                    transition: 'opacity 0.4s ease',
+                  }}
+                >
+                  {stat.value}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Right: scroll phases */}
@@ -125,15 +152,22 @@ export default function StatsSection({ imageSrc, imageAlt, id = 'stats' }: Stats
                       : 'translateY(24px)',
                 }}
               >
+                {variant === 'image' && (
+                  <span
+                    className="font-semibold leading-none tracking-[-0.03em]"
+                    style={{ fontFamily: 'var(--font-display)', color: 'var(--color-nav-text)', fontSize: '160px' }}
+                  >
+                    {stat.value}
+                  </span>
+                )}
                 <span
-                  className="font-semibold leading-none tracking-[-0.03em]"
-                  style={{ fontFamily: 'var(--font-display)', color: 'var(--color-nav-text)', fontSize: '160px' }}
-                >
-                  {stat.value}
-                </span>
-                <span
-                  className="font-medium tracking-[-0.01em] mt-2"
-                  style={{ fontFamily: 'var(--font-display)', color: 'var(--color-hero-subtitle)', fontSize: '28px' }}
+                  className="font-medium tracking-[-0.01em]"
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    color: 'var(--color-hero-subtitle)',
+                    fontSize: variant === 'number' ? '3vw' : '28px',
+                    marginTop: variant === 'image' ? '8px' : 0,
+                  }}
                 >
                   {stat.label}
                 </span>

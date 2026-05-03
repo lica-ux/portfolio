@@ -102,6 +102,7 @@ export default function Home() {
       {/* Stats (copy) */}
       <StatsSection
         id="stats-2"
+        variant="number"
         imageSrc={statsImage}
         imageAlt="Lisa Caspersson working at her desk"
       />
