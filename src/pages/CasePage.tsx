@@ -42,7 +42,8 @@ export default function CasePage({ slug }: CasePageProps) {
           ? [
               'Client: Sejfa',
               'Role: Sole designer',
-              'Year: 2022 - 2023',
+              'Year: 2022 - ongoing',
+              'Result: 10 000 users & 2 design awards',
             ]
           : [
               'Client: Baricol / FitForMe',
