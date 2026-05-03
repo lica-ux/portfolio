@@ -56,8 +56,8 @@ export default function CasePage({ slug }: CasePageProps) {
           : slug === 'booky'
           ? [
               'Client: Booky',
-              'Role: Sole designer',
-              'Year: 2024',
+              'Role: Lead designer',
+              'Year: 2022',
               'Result: 80% of manual work automated',
             ]
           : [
