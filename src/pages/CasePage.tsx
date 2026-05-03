@@ -143,7 +143,10 @@ export default function CasePage({ slug }: CasePageProps) {
         className="text-[20px] md:text-[32px] font-normal leading-[1.1] w-3/4 max-w-[1080px] whitespace-pre-line"
         style={{ color: 'var(--color-hero-subtitle)' }}
       >
-        FitForMe, a Dutch supplements company, acquired Baricol to enter the Nordic market. Rather than growing organically, they bought a company that had built a loyal user base through its app. Baribuddy was cited as a central reason the acquisition made strategic sense.{'\n\n'}The app had grown from roughly 200 to 50 000 active users. I continued as sole designer post-acquisition, brought in for improvements as the product matured.
+        {slug === 'sejfa'
+          ? `Sejfa launched and scaled within its target group. It established itself as a clear alternative in a traditionally conservative category.\n\n• Scaled to ~10,000 customers\n• Won ITC Diamond Award for innovative technology\n• Won Swedish Design Prize, public vote, Best Digital App\n• Ongoing responsibility for UX and UI across app and website since 2022`
+          : `FitForMe, a Dutch supplements company, acquired Baricol to enter the Nordic market. Rather than growing organically, they bought a company that had built a loyal user base through its app. Baribuddy was cited as a central reason the acquisition made strategic sense.\n\nThe app had grown from roughly 200 to 50 000 active users. I continued as sole designer post-acquisition, brought in for improvements as the product matured.`
+        }
       </p>
     </section>
 
