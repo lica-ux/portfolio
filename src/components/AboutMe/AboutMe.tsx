@@ -18,7 +18,7 @@ export default function AboutMe() {
       <div className="flex flex-col md:flex-row gap-10 items-start md:items-center">
         <div className="flex-1 min-w-0 md:pr-10">
           <div
-            className="text-[20px] md:text-[32px] font-normal leading-[1.18] space-y-[1.18em]"
+            className="text-[20px] md:text-[24px] font-normal leading-[1.18] space-y-[1.18em]"
             style={{ color: 'var(--color-hero-subtitle)' }}
           >
             <p>I started in UX, taught myself UI, and never stopped learning.</p>
