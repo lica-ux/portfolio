@@ -4,13 +4,19 @@
 
 # Claude updates this at the end of every session.
 
-LAST UPDATED: 2026-05-03 (session 2)
+LAST UPDATED: 2026-05-03 (session 3)
 
 ---
 
 ## In progress
 
 NONE
+
+## Completed this session (2026-05-03, session 3)
+
+- **Sejfa case page — full content** — CaseIntro: title, tags (home insurance / mobile app / website), headline, metaLines (client Sejfa/Länsförsäkringar, year 2022-ongoing, result 10 000 users & 2 awards); peach section; three content sections (brand within a brand, constraints, AI claims); closing text with bullet points
+- **Booky case page — full content** — CaseIntro: title, tags (website / backoffice / automation), headline, metaLines (result: 80% of manual work automated); peach section; four content sections (reframing the brief, two user types, founder-free flow, font decision); closing text with bullet points
+- All content is slug-conditional — Baribuddy content unchanged
 
 ## Completed this session (2026-05-03, session 2)
 
