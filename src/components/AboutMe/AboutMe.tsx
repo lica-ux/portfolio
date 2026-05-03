@@ -8,36 +8,38 @@ export default function AboutMe() {
   return (
     <>
       {/* Section 1: bio text + portrait */}
-      <section className="snap-start snap-always flex flex-col md:flex-row gap-10 items-start md:items-center px-4 md:px-10 py-16 md:py-24 min-h-[100svh]">
-        <div className="flex-1 min-w-0 md:pr-10 flex flex-col gap-6 md:gap-8">
-          <h2
-            className="text-[32px] md:text-[56px] font-medium leading-[1.1]"
-            style={{ fontFamily: 'var(--font-display)', color: 'var(--color-nav-text)' }}
-          >
-            About me
-          </h2>
-          <div
-            className="text-[20px] md:text-[24px] font-normal leading-[1.18] space-y-[1.18em]"
-            style={{ color: 'var(--color-hero-subtitle)' }}
-          >
-            <p>I started in UX, taught myself UI, and never stopped learning.</p>
-            <p>
-              Over six years, I've grown into leading projects, mentoring designers, and shaping
-              how teams work. I often bridge the gap between design, tech, and business — and step
-              into product roles when needed.
-            </p>
-            <p>
-              I believe great design is about clarity. Colour, structure, and interaction aren't
-              decoration — they're how products communicate.
-            </p>
+      <section className="snap-start snap-always flex flex-col gap-10 px-4 md:px-10 py-16 md:py-24 min-h-[100svh]">
+        <h2
+          className="text-[32px] md:text-[56px] font-medium leading-[1.1]"
+          style={{ fontFamily: 'var(--font-display)', color: 'var(--color-nav-text)' }}
+        >
+          About me
+        </h2>
+        <div className="flex flex-col md:flex-row gap-10 items-start md:items-center">
+          <div className="flex-1 min-w-0 md:pr-10">
+            <div
+              className="text-[20px] md:text-[24px] font-normal leading-[1.18] space-y-[1.18em]"
+              style={{ color: 'var(--color-hero-subtitle)' }}
+            >
+              <p>I started in UX, taught myself UI, and never stopped learning.</p>
+              <p>
+                Over six years, I've grown into leading projects, mentoring designers, and shaping
+                how teams work. I often bridge the gap between design, tech, and business — and step
+                into product roles when needed.
+              </p>
+              <p>
+                I believe great design is about clarity. Colour, structure, and interaction aren't
+                decoration — they're how products communicate.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="w-full md:w-[30vw] shrink-0 aspect-[3/4] relative rounded-[2px] overflow-hidden">
-          <RevealImage
-            src={portraitSrc}
-            alt="Lisa Caspersson"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+          <div className="w-full md:w-[30vw] shrink-0 aspect-[3/4] relative rounded-[2px] overflow-hidden">
+            <RevealImage
+              src={portraitSrc}
+              alt="Lisa Caspersson"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
         </div>
       </section>
 
