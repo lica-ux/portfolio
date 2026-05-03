@@ -67,64 +67,66 @@ export default function MoreWork() {
   return (
     <section
       id="more-work"
-      className="snap-start snap-always relative pt-[120px] pb-20 w-full md:h-[100svh] md:overflow-y-auto"
+      className="snap-start snap-always w-full md:h-[100svh] md:overflow-y-auto"
       style={{ backgroundColor: '#ffe8db' }}
     >
-      {/* Background gradient — on section so it covers full height including padding */}
-      <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
-        <img
-          alt=""
-          src={gradientImage}
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
-        />
-      </div>
-
-      <div className="relative flex flex-col gap-20">
-        {/* Heading */}
-        <div className="px-4 md:px-10">
-          <h2
-            className="text-[40px] font-medium leading-[1.1]"
-            style={{ fontFamily: 'var(--font-display)', color: 'var(--color-nav-text)' }}
-          >
-            More work, <span style={{ color: 'var(--color-hero-subtitle)' }}>briefly.</span>
-          </h2>
+      {/* Padding wrapper — carries the padding so its height = full content height, letting the gradient fill it all */}
+      <div className="relative pt-[120px] pb-20">
+        <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
+          <img
+            alt=""
+            src={gradientImage}
+            className="w-full h-full object-cover opacity-30"
+          />
         </div>
 
-        {/* Project grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 md:gap-y-20 lg:gap-y-28 gap-x-8 px-4 md:px-10">
-          {PROJECTS.map((project) => (
-            <article
-              key={project.title}
-              className="flex flex-col gap-2"
+        <div className="relative flex flex-col gap-20">
+          {/* Heading */}
+          <div className="px-4 md:px-10">
+            <h2
+              className="text-[40px] font-medium leading-[1.1]"
+              style={{ fontFamily: 'var(--font-display)', color: 'var(--color-nav-text)' }}
             >
-              <h3
-                className="text-[32px] font-medium leading-[1.1]"
-                style={{ fontFamily: 'var(--font-display)', color: 'var(--color-nav-text)' }}
+              More work, <span style={{ color: 'var(--color-hero-subtitle)' }}>briefly.</span>
+            </h2>
+          </div>
+
+          {/* Project grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 md:gap-y-20 lg:gap-y-28 gap-x-8 px-4 md:px-10">
+            {PROJECTS.map((project) => (
+              <article
+                key={project.title}
+                className="flex flex-col gap-2"
               >
-                {project.title}
-              </h3>
-              <div className="flex flex-wrap gap-1">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="inline-flex items-center px-2 py-1 rounded-full border text-[14px] font-medium leading-none lowercase tracking-[-0.02em] whitespace-nowrap"
-                    style={{
-                      borderColor: 'rgba(73,17,41,0.3)',
-                      color: 'var(--color-nav-text)',
-                    }}
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <p
-                className="text-[18px] font-normal leading-[1.48]"
-                style={{ color: 'var(--color-hero-subtitle)' }}
-              >
-                {project.description}
-              </p>
-            </article>
-          ))}
+                <h3
+                  className="text-[32px] font-medium leading-[1.1]"
+                  style={{ fontFamily: 'var(--font-display)', color: 'var(--color-nav-text)' }}
+                >
+                  {project.title}
+                </h3>
+                <div className="flex flex-wrap gap-1">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="inline-flex items-center px-2 py-1 rounded-full border text-[14px] font-medium leading-none lowercase tracking-[-0.02em] whitespace-nowrap"
+                      style={{
+                        borderColor: 'rgba(73,17,41,0.3)',
+                        color: 'var(--color-nav-text)',
+                      }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <p
+                  className="text-[18px] font-normal leading-[1.48]"
+                  style={{ color: 'var(--color-hero-subtitle)' }}
+                >
+                  {project.description}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
