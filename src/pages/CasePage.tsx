@@ -69,7 +69,10 @@ export default function CasePage({ slug }: CasePageProps) {
         className="relative text-[20px] md:text-[32px] font-normal leading-[1.1] w-3/4 max-w-[1080px] whitespace-pre-line"
         style={{ color: 'var(--color-hero-subtitle)' }}
       >
-        Baricol makes supplements for people who've had gastric bypass surgery. After the procedure, the body absorbs certain vitamins and minerals significantly worse, meaning patients need to supplement every day for the rest of their lives.{'\n\n'}They had an app, but it had started life as a general journal with no daily behaviour to anchor it. Users downloaded it, came back a few times, and disappeared. They came to us to understand why.
+        {slug === 'sejfa'
+          ? <>Länsförsäkringar wanted to reach young adults who know they need home insurance but do not want to think about it.{'\n\n'}The product needed to feel effortless, affordable, and invisible until it was needed. It also had to feel completely different from a traditional insurance company.</>
+          : <>Baricol makes supplements for people who've had gastric bypass surgery. After the procedure, the body absorbs certain vitamins and minerals significantly worse, meaning patients need to supplement every day for the rest of their lives.{'\n\n'}They had an app, but it had started life as a general journal with no daily behaviour to anchor it. Users downloaded it, came back a few times, and disappeared. They came to us to understand why.</>
+        }
       </p>
     </section>
 
