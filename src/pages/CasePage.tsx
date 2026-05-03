@@ -34,7 +34,7 @@ export default function CasePage({ slug }: CasePageProps) {
       <CaseHero imageSrc={heroImages[slug] ?? placeholderImage} imageAlt="" />
       <CaseIntro
         title={slug === 'sejfa' ? 'Sejfa' : slug === 'booky' ? 'Booky' : 'Baribuddy'}
-        tags={slug === 'sejfa' ? ['Home insurance', 'Mobile app', 'Website'] : slug === 'booky' ? ['Mobile app'] : ['Health', 'Behaviour design']}
+        tags={slug === 'sejfa' ? ['Home insurance', 'Mobile app', 'Website'] : slug === 'booky' ? ['Mobile app', 'Website', 'Backoffice', 'Automation'] : ['Health', 'Behaviour design']}
         headline={slug === 'sejfa'
           ? 'Making insurance relevant to a generation that ignores it'
           : slug === 'booky'
