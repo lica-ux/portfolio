@@ -67,7 +67,7 @@ export default function MoreWork() {
   return (
     <section
       id="more-work"
-      className="snap-start relative pt-[120px] pb-20 w-full"
+      className="snap-start snap-always relative pt-[120px] pb-20 w-full md:h-[100svh] md:overflow-y-auto"
       style={{ backgroundColor: '#ffe8db' }}
     >
       {/* Background gradient */}
