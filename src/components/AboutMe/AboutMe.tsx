@@ -52,7 +52,7 @@ export default function AboutMe() {
             delay={150}
           />
         </div>
-        <div className="flex-1 min-w-0 md:px-10 md:py-4">
+        <div className="flex-1 min-w-0 md:pr-10 md:py-4">
           <p
             className="text-[20px] md:text-[24px] font-normal leading-[1.18]"
             style={{ color: 'var(--color-hero-subtitle)' }}
