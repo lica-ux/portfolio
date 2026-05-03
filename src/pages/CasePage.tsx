@@ -70,7 +70,7 @@ export default function CasePage({ slug }: CasePageProps) {
         style={{ color: 'var(--color-hero-subtitle)' }}
       >
         {slug === 'sejfa'
-          ? <>Länsförsäkringar wanted to reach young adults who know they need home insurance but do not want to think about it.{'\n\n'}The product needed to feel effortless, affordable, and invisible until it was needed. It also had to feel completely different from a traditional insurance company.</>
+          ? <>Länsförsäkringar wanted to reach young adults who rarely engage with insurance and struggle to see its value.{'\n\n'}It is something that lives in the background, easy to ignore until something goes wrong.{'\n\n'}The challenge was to design a product that requires almost no attention, yet builds enough clarity and trust to matter when it is actually needed.</>
           : <>Baricol makes supplements for people who've had gastric bypass surgery. After the procedure, the body absorbs certain vitamins and minerals significantly worse, meaning patients need to supplement every day for the rest of their lives.{'\n\n'}They had an app, but it had started life as a general journal with no daily behaviour to anchor it. Users downloaded it, came back a few times, and disappeared. They came to us to understand why.</>
         }
       </p>
