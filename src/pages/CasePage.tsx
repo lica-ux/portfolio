@@ -33,15 +33,23 @@ export default function CasePage({ slug }: CasePageProps) {
       </Link>
       <CaseHero imageSrc={heroImages[slug] ?? placeholderImage} imageAlt="" />
       <CaseIntro
-        title="Baribuddy"
-        tags={['Health', 'Behaviour design']}
-        headline={"Turning around a declining health app.\nFrom 200 to 50 000 users and a company acquisition"}
-        metaLines={[
-          'Client: Baricol / FitForMe',
-          'Role: Sole designer',
-          'Year: 2021 - 2024',
-          'Result: 50 000 active users & acquisition',
-        ]}
+        title={slug === 'sejfa' ? 'Sejfa' : 'Baribuddy'}
+        tags={slug === 'sejfa' ? ['Insurtech', 'Product design'] : ['Health', 'Behaviour design']}
+        headline={slug === 'sejfa'
+          ? 'Making insurance relevant to a generation that ignores it'
+          : "Turning around a declining health app.\nFrom 200 to 50 000 users and a company acquisition"}
+        metaLines={slug === 'sejfa'
+          ? [
+              'Client: Sejfa',
+              'Role: Sole designer',
+              'Year: 2022 - 2023',
+            ]
+          : [
+              'Client: Baricol / FitForMe',
+              'Role: Sole designer',
+              'Year: 2021 - 2024',
+              'Result: 50 000 active users & acquisition',
+            ]}
       />
     </main>
 
