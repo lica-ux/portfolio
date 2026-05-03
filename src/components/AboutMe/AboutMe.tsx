@@ -44,7 +44,7 @@ export default function AboutMe() {
       </section>
 
       {/* Section 2: hobby photo + hobby text */}
-      <section className="snap-start snap-always flex flex-col md:flex-row gap-10 items-start md:items-center justify-center px-4 md:px-10 py-16 md:py-24 min-h-[100svh]">
+      <section className="snap-start snap-always flex flex-col md:flex-row gap-10 items-start md:items-center justify-center px-4 md:px-10 pt-16 md:pt-24 pb-10 min-h-[100svh]">
         <div className="w-full md:flex-1 aspect-square relative rounded-[2px] overflow-hidden">
           <RevealImage
             src={knitSrc}
