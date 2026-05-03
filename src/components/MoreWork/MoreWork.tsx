@@ -70,16 +70,16 @@ export default function MoreWork() {
       className="snap-start snap-always relative pt-[120px] pb-20 w-full md:h-[100svh] md:overflow-y-auto"
       style={{ backgroundColor: '#ffe8db' }}
     >
-      {/* Background gradient */}
-      <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
-        <img
-          alt=""
-          src={gradientImage}
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
-        />
-      </div>
-
       <div className="relative flex flex-col gap-20">
+        {/* Background gradient — inside scroll container so it covers full scroll height */}
+        <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
+          <img
+            alt=""
+            src={gradientImage}
+            className="absolute inset-0 w-full h-full object-cover opacity-30"
+          />
+        </div>
+
         {/* Heading */}
         <div className="px-4 md:px-10">
           <h2
@@ -91,7 +91,7 @@ export default function MoreWork() {
         </div>
 
         {/* Project grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8 px-4 md:px-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 md:gap-y-20 lg:gap-y-28 gap-x-8 px-4 md:px-10">
           {PROJECTS.map((project) => (
             <article
               key={project.title}
