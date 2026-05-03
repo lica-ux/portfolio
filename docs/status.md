@@ -4,13 +4,22 @@
 
 # Claude updates this at the end of every session.
 
-LAST UPDATED: 2026-05-03
+LAST UPDATED: 2026-05-03 (session 2)
 
 ---
 
 ## In progress
 
 NONE
+
+## Completed this session (2026-05-03, session 2)
+
+- **MoreWork gradient** — gradient-bild täcker nu hela sektionens scroll-höjd + `min-h-full` säkerställer täckning på stora skärmar där innehållet är kortare än `100svh`
+- **Favicon** — `Favicon.png` kopierad till `public/favicon.png`, `index.html` uppdaterad
+- **AboutMe: vertikal centrering** — `justify-center` lagt till på båda snap-sektionerna
+- **AboutMe: text max-width** — `max-w-[1024px]` på bio-texten
+- **StatsSection: number-variant** — ny `variant="number"` prop; vänster sida visar nu sticky siffra (20vw, fade cross-fade) istället för bild; höger sida visar etikett (3vw) med befintlig scroll-animation; `id`-prop gjord valfri
+- **StatsSection: ersatt med number-variant** — bildsektionen borttagen, number-varianten är nu den enda `id="stats"`
 
 ## Completed this session (2026-05-03)
 
