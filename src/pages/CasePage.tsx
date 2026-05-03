@@ -12,7 +12,6 @@ import sejfa2 from '../images/Sejfa2.png'
 import sejfa3 from '../images/Sejfa3.png'
 import sejfa4 from '../images/Sejfa4.png'
 import bookyHero from '../images/BookyHero.png'
-import booky4 from '../images/Booky4.mov'
 
 // TODO: replace with local .webp images per case
 const placeholderImage = 'https://www.figma.com/api/mcp/asset/71cd43ec-3dfb-420e-90fd-11aedaa8f51c'
