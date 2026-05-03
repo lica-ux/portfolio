@@ -10,6 +10,7 @@ import sejfaMock2 from '../images/Sejfa_mock2.webp'
 import sejfa1 from '../images/Sejfa1.png'
 import sejfa2 from '../images/Sejfa2.png'
 import sejfa3 from '../images/Sejfa3.png'
+import sejfa4 from '../images/Sejfa4.png'
 
 // TODO: replace with local .webp images per case
 const placeholderImage = 'https://www.figma.com/api/mcp/asset/71cd43ec-3dfb-420e-90fd-11aedaa8f51c'
@@ -167,7 +168,7 @@ export default function CasePage({ slug }: CasePageProps) {
     <section className="snap-start snap-always py-4 md:py-10 px-4 md:px-10 flex flex-col min-h-[100svh]">
       <div className="relative w-full flex-1 rounded-[2px] overflow-hidden">
         <RevealImage
-          src="https://www.figma.com/api/mcp/asset/081ecd84-3266-43d7-b99d-bab6632b8f20"
+          src={sejfa4}
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />
