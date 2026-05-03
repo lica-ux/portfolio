@@ -15,12 +15,18 @@ NONE
 ## Completed this session (2026-05-03)
 
 - **AboutMe section** — `src/components/AboutMe/` (Figma node 5893-4512)
-  - "About me" heading + bio text column + portrait image (row 1)
-  - Hobby image + "Outside of work…" text (row 2)
+  - Split into two `snap-start snap-always min-h-[100svh]` sections
+  - Section 1: "About me" heading + bio text (24px desktop) + portrait (3:4, 30vw) with RevealImage
+  - Section 2: knitting image (square, flex-1) + hobby text (24px desktop) with RevealImage
   - Added to `Home.tsx` above `<Footer />`
-  - Colors: `--color-nav-text` (heading) + `--color-hero-subtitle` (body) — both pass WCAG AA
+  - Body text updated to final copy
+  - Colors: `--color-nav-text` + `--color-hero-subtitle` — pass WCAG AA
   - Images: Figma CDN TODOs — must be replaced with local .webp before production
-  - WCAG AA: semantic `<section>`, `<h2>`, descriptive `alt` attributes — no interactive elements
+
+- **Footer: full-screen height on desktop**
+  - `<footer>` gets `md:min-h-[100svh] md:flex md:flex-col`
+  - Contact section gets `md:flex-1 md:justify-center md:pt-0 md:pb-0`
+  - Footer bar stays pinned at bottom
 
 ## Completed this session (2026-05-01, session 5)
 
