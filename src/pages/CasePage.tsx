@@ -154,7 +154,14 @@ export default function CasePage({ slug }: CasePageProps) {
     {slug === 'booky' && (
     <section className="snap-start snap-always flex flex-col md:flex-row-reverse px-4 md:px-10 p-4 md:p-10 pb-12 md:min-h-[100svh] gap-6 md:gap-10">
       <div className="relative w-full aspect-[4/3] md:aspect-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
-        <RevealImage src={placeholderImage} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <video
+          src={booky4}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        />
       </div>
       <div className="md:flex-1 flex flex-col gap-4 md:justify-center">
         <h2 className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]" style={{ color: 'var(--color-nav-text)' }}>
@@ -170,22 +177,11 @@ export default function CasePage({ slug }: CasePageProps) {
     {/* TODO: replace with local .webp (max 2080×2080px, max 940kb) */}
     <section className="snap-start snap-always py-4 md:py-10 px-4 md:px-10 flex flex-col min-h-[100svh]">
       <div className="relative w-full flex-1 rounded-[2px] overflow-hidden">
-        {slug === 'booky' ? (
-          <video
-            src={booky4}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        ) : (
-          <RevealImage
-            src={slug === 'sejfa' ? sejfa4 : placeholderImage}
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        )}
+        <RevealImage
+          src={slug === 'sejfa' ? sejfa4 : placeholderImage}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+        />
       </div>
     </section>
 
