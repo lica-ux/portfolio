@@ -19,6 +19,7 @@ import booky2 from '../images/Booky2.jpg'
 import booky3 from '../images/Booky3.png'
 import baribuddy4 from '../images/Baribuddy4.webp'
 import baribuddy1 from '../images/Baribuddy1.png'
+import baribuddy3 from '../images/Baribuddy3.png'
 
 // TODO: replace with local .webp images per case
 const placeholderImage = 'https://www.figma.com/api/mcp/asset/71cd43ec-3dfb-420e-90fd-11aedaa8f51c'
@@ -140,7 +141,7 @@ export default function CasePage({ slug }: CasePageProps) {
 
     <section className="snap-start snap-always flex flex-col md:flex-row p-4 md:p-10 pb-12 md:min-h-[100svh] gap-6 md:gap-10">
       <div className="relative w-full aspect-[4/3] md:aspect-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
-        <RevealImage src={slug === 'sejfa' ? sejfa3 : slug === 'booky' ? booky3 : placeholderImage} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <RevealImage src={slug === 'sejfa' ? sejfa3 : slug === 'booky' ? booky3 : slug === 'baribuddy' ? baribuddy3 : placeholderImage} alt="" className="absolute inset-0 w-full h-full object-cover" />
       </div>
       <div className="md:flex-1 flex flex-col gap-4 md:justify-center">
         <h2 className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]" style={{ color: 'var(--color-nav-text)' }}>
