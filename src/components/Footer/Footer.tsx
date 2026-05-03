@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="snap-start relative w-full"
+      className="snap-start relative w-full md:min-h-[100svh] md:flex md:flex-col"
       style={{ backgroundColor: 'var(--color-about-bg)' }}
     >
       {/* Background gradient */}
@@ -18,7 +18,7 @@ export default function Footer() {
       </div>
 
       {/* Contact section */}
-      <div className="relative flex flex-col gap-8 pt-32 md:pt-[168px] pb-24 md:pb-[112px] px-4 md:px-10">
+      <div className="relative flex flex-col gap-8 pt-32 md:flex-1 md:justify-center md:pt-0 pb-24 md:pb-0 px-4 md:px-10">
         <div className="flex flex-col gap-4">
           <h2
             className="text-[40px] md:text-[64px] font-medium leading-[1.1]"
