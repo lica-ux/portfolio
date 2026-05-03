@@ -54,7 +54,7 @@ export default function AboutMe() {
         </div>
         <div className="flex-1 min-w-0 md:px-10 md:py-4">
           <p
-            className="text-[20px] md:text-[32px] font-normal leading-[1.18]"
+            className="text-[20px] md:text-[24px] font-normal leading-[1.18]"
             style={{ color: 'var(--color-hero-subtitle)' }}
           >
             Outside of work, I paint, play piano by ear, and knit — which, surprisingly, isn't
