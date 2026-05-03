@@ -99,6 +99,13 @@ export default function Home() {
       {/* About me */}
       <AboutMe />
 
+      {/* Stats (copy) */}
+      <StatsSection
+        id="stats-2"
+        imageSrc={statsImage}
+        imageAlt="Lisa Caspersson working at her desk"
+      />
+
       {/* Footer */}
       <Footer />
 

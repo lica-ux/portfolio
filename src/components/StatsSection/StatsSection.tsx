@@ -9,7 +9,7 @@ const STATS = [
   { value: '2', label: 'design awards' },
 ]
 
-export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) {
+export default function StatsSection({ imageSrc, imageAlt, id = 'stats' }: StatsSectionProps) {
   const [desktopStates, setDesktopStates] = useState<StatState[]>(
     STATS.map(() => 'below')
   )
@@ -82,7 +82,7 @@ export default function StatsSection({ imageSrc, imageAlt }: StatsSectionProps) 
   }, [])
 
   return (
-    <section id="stats" className="snap-start snap-always bg-[var(--color-bg)]">
+    <section id={id} className="snap-start snap-always bg-[var(--color-bg)]">
       {/* Desktop layout */}
       <div
         className="hidden md:flex"
