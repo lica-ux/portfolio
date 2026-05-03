@@ -71,7 +71,7 @@ export default function MoreWork() {
       style={{ backgroundColor: '#ffe8db' }}
     >
       {/* Padding wrapper — carries the padding so its height = full content height, letting the gradient fill it all */}
-      <div className="relative pt-[120px] pb-20">
+      <div className="relative pt-[120px] pb-20 min-h-full">
         <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
           <img
             alt=""
