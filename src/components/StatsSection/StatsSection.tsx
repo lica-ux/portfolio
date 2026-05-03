@@ -116,15 +116,11 @@ export default function StatsSection({ imageSrc, imageAlt, id = 'stats', variant
                   className="absolute font-semibold leading-none tracking-[-0.03em]"
                   style={{
                     fontFamily: 'var(--font-display)',
+                    color: 'var(--color-nav-text)',
                     fontSize: '20vw',
                     opacity: displayIndex === i ? 1 : 0,
                     transition: 'opacity 0.4s ease',
-                    background: 'linear-gradient(135deg, #ffd4c2 0%, #c8b0e8 100%)',
-                    WebkitBackgroundClip: 'text',
-                    backgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    color: 'transparent',
-                    textShadow: '3px 3px 0 #a06090, 6px 6px 0 #7a4070, 9px 9px 0 #542050, 12px 12px 0 #2e0030',
+                    textShadow: '3px 3px 0 #ffe8db, 6px 6px 0 #f5d0c0, 9px 9px 0 #e8b8a8, 12px 12px 0 #d4a090',
                   }}
                 >
                   {stat.value}
