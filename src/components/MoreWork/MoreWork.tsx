@@ -70,16 +70,16 @@ export default function MoreWork() {
       className="snap-start snap-always relative pt-[120px] pb-20 w-full md:h-[100svh] md:overflow-y-auto"
       style={{ backgroundColor: '#ffe8db' }}
     >
-      <div className="relative flex flex-col gap-20">
-        {/* Background gradient — inside scroll container so it covers full scroll height */}
-        <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
-          <img
-            alt=""
-            src={gradientImage}
-            className="absolute inset-0 w-full h-full object-cover opacity-30"
-          />
-        </div>
+      {/* Background gradient — on section so it covers full height including padding */}
+      <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
+        <img
+          alt=""
+          src={gradientImage}
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+        />
+      </div>
 
+      <div className="relative flex flex-col gap-20">
         {/* Heading */}
         <div className="px-4 md:px-10">
           <h2
