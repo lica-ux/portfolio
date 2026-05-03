@@ -6,7 +6,7 @@ const knitSrc = 'https://www.figma.com/api/mcp/asset/71be2b76-763d-47da-96a8-25c
 
 export default function AboutMe() {
   return (
-    <section className="flex flex-col gap-10 px-4 md:px-10 py-16 md:py-24">
+    <section className="snap-start snap-always flex flex-col gap-10 px-4 md:px-10 py-16 md:py-24 min-h-[100svh] justify-center">
       <h2
         className="text-[32px] md:text-[56px] font-medium leading-[1.1]"
         style={{ fontFamily: 'var(--font-display)', color: 'var(--color-nav-text)' }}
