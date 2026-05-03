@@ -82,10 +82,13 @@ export default function CasePage({ slug }: CasePageProps) {
       </div>
       <div className="md:flex-1 flex flex-col gap-4 md:justify-center">
         <h2 className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]" style={{ color: 'var(--color-nav-text)' }}>
-          Starting with the people who left
+          {slug === 'sejfa' ? 'Designing a brand within a brand' : 'Starting with the people who left'}
         </h2>
         <p className="text-base md:text-[20px] leading-[1.4] whitespace-pre-line" style={{ color: 'var(--color-hero-subtitle)' }}>
-          The most useful conversations were with users who had already stopped. What came back wasn't a list of missing features. It was a motivation problem. There was no compelling reason to open the app tomorrow if you'd already opened it today.{'\n\n'}The real design challenge wasn't functionality. It was making a daily health behaviour feel worth maintaining.
+          {slug === 'sejfa'
+            ? `Sejfa could not feel like a lighter version of LF. It needed its own identity.\n\nI defined and drove a visual direction that was bold, colourful, and deliberately playful. The goal was to position Sejfa as a distinct alternative rather than a corporate extension.\n\nWe framed it as a cheeky little sister to LF's traditional brand. Something recognisable on its own terms and designed to stand out in a category where everything tends to look the same.`
+            : `The most useful conversations were with users who had already stopped. What came back wasn't a list of missing features. It was a motivation problem. There was no compelling reason to open the app tomorrow if you'd already opened it today.\n\nThe real design challenge wasn't functionality. It was making a daily health behaviour feel worth maintaining.`
+          }
         </p>
       </div>
     </section>
@@ -96,10 +99,13 @@ export default function CasePage({ slug }: CasePageProps) {
       </div>
       <div className="md:flex-1 flex flex-col gap-4 md:justify-center">
         <h2 className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]" style={{ color: 'var(--color-nav-text)' }}>
-          Designing for the actual user, not the clinical default
+          {slug === 'sejfa' ? 'Working within constraints, not against them' : 'Designing for the actual user, not the clinical default'}
         </h2>
         <p className="text-base md:text-[20px] leading-[1.4] whitespace-pre-line" style={{ color: 'var(--color-hero-subtitle)' }}>
-          The core audience was women over 40 recovering from a major medical procedure. The obvious direction would have been clean and clinical. I went the other way — warm, inviting, and built for someone who deserved an experience that felt genuinely on their side. User feedback confirmed it landed.
+          {slug === 'sejfa'
+            ? `The product relied on a third-party backend that limited what we could build. We lost features as fundamental as push notifications.\n\nInstead of fighting those constraints, I focused on making the core experience as clear and effective as possible within them.\n\nThe onboarding flow was validated through an external user study conducted with University of Gothenburg students. The results showed strong clarity, flow, and understanding of the information presented.`
+            : `The core audience was women over 40 recovering from a major medical procedure. The obvious direction would have been clean and clinical. I went the other way — warm, inviting, and built for someone who deserved an experience that felt genuinely on their side. User feedback confirmed it landed.`
+          }
         </p>
       </div>
     </section>
@@ -110,10 +116,13 @@ export default function CasePage({ slug }: CasePageProps) {
       </div>
       <div className="md:flex-1 flex flex-col gap-4 md:justify-center">
         <h2 className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]" style={{ color: 'var(--color-nav-text)' }}>
-          Building the habit loop
+          {slug === 'sejfa' ? 'Integrating AI into the claims experience' : 'Building the habit loop'}
         </h2>
         <p className="text-base md:text-[20px] leading-[1.4] whitespace-pre-line" style={{ color: 'var(--color-hero-subtitle)' }}>
-          I designed the product around one non-negotiable behaviour: logging supplements daily. Completing that action unlocks relevant content. Missing it triggers a gentle end-of-day reminder.{'\n\n'}On top of that I added weight tracking, a post-op food journey with doctor-approved recipes, and social challenges tied to goals users already had from their doctors. The challenges addressed something users told us directly: they wanted to feel less alone in this.
+          {slug === 'sejfa'
+            ? `As the product matured, I helped introduce AI into the claims flow.\n\nInstead of filling out forms, users describe what happened in their own words. The system identifies missing information and asks follow-up questions. This guides users to a complete claim without requiring prior knowledge.\n\nMy focus was on making the experience genuinely simpler, not just different. A large part of the work was navigating legal and technical boundaries around what the AI could and could not handle.`
+            : `I designed the product around one non-negotiable behaviour: logging supplements daily. Completing that action unlocks relevant content. Missing it triggers a gentle end-of-day reminder.\n\nOn top of that I added weight tracking, a post-op food journey with doctor-approved recipes, and social challenges tied to goals users already had from their doctors. The challenges addressed something users told us directly: they wanted to feel less alone in this.`
+          }
         </p>
       </div>
     </section>
