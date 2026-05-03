@@ -33,7 +33,7 @@ export default function AboutMe() {
             </p>
           </div>
         </div>
-        <div className="w-full md:w-[30vw] shrink-0 aspect-[2/3] md:aspect-auto md:h-[680px] relative rounded-[2px] overflow-hidden">
+        <div className="w-full md:w-[30vw] shrink-0 aspect-[3/4] relative rounded-[2px] overflow-hidden">
           <RevealImage
             src={portraitSrc}
             alt="Lisa Caspersson"
