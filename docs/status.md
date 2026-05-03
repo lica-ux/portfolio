@@ -28,6 +28,11 @@ NONE
   - Contact section gets `md:flex-1 md:justify-center md:pt-0 md:pb-0`
   - Footer bar stays pinned at bottom
 
+- **MoreWork: inner scroll + snap-always**
+  - `md:h-[100svh] md:overflow-y-auto snap-always` — sektionen är exakt 100svh, innehållet scrollar inuti
+  - Gradient-div flyttad inuti scroll-containern så den täcker hela scroll-höjden
+  - `gap-y` ökad på desktop: `md:gap-y-20 lg:gap-y-28` (mobil behåller `gap-y-16`)
+
 ## Completed this session (2026-05-01, session 5)
 
 - **CasePage: full snap-scroll implementation** — alla sektioner i CasePage har nu `snap-start snap-always`; sektionerna bröts ut ur `<main>` till fragment-siblings så att varje `<section>` är en top-level snap-target; `<main>` innehåller nu bara back-link + CaseHero + CaseIntro
