@@ -1,6 +1,7 @@
 import StatsSection from '../components/StatsSection/StatsSection'
 import SelectedWork from '../components/SelectedWork'
 import MoreWork from '../components/MoreWork'
+import AboutMe from '../components/AboutMe'
 import Footer from '../components/Footer'
 import RevealImage from '../components/RevealImage'
 import statsImage from '../images/DSC03053-Enhanced-NR (1).webp'
@@ -94,6 +95,9 @@ export default function Home() {
 
       {/* More work */}
       <MoreWork />
+
+      {/* About me */}
+      <AboutMe />
 
       {/* Footer */}
       <Footer />

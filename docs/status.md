@@ -4,13 +4,23 @@
 
 # Claude updates this at the end of every session.
 
-LAST UPDATED: 2026-05-01
+LAST UPDATED: 2026-05-03
 
 ---
 
 ## In progress
 
 NONE
+
+## Completed this session (2026-05-03)
+
+- **AboutMe section** — `src/components/AboutMe/` (Figma node 5893-4512)
+  - "About me" heading + bio text column + portrait image (row 1)
+  - Hobby image + "Outside of work…" text (row 2)
+  - Added to `Home.tsx` above `<Footer />`
+  - Colors: `--color-nav-text` (heading) + `--color-hero-subtitle` (body) — both pass WCAG AA
+  - Images: Figma CDN TODOs — must be replaced with local .webp before production
+  - WCAG AA: semantic `<section>`, `<h2>`, descriptive `alt` attributes — no interactive elements
 
 ## Completed this session (2026-05-01, session 5)
 

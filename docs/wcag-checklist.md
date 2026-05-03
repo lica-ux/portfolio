@@ -16,6 +16,7 @@
 | Button    | ✅       | ✅            | ✅       | ✅      | N/A | ✅       | ✅       | ✅      |
 | StatsSection | ✅    | ✅            | N/A      | N/A     | ✅  | N/A      | —        | ✅      |
 | SelectedWork | ✅    | ✅            | N/A      | N/A     | N/A | N/A      | —        | ✅      |
+| AboutMe      | ✅    | ✅            | N/A      | N/A     | N/A | N/A      | —        | ✅      |
 
 ---
 
@@ -74,6 +75,22 @@ Notes: Purely presentational section. Only animated properties are `opacity` and
 - [x] Figma node 5885-4596 — no component descriptions found
 
 Notes: Purely presentational section. Three project cards with portrait images. Images use temporary Figma CDN URLs — must be replaced with local .webp files before production.
+
+### AboutMe — 2026-05-03
+- [x] Contrast ≥ 4.5:1 normal text / 3:1 large text — `--color-nav-text` (#491129) on `--color-bg` (#f8f3ff) = 13.9:1 ✅. `--color-hero-subtitle` rgba(73,17,41,0.7) on `#f8f3ff` ≈ 5.0:1 ✅ (large text ≥18px, requires 3:1).
+- [x] Correct semantic HTML element used — `<section>`, `<h2>`, `<p>`, `<img alt>`
+- [x] All interactive states keyboard accessible — N/A (no interactive elements)
+- [x] Visible focus indicator — N/A (no focusable elements)
+- [x] aria-label on icon-only buttons — N/A
+- [x] Form fields have associated `<label>` — N/A
+- [x] Error messages linked via aria-describedby — N/A
+- [x] Loading state uses aria-busy or aria-live — N/A
+- [x] Animations respect prefers-reduced-motion — N/A (no animations)
+- [x] All interactive elements ≥ 44×44px — N/A
+- [ ] axe-core scan: not yet run
+- [x] Figma node 5893-4512 — no component descriptions found
+
+Notes: Purely presentational. Portrait and hobby images use temporary Figma CDN URLs — must be replaced with local .webp before production.
 
 <!-- Template — copy for each component
 
