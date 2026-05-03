@@ -17,6 +17,7 @@ import booky5 from '../images/Booky5.png'
 import booky1 from '../images/Booky1.png'
 import booky2 from '../images/Booky2.jpg'
 import booky3 from '../images/Booky3.png'
+import baribuddy4 from '../images/Baribuddy4.webp'
 
 // TODO: replace with local .webp images per case
 const placeholderImage = 'https://www.figma.com/api/mcp/asset/71cd43ec-3dfb-420e-90fd-11aedaa8f51c'
@@ -182,7 +183,7 @@ export default function CasePage({ slug }: CasePageProps) {
     <section className="snap-start snap-always py-4 md:py-10 px-4 md:px-10 flex flex-col min-h-[100svh]">
       <div className="relative w-full flex-1 rounded-[2px] overflow-hidden">
         <RevealImage
-          src={slug === 'sejfa' ? sejfa4 : slug === 'booky' ? booky5 : placeholderImage}
+          src={slug === 'sejfa' ? sejfa4 : slug === 'booky' ? booky5 : slug === 'baribuddy' ? baribuddy4 : placeholderImage}
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />
