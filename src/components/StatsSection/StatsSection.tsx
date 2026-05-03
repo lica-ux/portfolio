@@ -120,7 +120,6 @@ export default function StatsSection({ imageSrc, imageAlt, id = 'stats', variant
                     fontSize: '20vw',
                     opacity: displayIndex === i ? 1 : 0,
                     transition: 'opacity 0.4s ease',
-                    textShadow: '3px 3px 0 #ffe8db, 6px 6px 0 #f5d0c0, 9px 9px 0 #e8b8a8, 12px 12px 0 #d4a090',
                   }}
                 >
                   {stat.value}
