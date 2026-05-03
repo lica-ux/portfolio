@@ -1,3 +1,5 @@
+import RevealImage from '../RevealImage'
+
 // TODO: replace with local .webp images (max 2080×2080px, max 940kb)
 const portraitSrc = 'https://www.figma.com/api/mcp/asset/be608bd1-b3bb-4715-9f68-317e7fcc7467'
 const knitSrc = 'https://www.figma.com/api/mcp/asset/71be2b76-763d-47da-96a8-25c014060220'
@@ -32,7 +34,7 @@ export default function AboutMe() {
           </div>
         </div>
         <div className="w-full md:w-[461px] shrink-0 aspect-[2/3] md:aspect-auto md:h-[680px] relative rounded-[2px] overflow-hidden">
-          <img
+          <RevealImage
             src={portraitSrc}
             alt="Lisa Caspersson"
             className="absolute inset-0 w-full h-full object-cover"
@@ -43,10 +45,11 @@ export default function AboutMe() {
       {/* Row 2: hobby photo + hobby text */}
       <div className="flex flex-col md:flex-row gap-10 items-start md:items-center">
         <div className="w-full md:flex-1 aspect-square relative rounded-[2px] overflow-hidden">
-          <img
+          <RevealImage
             src={knitSrc}
             alt="Folded textured wool yarns in warm earthy tones"
             className="absolute inset-0 w-full h-full object-cover"
+            delay={150}
           />
         </div>
         <div className="flex-1 min-w-0 md:px-10 md:py-4">
