@@ -170,7 +170,7 @@ export default function CasePage({ slug }: CasePageProps) {
     <section className="snap-start snap-always py-4 md:py-10 px-4 md:px-10 flex flex-col min-h-[100svh]">
       <div className="relative w-full flex-1 rounded-[2px] overflow-hidden">
         <RevealImage
-          src={sejfa4}
+          src={slug === 'sejfa' ? sejfa4 : placeholderImage}
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />
