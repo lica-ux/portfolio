@@ -40,7 +40,7 @@ export default function CasePage({ slug }: CasePageProps) {
           : "Turning around a declining health app.\nFrom 200 to 50 000 users and a company acquisition"}
         metaLines={slug === 'sejfa'
           ? [
-              'Client: Sejfa',
+              'Client: Sejfa / Länsförsäkringar',
               'Role: Sole designer',
               'Year: 2022 - ongoing',
               'Result: 10 000 users & 2 design awards',
