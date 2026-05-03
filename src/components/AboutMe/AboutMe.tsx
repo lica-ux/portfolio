@@ -57,7 +57,7 @@ export default function AboutMe() {
             className="text-[20px] md:text-[24px] font-normal leading-[1.18]"
             style={{ color: 'var(--color-hero-subtitle)' }}
           >
-            Outside of work I paint, play piano by ear, and knit, which, unsurprisingly, isn't
+            Outside of work I paint, play piano by ear, and knit, which unsurprisingly isn't
             that different from product design: patience, iteration, and attention to detail.
           </p>
         </div>
