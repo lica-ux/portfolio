@@ -43,7 +43,7 @@ export default function CasePage({ slug }: CasePageProps) {
               'Client: Sejfa / Länsförsäkringar',
               'Role: Sole designer',
               'Year: 2022 - ongoing',
-              'Result: 10 000 users & 2 design awards',
+              'Result: 10 000 users & 2 awards',
             ]
           : [
               'Client: Baricol / FitForMe',
