@@ -96,7 +96,10 @@ export default function StatsSection({ imageSrc, imageAlt, id = 'stats', variant
         style={{ minHeight: `${STATS.length * 100}svh` }}
       >
         {/* Left: sticky image or number */}
-        <div className="w-1/2 sticky top-0 p-4 md:p-10" style={{ height: '100svh' }}>
+        <div
+          className={`w-1/2 sticky top-0 ${variant === 'image' ? 'p-4 md:p-10' : 'py-4 md:py-10'}`}
+          style={{ height: '100svh' }}
+        >
           {variant === 'image' ? (
             <div className="relative w-full h-full overflow-hidden rounded-[2px]">
               <RevealImage
@@ -106,7 +109,7 @@ export default function StatsSection({ imageSrc, imageAlt, id = 'stats', variant
               />
             </div>
           ) : (
-            <div className="relative w-full h-full flex items-center justify-end">
+            <div className="relative w-full h-full flex items-center justify-end px-[10%]">
               {STATS.map((stat, i) => (
                 <span
                   key={stat.label}
