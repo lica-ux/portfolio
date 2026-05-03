@@ -170,22 +170,11 @@ export default function CasePage({ slug }: CasePageProps) {
     {/* TODO: replace with local .webp (max 2080×2080px, max 940kb) */}
     <section className="snap-start snap-always py-4 md:py-10 px-4 md:px-10 flex flex-col min-h-[100svh]">
       <div className="relative w-full flex-1 rounded-[2px] overflow-hidden">
-        {slug === 'booky' ? (
-          <video
-            src={booky4}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        ) : (
-          <RevealImage
-            src={slug === 'sejfa' ? sejfa4 : placeholderImage}
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        )}
+        <RevealImage
+          src={slug === 'sejfa' ? sejfa4 : placeholderImage}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+        />
       </div>
     </section>
 
