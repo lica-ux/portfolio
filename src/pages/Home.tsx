@@ -86,6 +86,8 @@ export default function Home() {
 
       {/* Stats */}
       <StatsSection
+        id="stats"
+        variant="number"
         imageSrc={statsImage}
         imageAlt="Lisa Caspersson working at her desk"
       />
@@ -98,14 +100,6 @@ export default function Home() {
 
       {/* About me */}
       <AboutMe />
-
-      {/* Stats (copy) */}
-      <StatsSection
-        id="stats-2"
-        variant="number"
-        imageSrc={statsImage}
-        imageAlt="Lisa Caspersson working at her desk"
-      />
 
       {/* Footer */}
       <Footer />
