@@ -23,13 +23,13 @@ export default function AboutMe() {
             >
               <p>I started in UX, taught myself UI, and never stopped learning.</p>
               <p>
-                Over six years, I've grown into leading projects, mentoring designers, and shaping
-                how teams work. I often bridge the gap between design, tech, and business — and step
-                into product roles when needed.
+                Over six years I've grown into leading projects, mentoring designers, and defining
+                how we work as a team. I often bridge the gap between design, tech, and business and
+                step into product roles when no one else does.
               </p>
               <p>
                 I believe great design is about clarity. Colour, structure, and interaction aren't
-                decoration — they're how products communicate.
+                decoration. They're how products communicate.
               </p>
             </div>
           </div>
