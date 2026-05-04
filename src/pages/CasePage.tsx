@@ -18,8 +18,8 @@ import booky1 from '../images/Booky1.webp'
 import booky2 from '../images/Booky2.webp'
 import booky3 from '../images/Booky3.webp'
 import baribuddy4 from '../images/Baribuddy4.webp'
-import baribuddy1 from '../images/Baribuddy1.png'
-import baribuddy3 from '../images/Baribuddy3.png'
+import baribuddy1 from '../images/Baribuddy1.webp'
+import baribuddy3 from '../images/Baribuddy3.webp'
 import baribuddy2 from '../images/Baribuddy2.webp'
 
 // TODO: replace with local .webp images per case
