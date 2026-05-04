@@ -24,7 +24,8 @@ export default function RevealImage({ delay = 0, className = '', style, ...props
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setVisible(true)
+            // rAF ensures the initial opacity:0 is painted before transitioning
+            requestAnimationFrame(() => setVisible(true))
             observer.disconnect()
           }
         })
