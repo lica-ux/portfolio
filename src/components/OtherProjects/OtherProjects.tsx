@@ -15,6 +15,7 @@ const ALL_PROJECTS = [
     imageSrc: imgBaribuddy,
     imageAlt: 'Baribuddy app screenshot',
     slug: 'baribuddy',
+    imagePosition: 'object-right',
   },
   {
     title: 'Booky',
@@ -57,7 +58,7 @@ export default function OtherProjects({ currentSlug }: OtherProjectsProps) {
             <RevealImage
               src={project.imageSrc}
               alt={project.imageAlt}
-              className="absolute inset-0 w-full h-full object-cover"
+              className={`absolute inset-0 w-full h-full object-cover${project.imagePosition ? ` ${project.imagePosition}` : ''}`}
               delay={index * 150}
             />
           </div>

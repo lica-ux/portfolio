@@ -4,6 +4,7 @@ export interface Project {
   imageSrc: string
   imageAlt: string
   slug: string
+  imagePosition?: string
 }
 
 export interface SelectedWorkProps {

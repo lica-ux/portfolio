@@ -46,7 +46,7 @@ export default function CasePage({ slug }: CasePageProps) {
         <ChevronLeft width={20} height={20} className="[&_path]:fill-[currentColor]" aria-hidden="true" />
         Home
       </Link>
-      <CaseHero imageSrc={heroImages[slug] ?? placeholderImage} imageAlt="" />
+      <CaseHero imageSrc={heroImages[slug] ?? placeholderImage} imageAlt="" imagePosition={slug === 'baribuddy' ? 'object-right' : undefined} />
       <CaseIntro
         title={slug === 'sejfa' ? 'Sejfa' : slug === 'booky' ? 'Booky' : 'Baribuddy'}
         tags={slug === 'sejfa' ? ['Home insurance', 'Mobile app', 'Website'] : slug === 'booky' ? ['Website', 'Backoffice', 'Automation'] : ['Health', 'Behaviour design']}
