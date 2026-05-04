@@ -4,13 +4,22 @@
 
 # Claude updates this at the end of every session.
 
-LAST UPDATED: 2026-05-04 (session 1)
+LAST UPDATED: 2026-05-04 (session 2)
 
 ---
 
 ## In progress
 
 NONE
+
+## Completed this session (2026-05-04, session 2)
+
+- **Bildformat — PNG/JPG → WebP** — alla bildfiler med WebP-dubbletter ersatta i koden och gamla filer borttagna:
+  - Sejfa1–4.png → .webp (CasePage.tsx)
+  - Booky1, Booky2 (jpg), Booky3, Booky5, BookyHero.png → .webp (CasePage.tsx)
+  - Baribuddy1, Baribuddy3.png → .webp (CasePage.tsx)
+- **OtherProjects — Sejfa-bild** — ersatt Figma CDN-URL med lokal `Sejfa_mock2.webp` (samma bild som SelectedWork och CaseHero använder); nu konsekvent på alla sidor
+- **Baribuddy — object-position** — `object-right` lagt till på Baribuddy-bilden i SelectedWork, OtherProjects och CaseHero så att mobilen i bilden alltid syns vid beskärning; `imagePosition`-prop tillagd i SelectedWork.types.ts och CaseHero.types.ts
 
 ## Completed this session (2026-05-04, session 1)
 
