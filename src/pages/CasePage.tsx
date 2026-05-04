@@ -47,6 +47,9 @@ export default function CasePage({ slug }: CasePageProps) {
         Home
       </Link>
       <CaseHero imageSrc={heroImages[slug] ?? placeholderImage} imageAlt="" imagePosition={slug === 'baribuddy' ? 'object-right' : undefined} />
+    </main>
+
+    <section className="snap-start snap-always min-h-[100svh] flex flex-col justify-center px-4 md:px-10">
       <CaseIntro
         title={slug === 'sejfa' ? 'Sejfa' : slug === 'booky' ? 'Booky' : 'Baribuddy'}
         tags={slug === 'sejfa' ? ['Home insurance', 'Mobile app', 'Website'] : slug === 'booky' ? ['Website', 'Backoffice', 'Automation'] : ['Health', 'Behaviour design']}
@@ -76,7 +79,7 @@ export default function CasePage({ slug }: CasePageProps) {
               'Result: 50 000 active users & acquisition',
             ]}
       />
-    </main>
+    </section>
 
     <section
       className="snap-start snap-always relative flex flex-col justify-center gap-6 py-24 md:py-48 px-4 md:px-10 min-h-[100svh]"
