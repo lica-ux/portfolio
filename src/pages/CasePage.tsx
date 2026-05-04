@@ -37,7 +37,7 @@ interface CasePageProps {
 export default function CasePage({ slug }: CasePageProps) {
   return (
     <>
-    <main className="snap-start snap-always min-h-[100svh] px-4 md:px-10 pt-6 flex flex-col">
+    <main className="min-h-[100svh] px-4 md:px-10 pt-6 flex flex-col">
       <Link
         to="/"
         className="inline-flex items-center gap-1 text-base font-medium font-display focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-nav-text)] pb-6"
