@@ -167,9 +167,9 @@ export default function Footer() {
                 <ul className="flex flex-col">
                   {[
                     { label: 'Home', href: '/' },
-                    { label: 'Work', href: '#work' },
-                    { label: 'About', href: '#about-me' },
-                    { label: 'Contact', href: '#contact' },
+                    { label: 'Work', href: '/#work' },
+                    { label: 'About', href: '/#about-me' },
+                    { label: 'Contact', href: '/#contact' },
                   ].map(({ label, href }) => (
                     <li key={label}>
                       <a
