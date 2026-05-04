@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
 import type { OtherProjectsProps } from './OtherProjects.types'
 import RevealImage from '../RevealImage'
+import sejfaMock2 from '../../images/Sejfa_mock2.webp'
 
 // TODO: replace with local .webp images (max 2080×2080px, max 940kb)
 const imgBaribuddy = 'https://www.figma.com/api/mcp/asset/9615129a-6fbb-4fc7-a565-ab5796c9d142'
 const imgBooky = 'https://www.figma.com/api/mcp/asset/005d71f0-4e8e-4d0d-820b-7c91d138841c'
-const imgSejfa = 'https://www.figma.com/api/mcp/asset/0826ff24-784a-4a87-befb-9420e5f08a6a'
+const imgSejfa = sejfaMock2
 
 const ALL_PROJECTS = [
   {
