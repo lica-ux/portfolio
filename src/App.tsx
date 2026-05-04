@@ -8,8 +8,18 @@ import About from './pages/About'
 import CasePage from './pages/CasePage'
 
 function Layout() {
-  const { pathname } = useLocation()
-  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+  const { pathname, hash } = useLocation()
+  useEffect(() => {
+    if (hash) {
+      const id = hash.slice(1)
+      // Wait for the new page to render before scrolling to the anchor
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView()
+      }, 50)
+    } else {
+      window.scrollTo(0, 0)
+    }
+  }, [pathname, hash])
   const hideNav = pathname.startsWith('/work/')
   return (
     <>
