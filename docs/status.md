@@ -4,13 +4,21 @@
 
 # Claude updates this at the end of every session.
 
-LAST UPDATED: 2026-05-03 (session 3)
+LAST UPDATED: 2026-05-04 (session 1)
 
 ---
 
 ## In progress
 
 NONE
+
+## Completed this session (2026-05-04, session 1)
+
+- **Sejfa case page — bilder** — Sejfa1–4 placerade i rätt sektioner: "Designing a brand within a brand" (Sejfa1), "Working within constraints" (Sejfa2), "Integrating AI" (Sejfa3), helbredd-sektion (Sejfa4). Alla är PNG/PNG-format — ska konverteras till .webp inför produktion
+- **Booky case page — bilder** — BookyHero i CaseHero; Booky1–3 i content-sektioner; Booky4.mp4 som video-element i "A font decision that saved the client money"; Booky5 i helbredd-sektion
+- **Baribuddy case page — bilder** — Baribuddy1 ("Starting with the people who left"), Baribuddy2 ("Designing for the actual user"), Baribuddy3 ("Building the habit loop"), Baribuddy4 (helbredd-sektion)
+- **Booky metaData** — År ändrat till 2022, roll ändrad från "Sole designer" till "Lead designer"
+- **Obs:** Booky4.mp4 kräver .mp4-format — fungerar i Chrome. Alla PNG/JPG-bilder ska konverteras till .webp max 940kb inför produktion
 
 ## Completed this session (2026-05-03, session 3)
 
