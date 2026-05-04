@@ -8,7 +8,7 @@ export default function AboutMe() {
   return (
     <>
       {/* Section 1: bio text + portrait */}
-      <section className="snap-start snap-always flex flex-col justify-center gap-10 px-4 md:px-10 py-16 md:py-24 min-h-[100svh]">
+      <section id="about-me" className="snap-start snap-always flex flex-col justify-center gap-10 px-4 md:px-10 py-16 md:py-24 min-h-[100svh]">
         <h2
           className="text-[32px] md:text-[56px] font-medium leading-[1.1]"
           style={{ fontFamily: 'var(--font-display)', color: 'var(--color-nav-text)' }}
