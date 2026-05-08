@@ -14,7 +14,7 @@ const defaultProjects: Project[] = [
     imageSrc: imgBaribuddy,
     imageAlt: 'Baribuddy app screenshot',
     slug: 'baribuddy',
-    imagePosition: 'object-right',
+    imagePosition: 'object-[75%_center]',
   },
   {
     title: 'Booky',
