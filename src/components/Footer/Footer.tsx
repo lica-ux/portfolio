@@ -82,7 +82,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex flex-1 gap-8 min-w-[280px]">
+          <div className="flex flex-col md:flex-row flex-1 gap-8 min-w-[280px]">
             {/* Let's talk */}
             <div className="flex flex-col gap-2 flex-1 min-w-0">
               <p
@@ -117,6 +117,8 @@ export default function Footer() {
               </nav>
             </div>
 
+            {/* Projects + Navigation row on mobile */}
+            <div className="flex gap-8 flex-1 min-w-0">
             {/* Projects */}
             <div className="flex flex-col gap-2 flex-1 min-w-0">
               <p
@@ -183,6 +185,7 @@ export default function Footer() {
                   ))}
                 </ul>
               </nav>
+            </div>
             </div>
           </div>
         </div>
