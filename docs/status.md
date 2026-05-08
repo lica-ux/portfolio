@@ -4,13 +4,36 @@
 
 # Claude updates this at the end of every session.
 
-LAST UPDATED: 2026-05-04 (session 2)
+LAST UPDATED: 2026-05-08
 
 ---
 
 ## In progress
 
 NONE
+
+## Completed this session (2026-05-08)
+
+- **Regelgranskning** — genomgång av alla grundregelbrott i projektet
+- **Figma CDN-URLs borttagna** — alla 10 ersatta med lokala .webp-importer; `AboutMe1.webp`, `AboutMe2.webp`, `BaribuddyHero.webp` kopierade från huvud-repot; döda konstanter (`heroImage`, `aboutTexture`) borttagna från Home.tsx
+- **Hårdkodad `#ffe8db`** — ersatt med `var(--color-about-bg)` i MoreWork.tsx, Home.tsx, CasePage.tsx
+- **Ny token `--radius-xs: 2px`** — tillagd i `@theme {}` i index.css; alla 10 förekomster av `rounded-[2px]` ersatta med `rounded-xs`
+- **Oanvända radius-tokens borttagna** — `--radius-none`, `--radius-sm`, `--radius-xl`, `--radius-2xl` borttagna
+- **Button + Input borttagna** — komponentmappar raderade, inga produktionsreferenser
+- **Components-sidan borttagen** — `src/pages/Components.tsx`, `ComponentShowcase/`, `Typography/` raderade; rutten borttagen från App.tsx
+- **StatsSection — mobil bild borttagen** — `RevealImage` i mobillayouten borttagen
+- **Baribuddy-bilder konsekventa** — `BaribuddyHero.webp` används nu i SelectedWork, OtherProjects och CaseHero
+- **OtherProjects — hover-overlay** — `group`, scale-wrapper och `bg-[rgba(73,17,41,0.24)]`-overlay tillagda (samma mönster som SelectedWork)
+
+## Kvarstående regelbrott att åtgärda (starta här nästa session)
+
+1. **Hårdkodade rgba-färger** (ej dokumenterade undantag):
+   - `src/components/Footer/Footer.tsx` — `rgba(73,17,41,0.2)` (gradient-overlay)
+   - `src/components/SelectedWork/SelectedWork.tsx` + `src/components/OtherProjects/OtherProjects.tsx` — `bg-[rgba(73,17,41,0.24)]` (hover-overlay) → behöver token
+
+2. **Hårdkodade typsnittsstorlekar** — utbredd användning av `text-[48px]`, `text-[104px]` etc. i alla komponenter och sidor. Kräver nytt typsnittstokensystem i `@theme {}` — diskutera approach före implementation.
+
+3. **`var(--color-...)` i inline styles** — lägre prioritet, fungerar korrekt men bryter mot regeln att använda Tailwind-klasser.
 
 ## Completed this session (2026-05-04, session 2)
 

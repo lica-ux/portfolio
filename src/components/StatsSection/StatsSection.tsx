@@ -101,7 +101,7 @@ export default function StatsSection({ imageSrc, imageAlt, id = 'stats', variant
           style={{ height: '100svh' }}
         >
           {variant === 'image' ? (
-            <div className="relative w-full h-full overflow-hidden rounded-[2px]">
+            <div className="relative w-full h-full overflow-hidden rounded-xs">
               <RevealImage
                 src={imageSrc}
                 alt={imageAlt}
@@ -182,13 +182,6 @@ export default function StatsSection({ imageSrc, imageAlt, id = 'stats', variant
 
       {/* Mobile layout */}
       <div className="md:hidden">
-        <div className="w-full aspect-[4/3] overflow-hidden">
-          <RevealImage
-            src={imageSrc}
-            alt={imageAlt}
-            className="w-full h-full object-cover"
-          />
-        </div>
         <div className="flex flex-col">
           {STATS.map((stat, i) => (
             <div
