@@ -7,10 +7,6 @@ import RevealImage from '../components/RevealImage'
 import statsImage from '../images/DSC03053-Enhanced-NR (1).webp'
 import gradientImage from '../images/gradient.webp'
 
-// TODO: replace with local .webp image (max 2080×2080px, max 940kb)
-const heroImage = 'https://www.figma.com/api/mcp/asset/7b5bc51c-a56f-4c04-99d2-b68011959e2f'
-const aboutTexture = 'https://www.figma.com/api/mcp/asset/becf3c32-1203-42b8-8ad0-873d63b0d5a6'
-
 export default function Home() {
   return (
     <main>
@@ -37,7 +33,7 @@ export default function Home() {
             I turn complex problems into real products.
           </h1>
         </div>
-        <div className="flex-1 w-full md:flex-1 md:h-auto md:w-auto md:min-w-0 relative rounded-[2px] overflow-hidden">
+        <div className="flex-1 w-full md:flex-1 md:h-auto md:w-auto md:min-w-0 relative rounded-xs overflow-hidden">
           <RevealImage
             src={statsImage}
             alt="Lisa Caspersson working at her desk"
@@ -50,7 +46,7 @@ export default function Home() {
       <section
         id="about"
         className="snap-start snap-always relative flex flex-col justify-center gap-6 py-24 md:py-48 px-4 md:px-10 min-h-[100svh]"
-        style={{ backgroundColor: '#FFE8DB' }}
+        style={{ backgroundColor: 'var(--color-about-bg)' }}
       >
         {/* Background gradient */}
         <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">

@@ -2,10 +2,9 @@ import { Link } from 'react-router-dom'
 import type { SelectedWorkProps, Project } from './SelectedWork.types'
 import RevealImage from '../RevealImage'
 import sejfaMock2 from '../../images/Sejfa_mock2.webp'
+import imgBaribuddy from '../../images/BaribuddyHero.webp'
+import imgBooky from '../../images/BookyHero.webp'
 
-// TODO: replace with local .webp images (max 2080×2080px, max 940kb)
-const imgBaribuddy = 'https://www.figma.com/api/mcp/asset/9615129a-6fbb-4fc7-a565-ab5796c9d142'
-const imgBooky = 'https://www.figma.com/api/mcp/asset/005d71f0-4e8e-4d0d-820b-7c91d138841c'
 const imgSejfa = sejfaMock2
 
 const defaultProjects: Project[] = [
@@ -55,7 +54,7 @@ export default function SelectedWork({ projects = defaultProjects }: SelectedWor
             to={`/work/${project.slug}`}
             className="group flex flex-col gap-6 items-start w-full md:flex-1 no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-nav-text)]"
           >
-            <div className="overflow-hidden relative w-full rounded-[2px] aspect-[3/4] md:aspect-auto md:flex-1">
+            <div className="overflow-hidden relative w-full rounded-xs aspect-[3/4] md:aspect-auto md:flex-1">
               <div className="absolute inset-0 transition-transform duration-300 ease-out group-hover:scale-105">
                 <RevealImage
                   src={project.imageSrc}

@@ -19,15 +19,14 @@ import booky2 from '../images/Booky2.webp'
 import booky3 from '../images/Booky3.webp'
 import baribuddy4 from '../images/Baribuddy4.webp'
 import baribuddy1 from '../images/Baribuddy1.webp'
+import baribuddyHero from '../images/BaribuddyHero.webp'
 import baribuddy3 from '../images/Baribuddy3.webp'
 import baribuddy2 from '../images/Baribuddy2.webp'
-
-// TODO: replace with local .webp images per case
-const placeholderImage = 'https://www.figma.com/api/mcp/asset/71cd43ec-3dfb-420e-90fd-11aedaa8f51c'
 
 const heroImages: Record<string, string> = {
   sejfa: sejfaMock2,
   booky: bookyHero,
+  baribuddy: baribuddyHero,
 }
 
 interface CasePageProps {
@@ -46,7 +45,7 @@ export default function CasePage({ slug }: CasePageProps) {
         <ChevronLeft width={20} height={20} className="[&_path]:fill-[currentColor]" aria-hidden="true" />
         Home
       </Link>
-      <CaseHero imageSrc={heroImages[slug] ?? placeholderImage} imageAlt="" imagePosition={slug === 'baribuddy' ? 'object-right' : undefined} />
+      <CaseHero imageSrc={heroImages[slug] ?? ''} imageAlt="" imagePosition={slug === 'baribuddy' ? 'object-right' : undefined} />
     </main>
 
     <section className="snap-end snap-always px-4 md:px-10">
@@ -83,7 +82,7 @@ export default function CasePage({ slug }: CasePageProps) {
 
     <section
       className="snap-start snap-always relative flex flex-col justify-center gap-6 py-24 md:py-48 px-4 md:px-10 min-h-[100svh]"
-      style={{ backgroundColor: '#FFE8DB' }}
+      style={{ backgroundColor: 'var(--color-about-bg)' }}
     >
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
         <img
@@ -106,8 +105,8 @@ export default function CasePage({ slug }: CasePageProps) {
     </section>
 
     <section className="snap-start snap-always flex flex-col md:flex-row p-4 md:p-10 pb-12 md:min-h-[100svh] gap-6 md:gap-10">
-      <div className="relative w-full aspect-[4/3] md:aspect-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
-        <RevealImage src={slug === 'sejfa' ? sejfa1 : slug === 'booky' ? booky1 : slug === 'baribuddy' ? baribuddy1 : placeholderImage} alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <div className="relative w-full aspect-[4/3] md:aspect-auto md:flex-1 rounded-xs overflow-hidden z-10">
+        <RevealImage src={slug === 'sejfa' ? sejfa1 : slug === 'booky' ? booky1 : slug === 'baribuddy' ? baribuddy1 : ''} alt="" className="absolute inset-0 w-full h-full object-cover" />
       </div>
       <div className="md:flex-1 flex flex-col gap-4 md:justify-center">
         <h2 className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]" style={{ color: 'var(--color-nav-text)' }}>
@@ -125,8 +124,8 @@ export default function CasePage({ slug }: CasePageProps) {
     </section>
 
     <section className="snap-start snap-always flex flex-col md:flex-row-reverse px-4 md:px-10 p-4 md:p-10 pb-12 md:min-h-[100svh] gap-6 md:gap-10">
-      <div className="relative w-full aspect-[4/3] md:aspect-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
-        <RevealImage src={slug === 'sejfa' ? sejfa2 : slug === 'booky' ? booky2 : slug === 'baribuddy' ? baribuddy2 : placeholderImage} alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <div className="relative w-full aspect-[4/3] md:aspect-auto md:flex-1 rounded-xs overflow-hidden z-10">
+        <RevealImage src={slug === 'sejfa' ? sejfa2 : slug === 'booky' ? booky2 : slug === 'baribuddy' ? baribuddy2 : ''} alt="" className="absolute inset-0 w-full h-full object-cover" />
       </div>
       <div className="md:flex-1 flex flex-col gap-4 md:justify-center">
         <h2 className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]" style={{ color: 'var(--color-nav-text)' }}>
@@ -144,8 +143,8 @@ export default function CasePage({ slug }: CasePageProps) {
     </section>
 
     <section className="snap-start snap-always flex flex-col md:flex-row p-4 md:p-10 pb-12 md:min-h-[100svh] gap-6 md:gap-10">
-      <div className="relative w-full aspect-[4/3] md:aspect-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
-        <RevealImage src={slug === 'sejfa' ? sejfa3 : slug === 'booky' ? booky3 : slug === 'baribuddy' ? baribuddy3 : placeholderImage} alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <div className="relative w-full aspect-[4/3] md:aspect-auto md:flex-1 rounded-xs overflow-hidden z-10">
+        <RevealImage src={slug === 'sejfa' ? sejfa3 : slug === 'booky' ? booky3 : slug === 'baribuddy' ? baribuddy3 : ''} alt="" className="absolute inset-0 w-full h-full object-cover" />
       </div>
       <div className="md:flex-1 flex flex-col gap-4 md:justify-center">
         <h2 className="font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em]" style={{ color: 'var(--color-nav-text)' }}>
@@ -164,7 +163,7 @@ export default function CasePage({ slug }: CasePageProps) {
 
     {slug === 'booky' && (
     <section className="snap-start snap-always flex flex-col md:flex-row-reverse px-4 md:px-10 p-4 md:p-10 pb-12 md:min-h-[100svh] gap-6 md:gap-10">
-      <div className="relative w-full aspect-[4/3] md:aspect-auto md:flex-1 rounded-[2px] overflow-hidden z-10">
+      <div className="relative w-full aspect-[4/3] md:aspect-auto md:flex-1 rounded-xs overflow-hidden z-10">
         <video
           src={booky4}
           autoPlay
@@ -187,9 +186,9 @@ export default function CasePage({ slug }: CasePageProps) {
 
     {/* TODO: replace with local .webp (max 2080×2080px, max 940kb) */}
     <section className="snap-start snap-always py-4 md:py-10 px-4 md:px-10 flex flex-col min-h-[100svh]">
-      <div className="relative w-full flex-1 rounded-[2px] overflow-hidden">
+      <div className="relative w-full flex-1 rounded-xs overflow-hidden">
         <RevealImage
-          src={slug === 'sejfa' ? sejfa4 : slug === 'booky' ? booky5 : slug === 'baribuddy' ? baribuddy4 : placeholderImage}
+          src={slug === 'sejfa' ? sejfa4 : slug === 'booky' ? booky5 : slug === 'baribuddy' ? baribuddy4 : ''}
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />

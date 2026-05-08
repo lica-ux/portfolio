@@ -1,8 +1,6 @@
 import RevealImage from '../RevealImage'
-
-// TODO: replace with local .webp images (max 2080×2080px, max 940kb)
-const portraitSrc = 'https://www.figma.com/api/mcp/asset/be608bd1-b3bb-4715-9f68-317e7fcc7467'
-const knitSrc = 'https://www.figma.com/api/mcp/asset/71be2b76-763d-47da-96a8-25c014060220'
+import portraitSrc from '../../images/AboutMe1.webp'
+import knitSrc from '../../images/AboutMe2.webp'
 
 export default function AboutMe() {
   return (
@@ -33,7 +31,7 @@ export default function AboutMe() {
               </p>
             </div>
           </div>
-          <div className="w-full md:w-[30vw] shrink-0 aspect-[3/4] relative rounded-[2px] overflow-hidden">
+          <div className="w-full md:w-[30vw] shrink-0 aspect-[3/4] relative rounded-xs overflow-hidden">
             <RevealImage
               src={portraitSrc}
               alt="Lisa Caspersson"
@@ -45,7 +43,7 @@ export default function AboutMe() {
 
       {/* Section 2: hobby photo + hobby text */}
       <section className="snap-start snap-always flex flex-col md:flex-row gap-10 items-start md:items-center justify-center px-4 md:px-10 pt-16 md:pt-24 pb-10 min-h-[100svh]">
-        <div className="w-full md:flex-1 aspect-square relative rounded-[2px] overflow-hidden">
+        <div className="w-full md:flex-1 aspect-square relative rounded-xs overflow-hidden">
           <RevealImage
             src={knitSrc}
             alt="Folded textured wool yarns in warm earthy tones"

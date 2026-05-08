@@ -68,7 +68,7 @@ export default function MoreWork() {
     <section
       id="more-work"
       className="snap-start snap-always w-full md:h-[100svh] md:overflow-y-auto"
-      style={{ backgroundColor: '#ffe8db' }}
+      style={{ backgroundColor: 'var(--color-about-bg)' }}
     >
       {/* Padding wrapper — carries the padding so its height = full content height, letting the gradient fill it all */}
       <div className="relative pt-[120px] pb-20 min-h-full">
