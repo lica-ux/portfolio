@@ -4,13 +4,20 @@
 
 # Claude updates this at the end of every session.
 
-LAST UPDATED: 2026-05-08
+LAST UPDATED: 2026-05-08 (session 3)
 
 ---
 
 ## In progress
 
 NONE
+
+## Completed this session (2026-05-08, session 3)
+
+- **SelectedWork: Baribuddy bildposition** — `imagePosition` ändrad till inline style `object-position: 72% center` (Tailwind-klasser fungerar ej för dynamiska värden); telefon-skärmen syns centrerat på mobil
+- **AboutMe sektion 2: ordning mobil** — text visas först (order-1), bild under (order-2) på mobil; desktop-layout oförändrad
+- **Footer: mobillayout** — "Let's talk" på egen rad, "Projects" + "Navigation" sida vid sida på raden under
+- **CaseHero: fyller höjden** — container ändrad från `md:h-[640px]` till `md:flex-1`; CasePage main ändrad från `min-h-[100svh]` till `h-[100svh]` + `pb-10`
 
 ## Completed this session (2026-05-08)
 
