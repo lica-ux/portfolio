@@ -14,7 +14,7 @@ const defaultProjects: Project[] = [
     imageSrc: imgBaribuddy,
     imageAlt: 'Baribuddy app screenshot',
     slug: 'baribuddy',
-    imagePosition: 'object-[75%_center]',
+    imagePosition: '72% center',
   },
   {
     title: 'Booky',
@@ -59,7 +59,8 @@ export default function SelectedWork({ projects = defaultProjects }: SelectedWor
                 <RevealImage
                   src={project.imageSrc}
                   alt={project.imageAlt}
-                  className={`w-full h-full object-cover${project.imagePosition ? ` ${project.imagePosition}` : ''}`}
+                  className="w-full h-full object-cover"
+                  style={project.imagePosition ? { objectPosition: project.imagePosition } : undefined}
                   delay={index * 150}
                 />
               </div>
