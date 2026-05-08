@@ -43,14 +43,14 @@ export default function AboutMe() {
 
       {/* Section 2: hobby photo + hobby text */}
       <section className="snap-start snap-always flex flex-col md:flex-row gap-10 items-start md:items-center justify-center px-4 md:px-10 pt-16 md:pt-24 pb-10 min-h-[100svh]">
-        <div className="w-full md:flex-1 aspect-square relative rounded-xs overflow-hidden">
+        <div className="w-full md:flex-1 aspect-square relative rounded-xs overflow-hidden order-2 md:order-1">
           <RevealImage
             src={knitSrc}
             alt="Folded textured wool yarns in warm earthy tones"
             className="absolute inset-0 w-full h-full object-cover"
           />
         </div>
-        <div className="flex-1 min-w-0 md:pr-10">
+        <div className="flex-1 min-w-0 md:pr-10 order-1 md:order-2">
           <p
             className="text-[20px] md:text-[24px] font-normal leading-[1.18]"
             style={{ color: 'var(--color-hero-subtitle)' }}
