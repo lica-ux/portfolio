@@ -4,7 +4,7 @@ import RevealImage from '../RevealImage'
 // TODO: replace imageSrc with local .webp (max 2080×2080px, max 940kb)
 export default function CaseHero({ imageSrc, imageAlt, imagePosition }: CaseHeroProps) {
   return (
-    <div className="w-full overflow-hidden rounded-xs aspect-[4/3] md:aspect-auto md:h-[640px]">
+    <div className="w-full overflow-hidden rounded-xs aspect-[4/3] md:aspect-auto md:flex-1">
       <RevealImage
         src={imageSrc}
         alt={imageAlt}
