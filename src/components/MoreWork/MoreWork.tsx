@@ -96,9 +96,9 @@ export default function MoreWork() {
 
           {/* Project grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 md:gap-y-20 lg:gap-y-28 gap-x-8 px-4 md:px-10">
-            {PROJECTS.map((project) => (
+            {PROJECTS.map((project, index) => (
+              <RevealText key={project.title} as="div" delay={index * 100}>
               <article
-                key={project.title}
                 className="flex flex-col gap-2"
               >
                 <h3
@@ -128,6 +128,7 @@ export default function MoreWork() {
                   {project.description}
                 </p>
               </article>
+              </RevealText>
             ))}
           </div>
         </div>
