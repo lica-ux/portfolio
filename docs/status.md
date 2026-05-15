@@ -14,6 +14,19 @@ NONE
 
 ## Completed this session (2026-05-15)
 
+- **TextLink component** — `src/components/TextLink/` byggd
+  - Renderas som `<a>` eller `<Link>` beroende på `href`/`to`-prop
+  - Underline-animation vänster → höger via `::after` pseudo-element, samma easing som Button
+  - Används i Footer (alla textlänkar) och Nav (Work/About/Contact med `className="font-medium"`)
+- **Button hover-animation** — fill vänster → höger, text byter till `--color-text-on-dark` (#ffe8db)
+- **Ny token** `--color-text-on-dark: #ffe8db`
+- **Stats: 30+ products shipped** (var 25+)
+- **Nav höjd** — 56px (`py-[9px]` på wrapper)
+- **Favicon.png borttagen** från `src/images/` — original finns korrekt i `public/favicon.png`
+- **Booky2.webp** — 1005kb (marginellt över 940kb-gränsen, accepterat tills vidare — granskas i prod)
+
+## Completed this session (2026-05-15) — tidigare
+
 - **Button component** — `src/components/Button/` byggt från scratch (ingen Figma-källa)
   - Renderas som `<a>` (korrekt semantik för alla tre användningsfall: mailto:, extern URL, anchor)
   - Props: `href`, `children`, `target`, `rel`, `className` (layout-override)
