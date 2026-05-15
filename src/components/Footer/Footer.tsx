@@ -62,7 +62,7 @@ export default function Footer() {
             aria-hidden="true"
           />
         </div>
-        <div className="flex flex-wrap gap-8 px-4 md:px-10 pt-10 pb-[104px] md:pb-10">
+        <div className="flex flex-wrap gap-8 px-4 md:px-10 pt-10 pb-[104px] md:pb-20">
           <div className="flex-1 min-w-[280px] max-w-[40%]">
             <p
               className="text-[40px] font-medium leading-[1]"

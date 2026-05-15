@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import Nav from './components/Nav'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import Tokens from './pages/Tokens'
 import About from './pages/About'
@@ -23,6 +24,7 @@ function Layout() {
   return (
     <>
       {!hideNav && <Nav />}
+      <ScrollToTop />
       <Routes>
         <Route path="/"                  element={<Home />} />
 <Route path="/tokens"            element={<Tokens />} />
