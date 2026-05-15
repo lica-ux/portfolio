@@ -4,4 +4,5 @@ export interface TextLinkProps {
   to?: string
   target?: string
   rel?: string
+  className?: string
 }

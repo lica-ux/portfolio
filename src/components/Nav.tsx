@@ -1,3 +1,5 @@
+import TextLink from './TextLink'
+
 const links = [
   { href: '#work',    label: 'Work' },
   { href: '#about-me',   label: 'About' },
@@ -15,14 +17,9 @@ export default function Nav() {
         }}
       >
         {links.map(({ href, label }) => (
-          <a
-            key={href}
-            href={href}
-            className="text-base font-medium whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2"
-            style={{ color: 'var(--color-nav-text)' }}
-          >
+          <TextLink key={href} href={href} className="font-medium">
             {label}
-          </a>
+          </TextLink>
         ))}
       </div>
     </nav>
