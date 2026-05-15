@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import type { SelectedWorkProps, Project } from './SelectedWork.types'
 import RevealImage from '../RevealImage'
+import RevealText from '../RevealText'
 import sejfaMock2 from '../../images/Sejfa_mock2.webp'
 import imgBaribuddy from '../../images/BaribuddyHero.webp'
 import imgBooky from '../../images/BookyHero.webp'
@@ -39,12 +40,14 @@ export default function SelectedWork({ projects = defaultProjects }: SelectedWor
       className="snap-start snap-always flex flex-col gap-10 items-start py-16 md:py-24 px-4 md:px-10 w-full md:min-h-[100svh]"
     >
       <div className="flex items-center justify-center w-full">
-        <h2
+        <RevealText
+          as="h2"
+          delay={0}
           className="flex-1 text-[40px] md:text-[56px] font-medium leading-[1.1]"
           style={{ color: 'var(--color-nav-text)', fontFamily: 'var(--font-display)' }}
         >
           Selected work
-        </h2>
+        </RevealText>
       </div>
 
       <div className="flex flex-col gap-14 md:flex-row md:gap-8 items-stretch w-full flex-1">
