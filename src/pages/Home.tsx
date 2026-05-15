@@ -38,9 +38,6 @@ export default function Home() {
           >
             I turn complex problems into real products.
           </RevealText>
-          <RevealText as="div" delay={240} className="relative self-start">
-            <Button href="#work">View my work</Button>
-          </RevealText>
         </div>
         <div className="flex-1 w-full md:flex-1 md:h-auto md:w-auto md:min-w-0 relative rounded-xs overflow-hidden">
           <RevealImage
