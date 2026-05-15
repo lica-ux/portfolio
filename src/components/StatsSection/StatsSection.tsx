@@ -4,7 +4,7 @@ import RevealImage from '../RevealImage'
 
 const STATS = [
   { value: '6+', label: 'years in product design' },
-  { value: '25+', label: 'products shipped' },
+  { value: '30+', label: 'products shipped' },
   { value: '2', label: 'led to acquisitions' },
   { value: '2', label: 'design awards' },
 ]
