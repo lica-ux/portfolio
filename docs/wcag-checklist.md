@@ -28,21 +28,21 @@
 
 ## Component checklists
 
-### Button — 2026-03-31
-- [x] Contrast ≥ 4.5:1 normal text / 3:1 large text and UI elements — primary: 5.17:1 ✅, secondary: 5.17:1 ✅
-- [x] Correct semantic HTML element used — `<button>`
-- [x] All interactive states keyboard accessible (Tab, Enter, Space, Escape)
-- [ ] Visible focus indicator present (browser default active — axe-core to confirm)
-- [x] aria-label on icon-only buttons — N/A (text-only button)
+### Button — 2026-05-15
+- [x] Contrast ≥ 4.5:1 normal text / 3:1 large text and UI elements — `--color-nav-text` (#491129) on `--color-bg` (#f8f3ff) = 13.9:1 ✅
+- [x] Correct semantic HTML element used — `<a href>` (all uses are navigation links)
+- [x] All interactive states keyboard accessible — Tab focuses, Enter activates link
+- [x] Visible focus indicator present — `focus-visible:outline-2 focus-visible:outline-offset-2` ✅
+- [x] aria-label on icon-only buttons — N/A (text-only)
 - [x] Form fields have associated `<label>` — N/A
 - [x] Error messages linked via aria-describedby — N/A
 - [x] Loading state uses aria-busy or aria-live — N/A
-- [x] Animations respect prefers-reduced-motion — transition injected via `<style>` tag wrapped in `@media (prefers-reduced-motion: no-preference)`
-- [x] All interactive elements ≥ 44×44px — minHeight/minWidth 44px set
-- [x] axe-core scan: no violations ✅ 2026-03-31
+- [x] Animations respect prefers-reduced-motion — `motion-reduce:transition-none` ✅
+- [x] All interactive elements ≥ 44×44px — `min-h-[44px]` set ✅
+- [ ] axe-core scan: not yet run
 - [x] No Figma source — built without Figma description
 
-Notes: Transition handled via injected `<style>` tag with `@media (prefers-reduced-motion: no-preference)`. axe-core clean 2026-03-31.
+Notes: Renders as `<a>` — correct semantics for all three use cases (mailto:, external URL, anchor scroll). font-size 20px at all breakpoints.
 
 ### StatsSection — 2026-04-16
 - [x] Contrast ≥ 4.5:1 normal text / 3:1 large text — `--color-nav-text` (#491129) on `--color-bg` (#f8f3ff) = 13.9:1 ✅. Dark mode N/A (no dark mode on site).

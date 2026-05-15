@@ -11,7 +11,7 @@
 | Figma name | Node ID | Component path | Last synced | Notes |
 | ---------- | ------- | -------------- | ----------- | ----- |
 | —          | —       | —              | —           | —     |
-| Button     | —       | src/components/Button/ | 2026-03-31 | No Figma source — built 2026-03-31 |
+| Button     | —       | src/components/Button/ | 2026-05-15 | No Figma source — built 2026-05-15. Renders as `<a>`. Used in Footer (Email, Linkedin) and Home (View my work). |
 | Heading    | —       | src/components/Typography/Heading.tsx | 2026-03-31 | No Figma source — built 2026-03-31 |
 | Text       | —       | src/components/Typography/Text.tsx | 2026-03-31 | No Figma source — built 2026-03-31 |
 | Input      | —       | src/components/Input/ | 2026-03-31 | No Figma source — built 2026-03-31 |

@@ -1,3 +1,4 @@
+import Button from '../components/Button'
 import StatsSection from '../components/StatsSection/StatsSection'
 import SelectedWork from '../components/SelectedWork'
 import MoreWork from '../components/MoreWork'
@@ -67,17 +68,7 @@ export default function Home() {
           the problem is messy and the solution needs to be simple.
         </p>
 
-        <a
-          href="#work"
-          className="relative self-start inline-flex items-center justify-center px-4 py-3 rounded-full border whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2"
-          style={{
-            borderColor: 'var(--color-nav-text)',
-            color: 'var(--color-nav-text)',
-            fontFamily: 'var(--font-display)',
-          }}
-        >
-          <span className="text-[20px] md:text-2xl font-medium leading-[1.1]">View my work</span>
-        </a>
+        <Button href="#work" className="relative self-start">View my work</Button>
       </section>
 
       {/* Stats */}

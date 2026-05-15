@@ -4,13 +4,22 @@
 
 # Claude updates this at the end of every session.
 
-LAST UPDATED: 2026-05-08 (session 3)
+LAST UPDATED: 2026-05-15
 
 ---
 
 ## In progress
 
 NONE
+
+## Completed this session (2026-05-15)
+
+- **Button component** — `src/components/Button/` byggt från scratch (ingen Figma-källa)
+  - Renderas som `<a>` (korrekt semantik för alla tre användningsfall: mailto:, extern URL, anchor)
+  - Props: `href`, `children`, `target`, `rel`, `className` (layout-override)
+  - Styling: pill-form, `text-[20px]`, `--color-nav-text` border+text, `--font-display`, `min-h-[44px]`, `focus-visible:outline`, `hover:opacity-70`, `motion-reduce:transition-none`
+  - Ersatte inline-stylade knappar i Footer.tsx (Email, Linkedin) och Home.tsx (View my work)
+  - **Stats: "30+ products shipped"** — uppdaterat från 25+
 
 ## Completed this session (2026-05-08, session 3)
 

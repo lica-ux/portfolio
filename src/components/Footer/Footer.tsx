@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import gradientImage from '../../images/gradient.webp'
+import Button from '../Button'
 
 export default function Footer() {
   return (
@@ -36,30 +37,14 @@ export default function Footer() {
         </div>
 
         <div className="flex gap-4 flex-wrap">
-          <a
-            href="mailto:lisa@caspersson.biz"
-            className="inline-flex items-center justify-center px-4 py-3 rounded-full border text-[24px] font-medium leading-[1.1] whitespace-nowrap min-h-[44px] focus-visible:outline-2 focus-visible:outline-offset-2 transition-opacity duration-100 hover:opacity-70 motion-reduce:transition-none"
-            style={{
-              borderColor: 'var(--color-nav-text)',
-              color: 'var(--color-nav-text)',
-              fontFamily: 'var(--font-display)',
-            }}
-          >
-            Email
-          </a>
-          <a
+          <Button href="mailto:lisa@caspersson.biz">Email</Button>
+          <Button
             href="https://www.linkedin.com/in/lisa-caspersson-01231787/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-4 py-3 rounded-full border text-[24px] font-medium leading-[1.1] whitespace-nowrap min-h-[44px] focus-visible:outline-2 focus-visible:outline-offset-2 transition-opacity duration-100 hover:opacity-70 motion-reduce:transition-none"
-            style={{
-              borderColor: 'var(--color-nav-text)',
-              color: 'var(--color-nav-text)',
-              fontFamily: 'var(--font-display)',
-            }}
           >
             Linkedin
-          </a>
+          </Button>
         </div>
       </div>
 
