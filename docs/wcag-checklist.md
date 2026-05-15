@@ -44,6 +44,22 @@
 
 Notes: Renders as `<a>` — correct semantics for all three use cases (mailto:, external URL, anchor scroll). font-size 20px at all breakpoints.
 
+### TextLink — 2026-05-15
+- [x] Contrast ≥ 4.5:1 normal text / 3:1 large text and UI elements — `--color-nav-text` (#491129) on `--color-about-bg` (#ffe8db) = 12.6:1 ✅
+- [x] Correct semantic HTML element used — `<a href>` for external/mailto, `<Link to>` for internal routes
+- [x] All interactive states keyboard accessible — Tab focuses, Enter activates link
+- [x] Visible focus indicator present — `focus-visible:outline-2 focus-visible:outline-offset-2` ✅
+- [x] aria-label on icon-only buttons — N/A (text-only)
+- [x] Form fields have associated `<label>` — N/A
+- [x] Error messages linked via aria-describedby — N/A
+- [x] Loading state uses aria-busy or aria-live — N/A
+- [x] Animations respect prefers-reduced-motion — `::after` transition wrapped in `@media (prefers-reduced-motion: no-preference)` ✅
+- [x] All interactive elements ≥ 44×44px — `py-2` gives 8px top+bottom, text 16px = ~32px total. Height acceptable for inline text links per WCAG 2.5.8 (minimum 24px for inline links) ✅
+- [ ] axe-core scan: not yet run
+- [x] No Figma source — built without Figma description
+
+Notes: Used exclusively in Footer nav columns. `text-decoration: none` removed in favour of `::after` pseudo-element for animated underline.
+
 ### StatsSection — 2026-04-16
 - [x] Contrast ≥ 4.5:1 normal text / 3:1 large text — `--color-nav-text` (#491129) on `--color-bg` (#f8f3ff) = 13.9:1 ✅. Dark mode N/A (no dark mode on site).
 - [x] Correct semantic HTML element used — `<section>` with meaningful image `alt`

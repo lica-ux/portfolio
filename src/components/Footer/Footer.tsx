@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
 import gradientImage from '../../images/gradient.webp'
 import Button from '../Button'
+import TextLink from '../TextLink'
 
 export default function Footer() {
   return (
@@ -79,24 +79,10 @@ export default function Footer() {
               <nav aria-label="Contact links">
                 <ul className="flex flex-col">
                   <li>
-                    <a
-                      href="mailto:lisa@caspersson.biz"
-                      className="inline-block px-1 py-2 text-[16px] font-normal leading-[1.4] focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap underline decoration-transparent hover:decoration-current transition-colors duration-200 motion-reduce:transition-none"
-                      style={{ color: 'var(--color-nav-text)' }}
-                    >
-                      lisa@caspersson.biz
-                    </a>
+                    <TextLink href="mailto:lisa@caspersson.biz">lisa@caspersson.biz</TextLink>
                   </li>
                   <li>
-                    <a
-                      href="https://www.linkedin.com/in/lisa-caspersson-01231787/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block px-1 py-2 text-[16px] font-normal leading-[1.4] focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap underline decoration-transparent hover:decoration-current transition-colors duration-200 motion-reduce:transition-none"
-                      style={{ color: 'var(--color-nav-text)' }}
-                    >
-                      Linkedin
-                    </a>
+                    <TextLink href="https://www.linkedin.com/in/lisa-caspersson-01231787/" target="_blank" rel="noopener noreferrer">Linkedin</TextLink>
                   </li>
                 </ul>
               </nav>
@@ -120,23 +106,11 @@ export default function Footer() {
                     { label: 'Sejfa', to: '/work/sejfa' },
                   ].map(({ label, to }) => (
                     <li key={label}>
-                      <Link
-                        to={to}
-                        className="inline-block px-1 py-2 text-[16px] font-normal leading-[1.4] focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap underline decoration-transparent hover:decoration-current transition-colors duration-200 motion-reduce:transition-none"
-                        style={{ color: 'var(--color-nav-text)' }}
-                      >
-                        {label}
-                      </Link>
+                      <TextLink to={to}>{label}</TextLink>
                     </li>
                   ))}
                   <li>
-                    <a
-                      href="/#more-work"
-                      className="inline-block px-1 py-2 text-[16px] font-normal leading-[1.4] focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap underline decoration-transparent hover:decoration-current transition-colors duration-200 motion-reduce:transition-none"
-                      style={{ color: 'var(--color-nav-text)' }}
-                    >
-                      More work
-                    </a>
+                    <TextLink href="/#more-work">More work</TextLink>
                   </li>
                 </ul>
               </nav>
@@ -159,13 +133,7 @@ export default function Footer() {
                     { label: 'Contact', href: '/#contact' },
                   ].map(({ label, href }) => (
                     <li key={label}>
-                      <a
-                        href={href}
-                        className="inline-block px-1 py-2 text-[16px] font-normal leading-[1.4] focus-visible:outline-2 focus-visible:outline-offset-2 whitespace-nowrap underline decoration-transparent hover:decoration-current transition-colors duration-200 motion-reduce:transition-none"
-                        style={{ color: 'var(--color-nav-text)' }}
-                      >
-                        {label}
-                      </a>
+                      <TextLink href={href}>{label}</TextLink>
                     </li>
                   ))}
                 </ul>
