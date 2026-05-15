@@ -12,6 +12,20 @@ LAST UPDATED: 2026-05-15
 
 NONE
 
+## Completed this session (2026-05-15, session 2)
+
+- **ScrollToTop component** — `src/components/ScrollToTop/` byggd (ingen Figma-källa)
+  - Desktop: floating pill nere till höger med text "To top" + chevron_up-ikon, samma bakgrund/blur som Nav
+  - Mobil: rund knapp 56×56px, ikon centrerad, ingen text
+  - Visas inte på hero-sektionen (IntersectionObserver på `#hero`), alltid synlig på case-sidor
+  - Nav och ScrollToTop ligger sida vid sida på mobil: nav tar `left-4 right-[80px]`, knapp tar `right-4`
+  - WCAG: `aria-label="Scroll to top"`, `focus-visible:outline-2`, 56×56px touchyta på mobil ✅
+  - `chevron_up.svg` kopierad från main-repot till worktree
+
+- **Footer bottom padding** — `md:pb-10` → `md:pb-20` så ScrollToTop-knappen inte täcker footer-innehåll
+
+- **Nav mobilanpassning** — `justify-between w-full` på mobil så länkarna fördelas jämt över tillgänglig yta
+
 ## Completed this session (2026-05-15)
 
 - **RevealText component** — `src/components/RevealText/` built

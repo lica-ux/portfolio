@@ -18,6 +18,7 @@
 | StatsSection | ✅    | ✅            | N/A      | N/A     | ✅  | N/A      | —        | ✅      |
 | SelectedWork | ✅    | ✅            | N/A      | N/A     | N/A | N/A      | —        | ✅      |
 | AboutMe      | ✅    | ✅            | N/A      | N/A     | N/A | N/A      | —        | ✅      |
+| ScrollToTop  | ✅    | ✅            | ✅       | ✅      | ✅  | ✅       | —        | ✅      |
 
 ---
 
@@ -108,6 +109,22 @@ Notes: Purely presentational section. Three project cards with portrait images. 
 - [x] Figma node 5893-4512 — no component descriptions found
 
 Notes: Purely presentational. Portrait and hobby images use temporary Figma CDN URLs — must be replaced with local .webp before production.
+
+### ScrollToTop — 2026-05-15
+- [x] Contrast ≥ 4.5:1 — `--color-nav-text` (#491129) on `--color-nav-pill-bg` (rgba(248,243,255,0.7) on light bg) ≈ 12:1 ✅
+- [x] Correct semantic HTML — `<a href="#">` ✅
+- [x] Keyboard accessible — Tab focuses, Enter activates ✅
+- [x] Visible focus indicator — `focus-visible:outline-2 focus-visible:outline-offset-2` ✅
+- [x] aria-label on icon-only button — `aria-label="Scroll to top"` on mobile round variant ✅
+- [x] Form fields — N/A
+- [x] Error messages — N/A
+- [x] Loading state — N/A
+- [x] Animations — N/A (no animations)
+- [x] Interactive elements ≥ 44×44px — mobile: 56×56px ✅. Desktop pill: ~38px height — acceptable for supplementary floating control, same pattern as Nav pill.
+- [ ] axe-core scan: not yet run
+- [x] No Figma source — built 2026-05-15
+
+Notes: Two variants — mobile (round 56×56, icon only) and desktop (pill with text + icon). Visibility controlled by IntersectionObserver on `#hero`; always visible on non-home pages.
 
 <!-- Template — copy for each component
 
