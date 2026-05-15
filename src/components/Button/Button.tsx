@@ -9,7 +9,6 @@ export default function Button({ href, children, target, rel, className }: Butto
       className={`btn-pill inline-flex items-center justify-center px-4 py-3 rounded-full border text-[20px] font-medium leading-[1.1] whitespace-nowrap min-h-[44px] focus-visible:outline-2 focus-visible:outline-offset-2${className ? ` ${className}` : ''}`}
       style={{
         borderColor: 'var(--color-nav-text)',
-        color: 'var(--color-nav-text)',
         fontFamily: 'var(--font-display)',
       }}
     >

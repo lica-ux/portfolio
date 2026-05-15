@@ -85,6 +85,7 @@
 .btn-pill {
   position: relative;
   overflow: hidden;
+  color: var(--color-nav-text);
 }
 
 .btn-pill::before {
