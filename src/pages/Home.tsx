@@ -64,16 +64,18 @@ export default function Home() {
         </div>
 
         {/* Content */}
-        <p
+        <RevealText
+          as="p"
+          delay={0}
           className="relative text-[20px] md:text-[32px] font-normal leading-[1.1] w-3/4 max-w-[1080px]"
           style={{ color: 'var(--color-hero-subtitle)' }}
         >
           With 6+ years at the same agency, I've grown from UX designer to leading both projects
           and people. I work across mobile, web, and connected hardware, and I'm most at home when
           the problem is messy and the solution needs to be simple.
-        </p>
+        </RevealText>
 
-        <RevealText as="div" delay={240} className="relative self-start">
+        <RevealText as="div" delay={180} className="relative self-start">
           <Button href="#work">View my work</Button>
         </RevealText>
       </section>
