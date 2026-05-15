@@ -82,6 +82,7 @@ test('className is forwarded to the element', () => {
 })
 
 test('reveals immediately when prefers-reduced-motion is active', () => {
+  const original = window.matchMedia
   Object.defineProperty(window, 'matchMedia', {
     writable: true,
     value: (query: string) => ({
@@ -91,8 +92,12 @@ test('reveals immediately when prefers-reduced-motion is active', () => {
       removeEventListener: () => {},
     }),
   })
-  const { getByText } = render(<RevealText>Hello</RevealText>)
-  const el = getByText('Hello') as HTMLElement
-  expect(el.style.opacity).toBe('1')
-  expect(observeMock).not.toHaveBeenCalled()
+  try {
+    const { getByText } = render(<RevealText>Hello</RevealText>)
+    const el = getByText('Hello') as HTMLElement
+    expect(el.style.opacity).toBe('1')
+    expect(observeMock).not.toHaveBeenCalled()
+  } finally {
+    Object.defineProperty(window, 'matchMedia', { writable: true, value: original })
+  }
 })
