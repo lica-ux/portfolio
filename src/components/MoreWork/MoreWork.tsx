@@ -1,4 +1,5 @@
 import gradientImage from '../../images/gradient.webp'
+import RevealText from '../RevealText'
 
 interface Project {
   title: string
@@ -83,12 +84,14 @@ export default function MoreWork() {
         <div className="relative flex flex-col gap-20">
           {/* Heading */}
           <div className="px-4 md:px-10">
-            <h2
+            <RevealText
+              as="h2"
+              delay={0}
               className="text-[40px] font-medium leading-[1.1]"
               style={{ fontFamily: 'var(--font-display)', color: 'var(--color-nav-text)' }}
             >
               More work, <span style={{ color: 'var(--color-hero-subtitle)' }}>briefly.</span>
-            </h2>
+            </RevealText>
           </div>
 
           {/* Project grid */}

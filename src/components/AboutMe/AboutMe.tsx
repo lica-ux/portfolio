@@ -1,4 +1,5 @@
 import RevealImage from '../RevealImage'
+import RevealText from '../RevealText'
 import portraitSrc from '../../images/AboutMe1.webp'
 import knitSrc from '../../images/AboutMe2.webp'
 
@@ -7,15 +8,19 @@ export default function AboutMe() {
     <>
       {/* Section 1: bio text + portrait */}
       <section id="about-me" className="snap-start snap-always flex flex-col justify-center gap-10 px-4 md:px-10 py-16 md:py-24 min-h-[100svh]">
-        <h2
+        <RevealText
+          as="h2"
+          delay={0}
           className="text-[32px] md:text-[56px] font-medium leading-[1.1]"
           style={{ fontFamily: 'var(--font-display)', color: 'var(--color-nav-text)' }}
         >
           About me
-        </h2>
+        </RevealText>
         <div className="flex flex-col md:flex-row gap-10 items-start md:items-center">
           <div className="flex-1 min-w-0 md:pr-10">
-            <div
+            <RevealText
+              as="div"
+              delay={120}
               className="text-[20px] md:text-[24px] font-normal leading-[1.18] space-y-[1.18em] max-w-[1024px]"
               style={{ color: 'var(--color-hero-subtitle)' }}
             >
@@ -29,7 +34,7 @@ export default function AboutMe() {
                 I believe great design is about clarity. Colour, structure, and interaction aren't
                 decoration. They're how products communicate.
               </p>
-            </div>
+            </RevealText>
           </div>
           <div className="w-full md:w-[30vw] shrink-0 aspect-[3/4] relative rounded-xs overflow-hidden">
             <RevealImage
@@ -51,13 +56,15 @@ export default function AboutMe() {
           />
         </div>
         <div className="flex-1 min-w-0 md:pr-10 order-1 md:order-2">
-          <p
+          <RevealText
+            as="p"
+            delay={0}
             className="text-[20px] md:text-[24px] font-normal leading-[1.18]"
             style={{ color: 'var(--color-hero-subtitle)' }}
           >
             Outside of work I paint, play piano by ear, and knit, which unsurprisingly isn't
             that different from product design: patience, iteration, and attention to detail.
-          </p>
+          </RevealText>
         </div>
       </section>
     </>

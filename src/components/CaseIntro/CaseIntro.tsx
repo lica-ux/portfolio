@@ -1,16 +1,19 @@
 import type { CaseIntroProps } from './CaseIntro.types'
+import RevealText from '../RevealText'
 
 export default function CaseIntro({ title, tags, headline, metaLines }: CaseIntroProps) {
   return (
     <div className="flex flex-col w-full">
       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-4 py-10 md:py-14">
-        <p
+        <RevealText
+          as="p"
+          delay={0}
           className="font-display font-normal leading-[0.94] text-[48px] md:text-[104px]"
           style={{ color: 'var(--color-nav-text)' }}
         >
           {title}
-        </p>
-        <div className="flex gap-1 items-start md:pt-2 shrink-0">
+        </RevealText>
+        <RevealText as="div" delay={0} className="flex gap-1 items-start md:pt-2 shrink-0">
           {tags.map((tag) => (
             <span
               key={tag}
@@ -23,24 +26,28 @@ export default function CaseIntro({ title, tags, headline, metaLines }: CaseIntr
               {tag}
             </span>
           ))}
-        </div>
+        </RevealText>
       </div>
 
       <div className="flex flex-col md:flex-row gap-8 pb-20 md:pb-52">
-        <p
+        <RevealText
+          as="p"
+          delay={120}
           className="md:flex-1 font-display font-normal text-[22px] md:text-[34px] leading-[1.15] tracking-[-0.02em] md:max-w-[640px] whitespace-pre-line"
           style={{ color: 'var(--color-nav-text)' }}
         >
           {headline}
-        </p>
-        <div
+        </RevealText>
+        <RevealText
+          as="div"
+          delay={260}
           className="flex flex-col gap-1 text-base md:text-[24px] leading-[1.24] md:flex-1"
           style={{ color: 'var(--color-hero-subtitle)' }}
         >
           {metaLines.map((line, i) => (
             <p key={i}>{line}</p>
           ))}
-        </div>
+        </RevealText>
       </div>
     </div>
   )

@@ -14,6 +14,16 @@ NONE
 
 ## Completed this session (2026-05-15)
 
+- **RevealText component** — `src/components/RevealText/` built
+  - Scroll-triggered fade-up: `translateY(8px→0)` + `opacity 0→1`, 1.0–1.1s ease
+  - Same IntersectionObserver pattern as RevealImage (threshold 0.15)
+  - `as` prop for polymorphic rendering (h1–h6, p, span, li, div)
+  - `delay` prop for stagger control
+  - `prefers-reduced-motion` respected — renders visible immediately
+  - Applied to: Hero, About, SelectedWork, MoreWork, AboutMe, Footer contact, CaseIntro, CasePage content sections
+  - Excluded: StatsSection (has own scroll animation), Nav, decorative backgrounds
+  - 9 tests, all passing
+
 - **TextLink component** — `src/components/TextLink/` byggd
   - Renderas som `<a>` eller `<Link>` beroende på `href`/`to`-prop
   - Underline-animation vänster → höger via `::after` pseudo-element, samma easing som Button

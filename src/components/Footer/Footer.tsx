@@ -1,6 +1,7 @@
 import gradientImage from '../../images/gradient.webp'
 import Button from '../Button'
 import TextLink from '../TextLink'
+import RevealText from '../RevealText'
 
 export default function Footer() {
   return (
@@ -21,22 +22,26 @@ export default function Footer() {
       {/* Contact section */}
       <div className="relative flex flex-col gap-8 pt-32 md:flex-1 md:justify-center md:pt-0 pb-24 md:pb-0 px-4 md:px-10">
         <div className="flex flex-col gap-4">
-          <h2
+          <RevealText
+            as="h2"
+            delay={0}
             className="text-[40px] md:text-[64px] font-medium leading-[1.1]"
             style={{ color: 'var(--color-nav-text)', fontFamily: 'var(--font-display)' }}
           >
             Contact
-          </h2>
-          <p
+          </RevealText>
+          <RevealText
+            as="p"
+            delay={120}
             className="text-[22px] md:text-[32px] font-normal leading-[1.18]"
             style={{ color: 'var(--color-hero-subtitle)' }}
           >
             Want to work together or just talk design?<br />
             I'd love to hear from you.
-          </p>
+          </RevealText>
         </div>
 
-        <div className="flex gap-4 flex-wrap">
+        <RevealText as="div" delay={260} className="flex gap-4 flex-wrap">
           <Button href="mailto:lisa@caspersson.biz">Email</Button>
           <Button
             href="https://www.linkedin.com/in/lisa-caspersson-01231787/"
@@ -45,7 +50,7 @@ export default function Footer() {
           >
             Linkedin
           </Button>
-        </div>
+        </RevealText>
       </div>
 
       {/* Footer bar */}
